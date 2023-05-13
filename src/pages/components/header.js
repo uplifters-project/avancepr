@@ -25,7 +25,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Home
 									</Link>
@@ -35,7 +35,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										About Us
 									</Link>
@@ -45,7 +45,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Our Services
 									</Link>
@@ -56,7 +56,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Our Clients
 									</Link>
@@ -66,7 +66,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Blogs
 									</Link>
@@ -76,7 +76,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Testimonials
 									</Link>
@@ -87,7 +87,7 @@ function Navbar() {
 										smooth={true}
 										offset={50}
 										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-yellow-300/90 px-3 py-2 rounded-md font-medium"
+										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Contact Us
 									</Link>

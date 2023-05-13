@@ -14,7 +14,6 @@ export default function Home() {
     <div className="flex flex-col h-screen">
       <Header />
       <Body>
-        Hi
         <Whatsapp />
       </Body>
       <Footer />

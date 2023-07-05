@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
+
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import Image from "next/image";
-// import Logo from "../public/Logo.jpg";
+
+
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div>
-			<nav className=" shadow-sm fixed w-full z-10 bg-yellow-300/70">
+			<nav className=" shadow-sm fixed w-full z-10 bg-[#FF9F00]">
 				<div className="w-full">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
+							    <div className="mr-2">
+                                  <Image src={"/Logo.jpg"} alt="Logo" width={40} height={40} />
+                                </div>
 								<h1 className=" font-bold text-xl cursor-pointer">
 									Avance<span className="text-yellow-900/70">PR</span>
 								</h1>
@@ -91,10 +100,24 @@ function Navbar() {
 									>
 										Contact Us
 									</Link>
+
+									<Link>
+									  <div>
+                                        <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">+91-9899707349</p>
+                                        <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium"> info@avancepr.in</p>
+										<div className="flex space-x-2 mt-2 px-4">
+							                <FaInstagram className="text-2xl cursor-pointer hover:text-white" size={15} />
+							                <FaTwitter className="text-2xl cursor-pointer hover:text-white" size={15}/>
+							                <FaLinkedin className="text-2xl cursor-pointer hover:text-white"size={15} />
+							                <FaYoutube className="text-2xl cursor-pointer hover:text-white" size={15} />
+						                </div>
+                                      </div>
+									   
+									</Link>
 								</div>
 							</div>
 						</div>
-						<div className="mr-10 flex md:hidden ">
+						<div className="mr-12 flex md:hidden ">
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
@@ -151,7 +174,7 @@ function Navbar() {
 					leaveTo="opacity-0 scale-95"
 				>
 					{(ref) => (
-						<div className="md:hidden" id="mobile-menu">
+						<div className="md:10" id="mobile-menu">
 							<div
 								ref={ref}
 								className="bg-white-300/70 px-2 pt-2 pb-3 space-y-1 sm:px-3"

@@ -14,14 +14,14 @@ function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div>
-			<nav className=" shadow-sm fixed w-full z-10 bg-[#FF9F00]">
+			<nav className=" shadow-sm  w-full z-10 bg-[#FF9F00]">
 				<div className="w-full">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
-							    <div className="mr-2">
-                                  <Image src={"/Logo.jpg"} alt="Logo" width={40} height={40} />
-                                </div>
+								<div className="mr-2">
+									<Image src={"/Logo.jpg"} alt="Logo" width={40} height={40} />
+								</div>
 								<h1 className=" font-bold text-xl cursor-pointer">
 									Avance<span className="text-yellow-900/70">PR</span>
 								</h1>
@@ -69,7 +69,7 @@ function Navbar() {
 									>
 										Our Clients
 									</Link>
-                                    <Link
+									<Link
 										activeClass="blog"
 										to="blog"
 										smooth={true}
@@ -79,7 +79,7 @@ function Navbar() {
 									>
 										Blogs
 									</Link>
-                                    <Link
+									<Link
 										activeClass="testimonials"
 										to="testimonials"
 										smooth={true}
@@ -102,17 +102,17 @@ function Navbar() {
 									</Link>
 
 									<Link>
-									  <div>
-                                        <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">+91-9899707349</p>
-                                        <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium"> info@avancepr.in</p>
-										<div className="flex space-x-2 mt-2 px-4">
-							                <FaInstagram className="text-2xl cursor-pointer hover:text-white" size={15} />
-							                <FaTwitter className="text-2xl cursor-pointer hover:text-white" size={15}/>
-							                <FaLinkedin className="text-2xl cursor-pointer hover:text-white"size={15} />
-							                <FaYoutube className="text-2xl cursor-pointer hover:text-white" size={15} />
-						                </div>
-                                      </div>
-									   
+										<div>
+											<p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">+91-9899707349</p>
+											<p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium"> info@avancepr.in</p>
+											<div className="flex space-x-2 mt-2 px-4">
+												<FaInstagram className="text-2xl cursor-pointer hover:text-white" size={15} />
+												<FaTwitter className="text-2xl cursor-pointer hover:text-white" size={15} />
+												<FaLinkedin className="text-2xl cursor-pointer hover:text-white" size={15} />
+												<FaYoutube className="text-2xl cursor-pointer hover:text-white" size={15} />
+											</div>
+										</div>
+
 									</Link>
 								</div>
 							</div>
@@ -191,67 +191,67 @@ function Navbar() {
 									Home
 								</Link>
 								<Link
-										activeClass="about"
-										to="about"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-									>
-										About Us
-									</Link>
-									<Link
-										activeClass="service"
-										to="service"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-									>
-										Our Services
-									</Link>
+									activeClass="about"
+									to="about"
+									smooth={true}
+									offset={50}
+									duration={500}
+									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								>
+									About Us
+								</Link>
+								<Link
+									activeClass="service"
+									to="service"
+									smooth={true}
+									offset={50}
+									duration={500}
+									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								>
+									Our Services
+								</Link>
 
-									<Link
-										activeClass="clients"
-										to="clients"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-									>
-										Our Clients
-									</Link>
-                                    <Link
-										activeClass="blog"
-										to="blog"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-									>
-										Blogs
-									</Link>
-                                    <Link
-										activeClass="testimonials"
-										to="testimonials"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-									>
-										Testimonials
-									</Link>
+								<Link
+									activeClass="clients"
+									to="clients"
+									smooth={true}
+									offset={50}
+									duration={500}
+									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								>
+									Our Clients
+								</Link>
+								<Link
+									activeClass="blog"
+									to="blog"
+									smooth={true}
+									offset={50}
+									duration={500}
+									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								>
+									Blogs
+								</Link>
+								<Link
+									activeClass="testimonials"
+									to="testimonials"
+									smooth={true}
+									offset={50}
+									duration={500}
+									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								>
+									Testimonials
+								</Link>
 
-									<Link
-										activeClass="contact"
-										to="contact"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-									>
-										Contact Us
-									</Link>
+								<Link
+									activeClass="contact"
+									to="contact"
+									smooth={true}
+									offset={50}
+									duration={500}
+									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								>
+									Contact Us
+								</Link>
 							</div>
 						</div>
 					)}

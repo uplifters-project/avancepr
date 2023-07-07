@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Popup = () => {
+const Popup = ({ setShow }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [inquiry, setInquiry] = useState("");
@@ -20,6 +20,7 @@ const Popup = () => {
   const handleClose = () => {
     // Close the form
     setIsFormOpen(false);
+    setShow(false);
   };
 
   if (!isFormOpen) {
@@ -63,7 +64,7 @@ const Popup = () => {
               required
             />
           </div>
-          
+
 
           <div className="mb-4">
             <input
@@ -76,18 +77,19 @@ const Popup = () => {
             />
           </div>
           <div className="flex justify-end">
-              <button
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mr-2"
-              >
-                Send Request
-              </button>
-              <button
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-              >
-                Close Request
-              </button>
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mr-2"
+            >
+              Send Request
+            </button>
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+              onClick={handleClose}
+            >
+              Close Request
+            </button>
           </div>
 
         </form>

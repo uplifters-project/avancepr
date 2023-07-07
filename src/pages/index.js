@@ -4,6 +4,18 @@ import Footer from "./components/footer";
 import Body from "./components/body";
 import Layout from "./Layout";
 
+const Halign = ({ children }) => {
+  return <div className="flex justify-around bg-gray-400 p-5">
+    {children}
+  </div>
+}
+
+const VAlign = ({ children }) => {
+  return <div className="flex flex-col justify-center align-middle justify-items-center bg-gray-400 p-5 mx-auto">
+    {children}
+  </div>
+}
+
 export default function Home() {
   const Whatsapp = () => {
     return (
@@ -13,7 +25,7 @@ export default function Home() {
           width={50}
           height={50}
           className="cursor-pointer hover:drop-shadow-md transition-all duration-100"
-          onClick={() => {}}
+          onClick={() => { }}
         />
       </div>
     );
@@ -23,8 +35,20 @@ export default function Home() {
     <div className="flex flex-col h-screen">
       <Header />
       <Body>
-        <Whatsapp />
+        <Halign>
+          <div>
+            <div className="text-4xl">About Us</div>
+          </div>
+          <div>Lorem ipsum dolor wingardium leviosa alohomora expelliramus</div>
+        </Halign>
+        <VAlign>
+          <div>
+            <div className="text-4xl">About Us</div>
+          </div>
+          <div>Lorem ipsum dolor wingardium leviosa alohomora expelliramus</div>
+        </VAlign>
       </Body>
+      <Whatsapp />
       <Footer />
       <Layout /> {/* Add the Layout component here */}
     </div>

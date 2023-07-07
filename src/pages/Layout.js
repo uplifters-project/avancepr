@@ -17,7 +17,7 @@ const Layout = () => {
   return (
     <div>
       {/* Rest of your layout code */}
-      {showPopup && <Popup />}
+      {showPopup && <Popup setShow={setShowPopup} />}
     </div>
   );
 };

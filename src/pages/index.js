@@ -3,15 +3,17 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Body from "./components/body";
 import Layout from "./Layout";
+import Gallery from "./components/clientGallery";
+import InfiniteScroll from "./components/infiniteScroll";
 
 const Halign = ({ children }) => {
-  return <div className="flex justify-around bg-gray-400 p-5">
+  return <div className="flex justify-around p-5 m-10">
     {children}
   </div>
 }
 
 const VAlign = ({ children }) => {
-  return <div className="flex flex-col justify-center align-middle justify-items-center bg-gray-400 p-5 mx-auto">
+  return <div className="flex flex-col m-10 justify-center align-middle justify-items-center p-5 mx-auto">
     {children}
   </div>
 }
@@ -32,21 +34,23 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col">
       <Header />
       <Body>
         <Halign>
-          <div>
+          <div className="my-5">
             <div className="text-4xl">About Us</div>
           </div>
-          <div>Lorem ipsum dolor wingardium leviosa alohomora expelliramus</div>
+          <div className="max-w-[40%] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         </Halign>
         <VAlign>
-          <div>
-            <div className="text-4xl">About Us</div>
+          <div className="mx-auto my-5">
+            <div className="text-4xl">Our Services</div>
           </div>
-          <div>Lorem ipsum dolor wingardium leviosa alohomora expelliramus</div>
+          <div className="max-w-[40%] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         </VAlign>
+        <Gallery />
+        <InfiniteScroll />
       </Body>
       <Whatsapp />
       <Footer />

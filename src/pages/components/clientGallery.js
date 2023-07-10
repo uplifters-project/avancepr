@@ -4,22 +4,26 @@ import { Carousel } from 'react-responsive-carousel';
 
 const data = [
     {
-        src: "/banner.webp",
+        src: "https://dummyimage.com/1600x800/aaaaaa/ffffff.png",
         text: "item 1 text"
     },
     {
-        src: "/banner.webp",
+        src: "https://dummyimage.com/1600x800/aaaaaa/000000.png",
         text: "item 2 text"
     },
     {
-        src: "/banner.webp",
+        src: "https://dummyimage.com/1600x800/aaaaaa/ffffff.png",
         text: "item 3 text"
-    }
+    },
+    {
+        src: "https://dummyimage.com/1600x800/aaaaaa/000000.png",
+        text: "item 4 text"
+    },
 ]
 
 export default function Gallery() {
     return <div className="w-[90%] mx-auto rounded-xl">
-        <Carousel emulateTouch infiniteLoop>
+        <Carousel emulateTouch infiniteLoop autoPlay>
             {
                 data.map((item, index) => {
                     return <div id={index} className="mx-5">

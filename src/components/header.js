@@ -91,11 +91,12 @@ function Navbar() {
 									</Link>
 
 									<Link
-										activeClass="contact"
-										to="contact"
-										smooth={true}
-										offset={50}
-										duration={500}
+										// activeClass="contact"
+										// to="contact"
+										href="/contact"
+										// smooth={true}
+										// offset={50}
+										// duration={500}
 										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
 										Contact Us

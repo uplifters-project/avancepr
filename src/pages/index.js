@@ -2,7 +2,7 @@ import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Body from "../components/body";
-import Layout from "./Layout";
+import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
 import InfiniteScroll from "../components/infiniteScroll";
 
@@ -83,7 +83,7 @@ export default function Home() {
       </Body>
       <Whatsapp />
       <Footer />
-      <Layout /> {/* Add the Layout component here */}
+      <PopupLayout /> {/* Add the Layout component here */}
     </div>
   );
 }

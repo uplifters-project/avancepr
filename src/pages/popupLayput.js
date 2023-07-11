@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Popup from "../components/Popup";
 
-const Layout = () => {
+const PopupLayout = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
@@ -22,4 +22,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default PopupLayout;

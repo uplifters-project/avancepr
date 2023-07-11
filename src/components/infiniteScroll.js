@@ -1,10 +1,11 @@
 import Image from "next/image"
 
 const data = [
-    "http://dummyimage.com/600x400/000000/ffffff.png",
-    "http://dummyimage.com/600x400/eeeeee/cccccc.png",
-    "http://dummyimage.com/600x400/000000/ffffff.png",
-    "http://dummyimage.com/600x400/eeeeee/cccccc.png",
+    "/content_marketing.jpg",
+    "/influencer_marketing.jpg",
+    "/public_relation.jpg",
+    "/social_media_marketing.jpg",
+    "/event.jpg",
 ]
 
 export default function InfiniteScroll() {
@@ -26,10 +27,10 @@ export default function InfiniteScroll() {
             </div>
             <div>
                 <ul>
-                    <li><img src="http://dummyimage.com/600x400/000000/ffffff.png" /></li>
-                    <li><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li>
-                    <li><img src="http://dummyimage.com/600x400/000000/ffffff.png" /></li>
-                    <li><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li>
+                    <li><img src="/influencer_marketing.jpg" /></li>
+                    <li><img src="/content_marketing.jpg" /></li>
+                    <li><img src="/public_relation.jpg" /></li>
+                    <li><img src="/event.jpg" /></li>
                 </ul>
             </div>
         </article>

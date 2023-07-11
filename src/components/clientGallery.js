@@ -1,23 +1,28 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 const data = [
     {
-        src: "https://dummyimage.com/1600x800/aaaaaa/ffffff.png",
-        text: "item 1 text"
+        src: "/content_marketing.jpg",
+        text: "Content Marketing"
     },
     {
-        src: "https://dummyimage.com/1600x800/aaaaaa/000000.png",
-        text: "item 2 text"
+        src: "/influencer_marketing.jpg",
+        text: "Influencer Marketing"
     },
     {
-        src: "https://dummyimage.com/1600x800/aaaaaa/ffffff.png",
-        text: "item 3 text"
+        src: "/public_relation.jpg",
+        text: "Public Relations"
     },
     {
-        src: "https://dummyimage.com/1600x800/aaaaaa/000000.png",
-        text: "item 4 text"
+        src: "/social_media_marketing.jpg",
+        text: "Social Media Marketing"
+    },
+    {
+        src: "/event.jpg",
+        text: "Event Marketing"
     },
 ]
 

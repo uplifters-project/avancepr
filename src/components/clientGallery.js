@@ -23,7 +23,10 @@ const data = [
 
 export default function Gallery() {
     return <div className="w-[90%] mx-auto rounded-xl">
-        <Carousel emulateTouch infiniteLoop autoPlay>
+        {/* <div className="font-bold text-5xl m-5 mt-10 text-center">
+            Client Gallery
+        </div> */}
+        <Carousel emulateTouch infiniteLoop autoPlay className='my-10'>
             {
                 data.map((item, index) => {
                     return <div id={index} className="mx-5">

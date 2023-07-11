@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Popup from "./components/Popup";
+import Popup from "../components/Popup";
 
 const Layout = () => {
   const [showPopup, setShowPopup] = useState(false);

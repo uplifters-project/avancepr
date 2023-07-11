@@ -2,9 +2,10 @@ import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Body from "../components/body";
-import Layout from "./Layout";
+import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
 import InfiniteScroll from "../components/infiniteScroll";
+import Testimonials from "@/components/testimonial";
 
 const services = [
   "https://dummyimage.com/500x500/000000/ffffff.png",
@@ -61,7 +62,8 @@ export default function Home() {
           <div className="my-5">
             <div className="text-4xl">About Us</div>
           </div>
-          <div className="max-w-[40%] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div className="max-w-[40%] text-center">Avance PR is a highly regarded and comprehensive PR agency headquartered in Gurugram. Our core expertise lies in cultivating impactful connections with influencers and crafting effective corporate communications strategies. We take pride in offering a diverse range of campaigns tailored to suit the unique needs of our esteemed clientele. Through strategic media engagement, we diligently work towards enhancing brand personality and reputation, bolstering our clients' market presence.
+          </div>
         </Halign>
         <VAlign>
           <div className="mx-auto my-5">
@@ -78,12 +80,20 @@ export default function Home() {
             }
           </div>
         </VAlign>
+        <VAlign>
+          <div className="mx-auto my-5">
+            <div className="text-4xl">Testimonials</div>
+          </div>
+          <div className="">
+            <Testimonials />
+          </div>
+        </VAlign>
 
         <InfiniteScroll />
       </Body>
       <Whatsapp />
       <Footer />
-      <Layout /> {/* Add the Layout component here */}
+      <PopupLayout /> {/* Add the Layout component here */}
     </div>
   );
 }

@@ -33,7 +33,7 @@ const Popup = ({ setShow }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
       <div className="bg-white p-20 rounded-lg shadow-md">
         <div className="relative">
-          <div className="absolute -top-20 -left-16 mr-5 pt-2 font-bold cursor-pointer" onClick={handleClose}>
+          <div className="absolute -top-20 -right-16 mr-5 pt-2 font-bold cursor-pointer" onClick={handleClose}>
             x
           </div>
         </div>
@@ -70,6 +70,17 @@ const Popup = ({ setShow }) => {
             />
           </div>
 
+          <div className="mb-4">
+            <input
+              type="email"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full border border-gray-300 rounded py-2 px-3"
+              placeholder="What are you interested in?"
+              required
+            />
+          </div>
+
 
           <div className="mb-4">
             <input
@@ -81,10 +92,10 @@ const Popup = ({ setShow }) => {
               required
             />
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mr-2"
+              className="bg-[#FF9F00] hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded mr-2"
             >
               Send Request
             </button>

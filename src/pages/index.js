@@ -6,6 +6,7 @@ import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
 import InfiniteScroll from "../components/infiniteScroll";
 import Testimonials from "@/components/testimonial";
+import News from "@/components/news";
 
 const services = [
   "https://dummyimage.com/500x500/000000/ffffff.png",
@@ -57,6 +58,14 @@ export default function Home() {
       <Header />
       <Body>
         <Gallery />
+        <VAlign>
+          <div className="mx-auto my-5">
+            <div className="text-4xl">Latest News</div>
+          </div>
+          <div className="">
+            <News />
+          </div>
+        </VAlign>
         <Halign>
           <div className="my-5">
             <div className="text-4xl">About Us</div>
@@ -87,7 +96,6 @@ export default function Home() {
             <Testimonials />
           </div>
         </VAlign>
-
         <InfiniteScroll />
       </Body>
       <Whatsapp />

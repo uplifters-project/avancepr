@@ -65,15 +65,6 @@ export default function Home() {
           <div className="max-w-[40%] text-center">Avance PR is a highly regarded and comprehensive PR agency headquartered in Gurugram. Our core expertise lies in cultivating impactful connections with influencers and crafting effective corporate communications strategies. We take pride in offering a diverse range of campaigns tailored to suit the unique needs of our esteemed clientele. Through strategic media engagement, we diligently work towards enhancing brand personality and reputation, bolstering our clients' market presence.
           </div>
         </Halign>
-        <Gallery />
-        <VAlign>
-          <div className="mx-auto my-5">
-            <div className="text-4xl">Latest News</div>
-          </div>
-          <div className="">
-            <News />
-          </div>
-        </VAlign>
 
         <VAlign>
           <div className="mx-auto my-5">
@@ -99,6 +90,14 @@ export default function Home() {
           </div>
         </VAlign>
         <InfiniteScroll />
+        <VAlign>
+          <div className="mx-auto my-5">
+            <div className="text-4xl">Latest News</div>
+          </div>
+          <div className="">
+            <News />
+          </div>
+        </VAlign>
       </Body>
       <Whatsapp />
       <Footer />

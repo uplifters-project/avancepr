@@ -10,7 +10,7 @@ const data = [
 
 export default function InfiniteScroll() {
     return <div className=" overflow-clip">
-        <div className="text-center text-4xl m-10">
+        <div className="text-center text-5xl font-bold leading-normal mt-0 mb-2 text-black">
             Our Clients
         </div>
         <article>

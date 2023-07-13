@@ -29,16 +29,6 @@ function Navbar() {
 							<div className="hidden md:block">
 								<div className="ml-10 flex items-baseline space-x-4">
 									<Link
-										activeClass="Home"
-										to="about"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
-									>
-										Home
-									</Link>
-									<Link
 										activeClass="about"
 										to="about"
 										smooth={true}
@@ -190,17 +180,6 @@ function Navbar() {
 								ref={ref}
 								className="bg-white-300/70 px-2 pt-2 pb-3 space-y-1 sm:px-3"
 							>
-								<Link
-									href="/home"
-									activeClass="home"
-									to="home"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
-									Home
-								</Link>
 								<Link
 									activeClass="about"
 									to="about"

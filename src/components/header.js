@@ -118,10 +118,21 @@ function Navbar() {
 							</div>
 						</div>
 						<div className="mr-12 flex md:hidden ">
+						    <Link>
+								<div>
+									<p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">+91-9899707349</p>
+									<p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium"> info@avancepr.in</p>
+									<div className="flex space-x-2 mt-2 px-4">
+										<FaInstagram className="text-2xl cursor-pointer hover:text-white" size={15} />
+										<FaTwitter className="text-2xl cursor-pointer hover:text-white" size={15} />
+										<FaLinkedin className="text-2xl cursor-pointer hover:text-white" size={15} />
+									</div>
+								</div>
+							</Link>
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
-								className="bg-black inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white"
+								className="h-10 w-10 bg-black inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white"
 								aria-controls="mobile-menu"
 								aria-expanded="false"
 							>

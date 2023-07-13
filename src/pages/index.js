@@ -16,7 +16,6 @@ const services = [
   "https://dummyimage.com/500x500/000000/ffffff.png",
   "https://dummyimage.com/500x500/eeeeee/cccccc.png",
   "https://dummyimage.com/500x500/000000/ffffff.png",
-
 ]
 
 const Halign = ({ children }) => {

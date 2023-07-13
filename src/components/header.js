@@ -110,7 +110,7 @@ function Navbar() {
 												<FaInstagram className="text-2xl cursor-pointer hover:text-white" size={15} />
 												<FaTwitter className="text-2xl cursor-pointer hover:text-white" size={15} />
 												<FaLinkedin className="text-2xl cursor-pointer hover:text-white" size={15} />
-												<FaYoutube className="text-2xl cursor-pointer hover:text-white" size={15} />
+												{/* <FaYoutube className="text-2xl cursor-pointer hover:text-white" size={15} /> */}
 											</div>
 										</div>
 

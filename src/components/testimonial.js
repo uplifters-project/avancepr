@@ -2,52 +2,33 @@ import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./testimonials.module.css";
+import Image from "next/image";
 
 export default function Testimonials() {
+    const Testimonial = () => {
+        return <div className="flex flex-col w-fit ring-1 ring-black/50 m-1 rounded-xl p-10">
+            {/* <Image src="/testimonials/person1.png" width={256} height={256} className="h-[100px] w-[100px]" /> */}
+            <div>
+                <div className="font-semibold text-3xl">John Doe</div>
+                <div>Designer</div>
+                <br />
+                <div>
+                    It's freeing to be able to catch up on customized news and not be
+                    distracted by a social media element on the same site
+                </div>
+            </div>
+        </div>
+
+    }
+
     return (
         <Carousel
-            showArrows={true}
-            infiniteLoop={true}
-            showThumbs={false}
-            showStatus={false}
-            autoPlay={true}
-            interval={6100}
+            emulateTouch
+            className="w-2/3 mx-auto"
         >
-            <div>
-                <img src="/testimonials/person1.png" />
-                <div className="myCarousel">
-                    <h3>Shirley Fultz</h3>
-                    <h4>Designer</h4>
-                    <p>
-                        It's freeing to be able to catch up on customized news and not be
-                        distracted by a social media element on the same site
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <img src="/testimonials/person2.png" />
-                <div className="myCarousel">
-                    <h3>Daniel Keystone</h3>
-                    <h4>Designer</h4>
-                    <p>
-                        The simple and intuitive design makes it easy for me use. I highly
-                        recommend Fetch to my peers.
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <img src="/testimonials/person3.png" />
-                <div className="myCarousel">
-                    <h3>Theo Sorel</h3>
-                    <h4>Designer</h4>
-                    <p>
-                        I enjoy catching up with Fetch on my laptop, or on my phone when
-                        I'm on the go!
-                    </p>
-                </div>
-            </div>
+            <Testimonial />
+            <Testimonial />
+            <Testimonial />
         </Carousel>
     );
 }

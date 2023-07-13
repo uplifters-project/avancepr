@@ -57,6 +57,13 @@ export default function Home() {
     <div className="flex flex-col">
       <Header />
       <Body>
+        <Halign>
+          <div className="my-5">
+            <div className="text-4xl">About Us</div>
+          </div>
+          <div className="max-w-[40%] text-center">Avance PR is a highly regarded and comprehensive PR agency headquartered in Gurugram. Our core expertise lies in cultivating impactful connections with influencers and crafting effective corporate communications strategies. We take pride in offering a diverse range of campaigns tailored to suit the unique needs of our esteemed clientele. Through strategic media engagement, we diligently work towards enhancing brand personality and reputation, bolstering our clients' market presence.
+          </div>
+        </Halign>
         <Gallery />
         <VAlign>
           <div className="mx-auto my-5">
@@ -66,13 +73,7 @@ export default function Home() {
             <News />
           </div>
         </VAlign>
-        <Halign>
-          <div className="my-5">
-            <div className="text-4xl">About Us</div>
-          </div>
-          <div className="max-w-[40%] text-center">Avance PR is a highly regarded and comprehensive PR agency headquartered in Gurugram. Our core expertise lies in cultivating impactful connections with influencers and crafting effective corporate communications strategies. We take pride in offering a diverse range of campaigns tailored to suit the unique needs of our esteemed clientele. Through strategic media engagement, we diligently work towards enhancing brand personality and reputation, bolstering our clients' market presence.
-          </div>
-        </Halign>
+
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-4xl">Our Services</div>
@@ -90,7 +91,7 @@ export default function Home() {
         </VAlign>
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-4xl">Testimonials</div>
+            <div className="text-4xl">Clients' Testimonials</div>
           </div>
           <div className="">
             <Testimonials />

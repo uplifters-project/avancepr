@@ -7,16 +7,17 @@ import Gallery from "../components/clientGallery";
 import InfiniteScroll from "../components/infiniteScroll";
 import Testimonials from "@/components/testimonial";
 import News from "@/components/news";
+import { Main } from "next/document";
 
 const services = [
-  "https://dummyimage.com/500x500/000000/ffffff.png",
-  "https://dummyimage.com/500x500/eeeeee/cccccc.png",
-  "https://dummyimage.com/500x500/000000/ffffff.png",
-  "https://dummyimage.com/500x500/eeeeee/cccccc.png",
-  "https://dummyimage.com/500x500/eeeeee/cccccc.png",
-  "https://dummyimage.com/500x500/000000/ffffff.png",
-  "https://dummyimage.com/500x500/eeeeee/cccccc.png",
-  "https://dummyimage.com/500x500/000000/ffffff.png",
+  "/content_marketing.jpg",
+  "/influencer_marketing.jpg",
+  "/public_relation.jpg",
+  "/social_media_marketing.jpg",
+  "/event.jpg",
+  "/content_marketing.jpg",
+  "/influencer_marketing.jpg",
+  "/public_relation.jpg",
 ]
 
 const Halign = ({ children }) => {

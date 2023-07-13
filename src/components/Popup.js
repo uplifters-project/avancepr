@@ -31,9 +31,9 @@ const Popup = ({ setShow }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
-      <div className="bg-white p-20 rounded-lg shadow-md">
+      <div className="bg-white p-10 rounded-lg shadow-md">
         <div className="relative">
-          <div className="absolute -top-20 -right-16 mr-5 pt-2 font-bold cursor-pointer" onClick={handleClose}>
+          <div className="absolute -top-10 -right-16 mr-16 pt-10 font-bold cursor-pointer text-2xl" onClick={handleClose}>
             x
           </div>
         </div>
@@ -99,13 +99,6 @@ const Popup = ({ setShow }) => {
             >
               Send Request
             </button>
-            {/* <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-              onClick={handleClose}
-            >
-              Close Request
-            </button> */}
           </div>
 
         </form>

@@ -37,16 +37,16 @@ export default function Home() {
     return (
       <div className="fixed right-6 bottom-6">
         <Image
-          src="/email.png"
-          width={40}
-          height={40}
+          src="/email_icon.jpg"
+          width={80}
+          height={80}
           className="cursor-pointer hover:drop-shadow-md transition-all duration-100 mx-auto"
           onClick={() => { }}
         />
         <Image
           src="/whatsapp.webp"
-          width={52}
-          height={52}
+          width={80}
+          height={80}
           className="cursor-pointer hover:drop-shadow-md transition-all duration-100"
           onClick={() => { }}
         />

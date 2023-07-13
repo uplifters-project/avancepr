@@ -20,7 +20,7 @@ function Navbar() {
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<div className="mr-2">
-									<Image src={"/Logo.jpg"} alt="Logo" width={40} height={40} />
+									<Image src={"/Logo-modified.png"} alt="Logo" width={50} height={50} />
 								</div>
 								<h1 className=" font-bold text-xl cursor-pointer">
 									Avance<span className="text-yellow-900/70">PR</span>

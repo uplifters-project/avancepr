@@ -63,10 +63,10 @@ function Footer() {
 					<ul>
 						<p className="text-gray-800 font-bold text-2xl pb-4"></p>
 						<li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-2 rounded-md font-medium">
-							Robert Robertson,<br />
-							1234 NW Bobcat Lane,<br />
-							St. Robert,<br />
-							MO 65584-5678
+						    10, Poorvi Marg<br />
+							DLF Phase 2, Sector 25<br />
+							Gurugram - 122002,<br />
+							MO 98997 07349
 						</li>
 					</ul>
 				</div>

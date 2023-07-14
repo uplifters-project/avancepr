@@ -15,9 +15,6 @@ const services = [
   "/public_relation.jpg",
   "/social_media_marketing.jpg",
   "/event.jpg",
-  "/content_marketing.jpg",
-  "/influencer_marketing.jpg",
-  "/public_relation.jpg",
 ]
 
 const Halign = ({ children }) => {
@@ -37,16 +34,16 @@ export default function Home() {
     return (
       <div className="fixed right-6 bottom-6">
         <Image
-          src="/email.png"
-          width={40}
-          height={40}
+          src="/email_icon.jpg"
+          width={80}
+          height={80}
           className="cursor-pointer hover:drop-shadow-md transition-all duration-100 mx-auto"
           onClick={() => { }}
         />
         <Image
           src="/whatsapp.webp"
-          width={52}
-          height={52}
+          width={80}
+          height={80}
           className="cursor-pointer hover:drop-shadow-md transition-all duration-100"
           onClick={() => { }}
         />
@@ -69,13 +66,13 @@ export default function Home() {
 
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-4xl">Our Services</div>
+            <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Our Services</div>
           </div>
           {/* <div className="max-w-[40%] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div> */}
-          <div className="grid grid-cols-4 mx-auto rounded-2xl overflow-clip">
+          <div className="grid grid-cols-3 gap-x-4 mx-auto rounded-2xl overflow-clip">
             {
               services.map((item, index) => {
-                return <div className="">
+                return <div className="flex flex-colm-1 rounded-xl p-10 mx-5">
                   <Image src={item} width={300} height={300} className="" />
                 </div>
               })
@@ -84,7 +81,7 @@ export default function Home() {
         </VAlign>
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-4xl">Clients' Testimonials</div>
+            <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Clients' Testimonials</div>
           </div>
           <div className="">
             <Testimonials />
@@ -93,7 +90,7 @@ export default function Home() {
         <InfiniteScroll />
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-4xl">Latest News</div>
+            <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Latest News</div>
           </div>
           <div className="">
             <News />

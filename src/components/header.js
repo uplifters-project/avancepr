@@ -20,24 +20,14 @@ function Navbar() {
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<div className="mr-2">
-									<Image src={"/Logo.jpg"} alt="Logo" width={40} height={40} />
+									<Image src={"/Logo-modified.png"} alt="Logo" width={50} height={50} />
 								</div>
 								<h1 className=" font-bold text-xl cursor-pointer">
 									Avance<span className="text-yellow-900/70">PR</span>
 								</h1>
 							</div>
 							<div className="hidden md:block">
-								<div className="ml-10 flex items-baseline space-x-4">
-									<Link
-										activeClass="Home"
-										to="about"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
-									>
-										Home
-									</Link>
+								<div className="ml-10 flex space-x-4 flex justify-center items-center">
 									<Link
 										activeClass="about"
 										to="about"
@@ -190,17 +180,6 @@ function Navbar() {
 								ref={ref}
 								className="bg-white-300/70 px-2 pt-2 pb-3 space-y-1 sm:px-3"
 							>
-								<Link
-									href="/home"
-									activeClass="home"
-									to="home"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
-									Home
-								</Link>
 								<Link
 									activeClass="about"
 									to="about"

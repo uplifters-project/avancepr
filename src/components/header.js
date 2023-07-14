@@ -108,7 +108,7 @@ function Navbar() {
 							</div>
 						</div>
 						<div className="mr-12 flex md:hidden ">
-						    <Link>
+							<Link>
 								<div>
 									<p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">+91-9899707349</p>
 									<p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium"> info@avancepr.in</p>

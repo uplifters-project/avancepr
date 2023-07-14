@@ -27,7 +27,7 @@ function Navbar() {
 								</h1>
 							</div>
 							<div className="hidden md:block">
-								<div className="ml-10 flex items-baseline space-x-4">
+								<div className="ml-10 flex space-x-4 flex justify-center items-center">
 									<Link
 										activeClass="about"
 										to="about"

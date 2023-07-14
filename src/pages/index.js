@@ -65,7 +65,8 @@ export default function Home() {
 
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Our Services</div>
+            <div className="text-5xl text-center font-bold text-yellow-700">Our Services</div>
+            <p class="text-lg text-center text-gray-600">See What we offer </p><br></br>
           </div>
           <div className='grid md:grid-cols-3 gap-8'>
             <ServiceItem
@@ -103,7 +104,8 @@ export default function Home() {
 
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Clients' Testimonials</div>
+            <h2 class="text-5xl text-center font-bold text-yellow-700">Testimonials</h2>
+            <p class="text-lg text-center text-gray-600">What others say about us</p>
           </div>
 
           <div className="">
@@ -113,7 +115,8 @@ export default function Home() {
         <InfiniteScroll />
         <VAlign>
           <div className="mx-auto my-5">
-            <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Latest News</div>
+            <div className="text-5xl text-center font-bold text-yellow-700">Latest News</div>
+            <p class="text-lg text-center text-gray-600">See the Latest News </p><br></br>
           </div>
           <div className="">
             <News />

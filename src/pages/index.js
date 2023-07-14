@@ -8,14 +8,13 @@ import InfiniteScroll from "../components/infiniteScroll";
 import Testimonials from "@/components/testimonial";
 import News from "@/components/news";
 import { Main } from "next/document";
+import ServiceItem from './ServiceItem';
+import content_marketing from "public/content_marketing.jpg";
+import influencer_marketing from "public/influencer_marketing.jpg";
+import public_relation from "public/public_relation.jpg";
+import social_media_marketing from "public/social_media_marketing.jpg";
+import event from "public/event.jpg";
 
-const services = [
-  "/content_marketing.jpg",
-  "/influencer_marketing.jpg",
-  "/public_relation.jpg",
-  "/social_media_marketing.jpg",
-  "/event.jpg",
-]
 
 const Halign = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">
@@ -68,21 +67,45 @@ export default function Home() {
           <div className="mx-auto my-5">
             <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Our Services</div>
           </div>
-          {/* <div className="max-w-[40%] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div> */}
-          <div className="grid grid-cols-3 gap-x-4 mx-auto rounded-2xl overflow-clip">
-            {
-              services.map((item, index) => {
-                return <div className="flex flex-colm-1 rounded-xl p-10 mx-5">
-                  <Image src={item} width={300} height={300} className="" />
-                </div>
-              })
-            }
+          <div className='grid md:grid-cols-3 gap-8'>
+            <ServiceItem
+              title='Content Marketing'
+              backgroundImg={content_marketing}
+              projectUrl=''
+              tech='Unlock your brands potential and captivate your audience with strategic content marketing that drives engagement, builds trust, and fuels growth.'
+            />
+            <ServiceItem
+              title='Influencer Marketing'
+              backgroundImg={influencer_marketing}
+              projectUrl=''
+              tech='"Unlock your brands potential with influencer marketing where authenticity meets reach to captivate your target audience and drive unprecedented growth.'
+            />
+            <ServiceItem
+              title='Public Relation'
+              backgroundImg={public_relation}
+              projectUrl=''
+              tech='Unlocking connections, shaping narratives, and building trust - Public Relations for a powerful impact.'
+            />
+            <ServiceItem
+              title='Social Media Marketing'
+              backgroundImg={social_media_marketing}
+              projectUrl=''
+              tech='Boost your brands online presence and reach millions with strategic social media marketing solutions that captivate, engage, and convert your target audience.'
+            />
+            <ServiceItem
+              title='Event Management' 
+              backgroundImg={event}
+              projectUrl=''
+              tech='Transforming visions into unforgettable experiences through flawless event management.'
+            />
           </div>
         </VAlign>
+
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-5xl font-bold leading-normal mt-0 mb-2 text-black">Clients' Testimonials</div>
           </div>
+
           <div className="">
             <Testimonials />
           </div>

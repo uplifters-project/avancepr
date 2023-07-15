@@ -10,16 +10,19 @@ export default function Testimonials() {
 
     useEffect(() => {
         const getTestimonials = async () => {
-            const res = await fetch("/api/testimonial/get");
-            const data = await res.json();
-            if (data.status === "success") {
-                setTestimonials([])
-                console.log(data.data)
-                for (var i in data.data) {
-                    setTestimonials((testimonials) => [...testimonials, data.data[i]])
+            setTestimonials([])
+            const res = fetch("/api/testimonial/get");
+            res.then((data) => data.json()).then((data) => {
+                if (data.status === "success") {
+                    const x = [];
+                    for (var i in data.data) {
+                        console.log(data.data[i])
+                        x.push(data.data[i]);
+                    }
+                    setTestimonials(x);
+                    setLoading(false);
                 }
-            }
-            setLoading(false);
+            })
         };
         getTestimonials();
     }, []);
@@ -31,11 +34,9 @@ export default function Testimonials() {
                 </div><div class="lg:grid lg:grid-cols-3 lg:gap-x-2">
                         {
                             testimonials.map((testimonial) => {
+                                // console.log(testimonial)
                                 return <div class="p-4 text-gray-800 rounded-lg shadow-md">
                                     <div class="mb-2">
-                                        <p class="mb-2 text-center text-gray-600 ">
-                                            " {testimonial.message} "
-                                        </p>
                                         <div class="flex flex-col items-center justify-center">
                                             <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
                                                 <img src={testimonial.image} alt="img"
@@ -44,6 +45,9 @@ export default function Testimonials() {
                                             <h5 class="font-bold text-indigo-600">{testimonial.name}</h5>
                                             <p class="text-sm text-gray-600">{testimonial.subtext}</p>
                                         </div>
+                                        <p class="mb-2 text-center text-gray-600 ">
+                                            "{testimonial.message}"
+                                        </p>
                                     </div>
                                 </div>
                             })

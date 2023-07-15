@@ -87,6 +87,8 @@ export default function Home() {
               projectUrl=''
               tech='Unlocking connections, shaping narratives, building trust.'
             />
+          </div>
+          <div className='grid md:grid-cols-2 gap-8 w-[66%] mx-auto my-8'>
             <ServiceItem
               title='Social Media Marketing'
               backgroundImg={social_media_marketing}
@@ -101,7 +103,6 @@ export default function Home() {
             />
           </div>
         </VAlign>
-
         <VAlign>
           <div className="mx-auto my-5">
             <h2 class="text-5xl text-center font-bold text-yellow-700">Testimonials</h2>

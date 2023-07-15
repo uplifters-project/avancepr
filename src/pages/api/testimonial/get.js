@@ -11,7 +11,7 @@ export default function handler(req, res) {
             if (snapshot.exists()) {
                 res.status(200).json({ status: "success", message: "Testimonials fetched successfully", data: snapshot.val() });
             } else {
-                res.status(200).json({ status: "error", message: "No testimonials found" });
+                res.status(200).json({ status: "error", message: "No testimonials found", data: [] });
             }
         })
         .catch((error) => {

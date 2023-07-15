@@ -6,12 +6,12 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 export default function handler(req, res) {
-    get(ref(database, 'news/'))
+    get(ref(database, 'clients/'))
         .then((snapshot) => {
             if (snapshot.exists()) {
-                res.status(200).json({ status: "success", message: "News fetched successfully", data: snapshot.val() });
+                res.status(200).json({ status: "success", message: "Clients fetched successfully", data: snapshot.val() });
             } else {
-                res.status(200).json({ status: "error", message: "No news found", data: [] });
+                res.status(200).json({ status: "error", message: "No clients found", data: [] });
             }
         })
         .catch((error) => {

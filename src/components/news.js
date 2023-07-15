@@ -2,18 +2,35 @@ import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
+import NewsItem from '../pages/NewsItem';
+import content_marketing from "public/content_marketing.jpg";
+import influencer_marketing from "public/influencer_marketing.jpg";
+import public_relation from "public/public_relation.jpg";
+import social_media_marketing from "public/social_media_marketing.jpg";
+import event from "public/event.jpg";
 
 export default function News() {
     const Testimonial = () => {
-        return <div className="flex flex-col w-fit ring-1 ring-black/50 m-1 rounded-xl p-10 mx-auto">
-            {/* <Image src="/testimonials/person1.png" width={256} height={256} className="h-[100px] w-[100px]" /> */}
-            <div>
-                <div className="font-semibold text-3xl">Title</div>
-                <br />
-                <div>
-                    Description
-                </div>
-            </div>
+        return <div className="">
+            {
+                <div className='grid md:grid-cols-3 gap-8'>
+                <NewsItem
+                  title='News 1'
+                  backgroundImg={content_marketing}
+                  
+                />
+                <NewsItem
+                  title='News 2'
+                  backgroundImg={influencer_marketing}
+                  
+                />
+                <NewsItem
+                  title='News 3'
+                  backgroundImg={public_relation}
+                  
+                />
+              </div>
+         }
         </div>
 
     }

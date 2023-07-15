@@ -2,8 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['dummyimage.com'],
-  }
-}
+    domains: ["dummyimage.com"],
+  },
+  env: {
+    WHATSAPP_NO: process.env.WHATSAPP_NO,
+    EMAIL: process.env.EMAIL,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

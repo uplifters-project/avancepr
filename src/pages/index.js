@@ -94,7 +94,7 @@ export default function Home() {
               tech='Elevate your brands online presence with strategic social media marketing.'
             />
             <ServiceItem
-              title='Event Management' 
+              title='Event Management'
               backgroundImg={event}
               projectUrl=''
               tech='Creating unforgettable experiences through flawless event management.'

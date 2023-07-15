@@ -6,7 +6,7 @@ const ServiceItem = ({title, backgroundImg, tech, projectUrl}) => {
   return (
     <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#FFFF8F] to-[#FFAA33]'>
     <Image className='rounded-xl group-hover:opacity-10' src={backgroundImg} alt='/' /> 
-    <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+    <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] overflow-wrap: break-word;'>
         <h3 className='text-2xl text-black font-bold tracking-wider text-center'>{title}</h3>
         <p className='pb-4 pt-2 text-black text-center'>{tech}</p>
         <Link href={projectUrl}>
@@ -14,6 +14,7 @@ const ServiceItem = ({title, backgroundImg, tech, projectUrl}) => {
         </Link>
     </div>
  </div>
+
   )
 }
 

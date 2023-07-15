@@ -73,31 +73,31 @@ export default function Home() {
               title='Content Marketing'
               backgroundImg={content_marketing}
               projectUrl=''
-              tech='Unlock your brands potential and captivate your audience with strategic content marketing that drives engagement, builds trust, and fuels growth.'
+              tech='Brand potential unleashed through strategic content marketing.'
             />
             <ServiceItem
               title='Influencer Marketing'
               backgroundImg={influencer_marketing}
               projectUrl=''
-              tech='"Unlock your brands potential with influencer marketing where authenticity meets reach to captivate your target audience and drive unprecedented growth.'
+              tech='Authentic influencer marketing unlocks brand potential and captivates.'
             />
             <ServiceItem
               title='Public Relation'
               backgroundImg={public_relation}
               projectUrl=''
-              tech='Unlocking connections, shaping narratives, and building trust - Public Relations for a powerful impact.'
+              tech='Unlocking connections, shaping narratives, building trust.'
             />
             <ServiceItem
               title='Social Media Marketing'
               backgroundImg={social_media_marketing}
               projectUrl=''
-              tech='Boost your brands online presence and reach millions with strategic social media marketing solutions that captivate, engage, and convert your target audience.'
+              tech='Elevate your brands online presence with strategic social media marketing.'
             />
             <ServiceItem
               title='Event Management' 
               backgroundImg={event}
               projectUrl=''
-              tech='Transforming visions into unforgettable experiences through flawless event management.'
+              tech='Creating unforgettable experiences through flawless event management.'
             />
           </div>
         </VAlign>

@@ -8,7 +8,7 @@ import InfiniteScroll from "../components/infiniteScroll";
 import Testimonials from "@/components/testimonial";
 import News from "@/components/news";
 import { Main } from "next/document";
-import ServiceItem from "./ServiceItem";
+import ServiceItem from "../components/ServiceItem";
 import content_marketing from "public/content_marketing.jpg";
 import influencer_marketing from "public/influencer_marketing.jpg";
 import public_relation from "public/public_relation.jpg";

@@ -70,14 +70,14 @@ function Navbar() {
 										Blogs
 									</Link>
 									<Link
-										activeClass="testimonials"
-										to="testimonials"
+										activeClass="our_work"
+										to="our_work"
 										smooth={true}
 										offset={50}
 										duration={500}
 										className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
 									>
-										Testimonials
+										Our Work
 									</Link>
 
 									<Link

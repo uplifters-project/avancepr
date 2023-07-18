@@ -80,8 +80,7 @@ export default function Home() {
             <div className="text-5xl text-center font-bold text-yellow-700">
               Our Services
             </div>
-            <p class="text-lg text-center text-gray-600">See What we offer </p>
-            <br></br>
+            
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceItem

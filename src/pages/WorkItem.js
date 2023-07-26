@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const WorkItem = ({title, backgroundImg}) => {
+const WorkItem = ({ title, backgroundImg }) => {
   return (
     <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#F5F5DC] to-[#666362]'>
     <Image className='rounded-xl group-hover:opacity-10' src={backgroundImg} alt='/' /> 
@@ -10,7 +10,6 @@ const WorkItem = ({title, backgroundImg}) => {
         <h3 className='text-2xl text-black font-bold tracking-wider text-center'>{title}</h3>
     </div>
  </div>
-
   )
 }
 

@@ -51,3 +51,12 @@ article li:nth-child(3) {
     transform: translateX(-50%);
   }
 }
+
+@keyframes showLetterByLetter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

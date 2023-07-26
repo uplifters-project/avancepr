@@ -21,6 +21,7 @@ import public_relation from "public/images/public_relation.jpg";
 import social_media_marketing from "public/images/social_media_marketing.jpg";
 import event from "public/event.jpg";
 
+
 const Halign = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
 };
@@ -123,7 +124,7 @@ export default function Home() {
         </VAlign>
         <VAlign>
           <div className="mx-auto my-5">
-            <h2 class="text-5xl text-center font-bold text-yellow-700">
+            <h2 class="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
               Testimonials
             </h2>
             <p class="text-lg text-center text-gray-600">
@@ -137,6 +138,7 @@ export default function Home() {
         </VAlign>
         <InfiniteScroll />
 
+        <br></br>
         {/* Our work Component */}
         <VAlign>
           <div className="mx-auto my-5">
@@ -151,14 +153,12 @@ export default function Home() {
         </VAlign>
 
 
+        <br></br>
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-5xl text-center font-bold text-yellow-700">
-              Latest News
+              We got Featured
             </div>
-            <p class="text-lg text-center text-gray-600">
-              See the Latest News{" "}
-            </p>
             <br></br>
           </div>
           <div className="">

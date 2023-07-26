@@ -20,7 +20,7 @@ export default function InfiniteScroll() {
       <div className="text-5xl text-center font-bold text-yellow-700">
         Our Clients
       </div>
-      <p class="text-lg text-center text-gray-600">Meet our Clients </p>
+      <p class="text-lg text-center text-gray-600">What Clients say about us </p>
       <br />
       <article>
         <div>

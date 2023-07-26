@@ -11,14 +11,15 @@ import Work from "@/components/work";
 import { Main } from "next/document";
 import ServiceItem from "../components/ServiceItem";
 /* import content_marketing from "public/content_marketing.jpg"; */
-import influencer_marketing from "public/influencer_marketing.jpg";
-import public_relation from "public/public_relation.jpg";
-import social_media_marketing from "public/social_media_marketing.jpg";
-import event from "public/event.jpg";
 import Link from "next/link";
 import { WHATSAPP_NO, EMAIL } from "../lib/constants";
 
+/* importing the Images */
 import content_marketing from "public/images/content_marketing2.jpg";
+import influencer_marketing from "public/images/influencer_marketing.jpg";
+import public_relation from "public/images/public_relation.jpg";
+import social_media_marketing from "public/images/social_media_marketing.jpg";
+import event from "public/event.jpg";
 
 const Halign = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
@@ -70,7 +71,7 @@ export default function Home() {
           <div className="max-w-[40%] text-center">Avance PR is a highly regarded and comprehensive PR agency headquartered in Gurugram. Our core expertise lies in cultivating impactful connections with influencers and crafting effective corporate communications strategies. We take pride in offering a diverse range of campaigns tailored to suit the unique needs of our esteemed clientele. Through strategic media engagement, we diligently work towards enhancing brand personality and reputation, bolstering our clients' market presence.
           </div> */}
           <video
-            className="w-full rounded-xl"
+            className="w-full rounded-xl shadow-xl animate-pulse"
             autoPlay
             loop
             muted
@@ -85,7 +86,7 @@ export default function Home() {
             </div>
             
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 ">
             <ServiceItem
               title="Content Marketing"
               backgroundImg={content_marketing}
@@ -105,7 +106,7 @@ export default function Home() {
               tech="Unlocking connections, shaping narratives, building trust."
             />
           </div>
-          <div className="grid md:grid-cols-2 gap-8 w-[66%] mx-auto my-8">
+          <div className="grid md:grid-cols-2 gap-8 w-[66%] mx-auto my-8 ">
             <ServiceItem
               title="Social Media Marketing"
               backgroundImg={social_media_marketing}

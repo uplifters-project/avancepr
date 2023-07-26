@@ -14,34 +14,41 @@ const moreData = [
   { src: "/images/uplifters_logo.png", width: 200, height: 200 },
 ];
 
-export default function InfiniteScroll() {
+const InfiniteScroll: React.FC<{
+  clients: Client[];
+}> = ({ clients }) => {
   return (
     <div className="overflow-clip">
       <div className="text-5xl text-center font-bold text-yellow-700">
         Our Clients
       </div>
-      <p class="text-lg text-center text-gray-600">What Clients say about us </p>
+      <p className="text-lg text-center text-gray-600">
+        What Clients say about us{" "}
+      </p>
       <br />
       <article>
         <div>
           <ul>
-            {data.map((item, index) => (
+            {clients.map((item, index) => (
               <li key={index}>
-                <Image src={item.src} width={item.width} height={item.height} />
+                <img src={item.image} />
               </li>
             ))}
           </ul>
         </div>
-        <div>
+
+        {/* <div>
           <ul>
             {moreData.map((item, index) => (
               <li key={index}>
-                <Image src={item.src} width={item.width} height={item.height} />
+                <img src={item.src} width={item.width} height={item.height} />
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </article>
     </div>
   );
-}
+};
+
+export default InfiniteScroll;

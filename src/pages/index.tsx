@@ -21,7 +21,12 @@ import public_relation from "public/images/public_relation.jpg";
 import social_media_marketing from "public/images/social_media_marketing.jpg";
 import event from "public/event.jpg";
 import { useEffect, useState } from "react";
-import { getTestimonials } from "../lib/apis";
+import {
+  getLatestNews,
+  getOurClients,
+  getOurWork,
+  getTestimonials,
+} from "../lib/apis";
 
 const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
@@ -37,13 +42,21 @@ const VAlign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 export default function Home() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [work, setWork] = useState<Work[]>([]);
+  const [clients, setClients] = useState<Client[]>([]);
+  const [news, setNews] = useState<News[]>([]);
 
   useEffect(() => {
     const loadData = async () => {
       const testimonials = await getTestimonials();
-      console.log(testimonials);
+      const work = await getOurWork();
+      const clients = await getOurClients();
+      const news = await getLatestNews();
 
       setTestimonials(testimonials);
+      setWork(work);
+      setClients(clients);
+      setNews(news);
     };
 
     loadData();
@@ -135,6 +148,7 @@ export default function Home() {
             />
           </div>
         </VAlign>
+
         <VAlign>
           <div className="mx-auto my-5">
             <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
@@ -149,7 +163,8 @@ export default function Home() {
             <Testimonials testimonials={testimonials} />
           </div>
         </VAlign>
-        <InfiniteScroll />
+
+        <InfiniteScroll clients={clients} />
 
         <br></br>
         {/* Our work Component */}
@@ -161,11 +176,12 @@ export default function Home() {
             <br></br>
           </div>
           <div className="">
-            <Work />
+            <Work workItems={work} />
           </div>
         </VAlign>
 
         <br></br>
+
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-5xl text-center font-bold text-yellow-700">
@@ -174,7 +190,7 @@ export default function Home() {
             <br></br>
           </div>
           <div className="">
-            <News />
+            <News newsItems={news} />
           </div>
         </VAlign>
       </Body>

@@ -2,19 +2,18 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import NewsItem from "../pages/NewsItem";
-import content_marketing from "public/content_marketing.jpg";
-import influencer_marketing from "public/influencer_marketing.jpg";
-import public_relation from "public/public_relation.jpg";
 
-export default function News() {
+const News: React.FC<{
+  newsItems: News[];
+}> = ({ newsItems }) => {
   const Testimonial = () => {
     return (
       <div className="">
         {
           <div className="grid md:grid-cols-3 gap-8">
-            <NewsItem title="News 1" backgroundImg={content_marketing} />
-            <NewsItem title="News 2" backgroundImg={influencer_marketing} />
-            <NewsItem title="News 3" backgroundImg={public_relation} />
+            {newsItems.map((item) => (
+              <NewsItem title={item.content} backgroundImg={item.image} />
+            ))}
           </div>
         }
       </div>
@@ -34,4 +33,6 @@ export default function News() {
       <Testimonial />
     </Carousel>
   );
-}
+};
+
+export default News;

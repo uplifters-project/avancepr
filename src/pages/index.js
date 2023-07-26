@@ -132,6 +132,21 @@ export default function Home() {
           </div>
         </VAlign>
         <InfiniteScroll />
+
+        {/* Our work Component */}
+        <VAlign>
+          <div className="mx-auto my-5">
+            <div className="text-5xl text-center font-bold text-yellow-700">
+              Our Work
+            </div>
+            <br></br>
+          </div>
+          <div className="">
+            <Work />
+          </div>
+        </VAlign>
+
+
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-5xl text-center font-bold text-yellow-700">

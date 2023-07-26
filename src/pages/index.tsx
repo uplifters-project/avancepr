@@ -20,13 +20,14 @@ import influencer_marketing from "public/images/influencer_marketing.jpg";
 import public_relation from "public/images/public_relation.jpg";
 import social_media_marketing from "public/images/social_media_marketing.jpg";
 import event from "public/event.jpg";
+import { useEffect, useState } from "react";
+import { getTestimonials } from "../lib/apis";
 
-
-const Halign = ({ children }) => {
+const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
 };
 
-const VAlign = ({ children }) => {
+const VAlign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex flex-col m-10 justify-center align-middle justify-items-center p-5 mx-auto">
       {children}
@@ -35,6 +36,19 @@ const VAlign = ({ children }) => {
 };
 
 export default function Home() {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const testimonials = await getTestimonials();
+      console.log(testimonials);
+
+      setTestimonials(testimonials);
+    };
+
+    loadData();
+  }, []);
+
   const Whatsapp = () => {
     return (
       <div className="fixed right-6 bottom-6">
@@ -85,7 +99,6 @@ export default function Home() {
             <div className="text-5xl text-center font-bold text-yellow-700">
               Our Services
             </div>
-            
           </div>
           <div className="grid md:grid-cols-3 gap-8 ">
             <ServiceItem
@@ -124,16 +137,16 @@ export default function Home() {
         </VAlign>
         <VAlign>
           <div className="mx-auto my-5">
-            <h2 class="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
+            <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
               Testimonials
             </h2>
-            <p class="text-lg text-center text-gray-600">
+            <p className="text-lg text-center text-gray-600">
               What others say about us
             </p>
           </div>
 
           <div className="">
-            <Testimonials />
+            <Testimonials testimonials={testimonials} />
           </div>
         </VAlign>
         <InfiniteScroll />
@@ -151,7 +164,6 @@ export default function Home() {
             <Work />
           </div>
         </VAlign>
-
 
         <br></br>
         <VAlign>

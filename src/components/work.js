@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
-import NewsItem from '../pages/NewsItem';
+import WorkItem from '../pages/WorkItem';
 import content_marketing from "public/content_marketing.jpg";
 import influencer_marketing from "public/influencer_marketing.jpg";
 import public_relation from "public/public_relation.jpg";

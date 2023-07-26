@@ -7,15 +7,18 @@ import Gallery from "../components/clientGallery";
 import InfiniteScroll from "../components/infiniteScroll";
 import Testimonials from "@/components/testimonial";
 import News from "@/components/news";
+import Work from "@/components/work";
 import { Main } from "next/document";
 import ServiceItem from "../components/ServiceItem";
-import content_marketing from "public/content_marketing.jpg";
+/* import content_marketing from "public/content_marketing.jpg"; */
 import influencer_marketing from "public/influencer_marketing.jpg";
 import public_relation from "public/public_relation.jpg";
 import social_media_marketing from "public/social_media_marketing.jpg";
 import event from "public/event.jpg";
 import Link from "next/link";
 import { WHATSAPP_NO, EMAIL } from "../lib/constants";
+
+import content_marketing from "public/images/content_marketing2.jpg";
 
 const Halign = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;

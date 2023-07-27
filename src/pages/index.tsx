@@ -118,19 +118,16 @@ export default function Home() {
               title="Content Marketing"
               backgroundImg={content_marketing}
               projectUrl=""
-              tech="Brand potential unleashed through strategic content marketing."
             />
             <ServiceItem
               title="Influencer Marketing"
               backgroundImg={influencer_marketing}
               projectUrl=""
-              tech="Authentic influencer marketing unlocks brand potential and captivates."
             />
             <ServiceItem
               title="Public Relation"
               backgroundImg={public_relation}
               projectUrl=""
-              tech="Unlocking connections, shaping narratives, building trust."
             />
           </div>
           <div className="grid md:grid-cols-2 gap-8 w-[66%] mx-auto my-8 ">
@@ -138,13 +135,11 @@ export default function Home() {
               title="Social Media Marketing"
               backgroundImg={social_media_marketing}
               projectUrl=""
-              tech="Elevate your brands online presence with strategic social media marketing."
             />
             <ServiceItem
               title="Event Management"
               backgroundImg={event}
               projectUrl=""
-              tech="Creating unforgettable experiences through flawless event management."
             />
           </div>
         </VAlign>

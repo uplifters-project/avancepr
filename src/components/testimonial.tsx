@@ -16,10 +16,10 @@ const Testimonials: React.FC<{ testimonials: Testimonial[] }> = ({
             <div className="lg:grid lg:grid-cols-3 lg:gap-x-2">
               {testimonials.map((testimonial) => {
                 return (
-                  <div className="p-4 text-gray-800 rounded-lg shadow-md">
-                    <div className="mb-2">
+                  <div className="p-4 text-gray-800 rounded-lg shadow-lg w-full">
+                    <div className="mb-4">
                       <div className="flex flex-col items-center justify-center">
-                        <div className="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                        <div className="w-24 h-24 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
                           <img
                             src={testimonial.image}
                             alt="img"

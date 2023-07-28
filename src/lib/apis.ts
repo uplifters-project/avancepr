@@ -50,7 +50,7 @@ const getLatestNews = async (): Promise<News[]> => {
 
 const submitEnquiryForm = async (data: EnquiryFormType): Promise<boolean> => {
   try {
-    const res = await server.post("/testimonials", data, {});
+    const res = await server.post("/enquiry/", data, {});
 
     return true;
   } catch (e) {

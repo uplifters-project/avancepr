@@ -1,57 +1,65 @@
-import React, { Component } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import Image from "next/image";
-import { useState, useEffect } from "react";
+import React, { useRef } from "react";
+import AliceCarousel, { Responsive } from "react-alice-carousel";
+import TestimonialCard from "./cards/testimonial-card";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const Testimonials: React.FC<{ testimonials: Testimonial[] }> = ({
   testimonials,
 }) => {
-  const Testimonial = () => {
-    return (
-      <div className="flex flex-col  m-1 rounded-xl p-10 mx-5">
-        {
-          <>
-            <div className="mb-8 text-center"></div>
-            <div className="lg:grid lg:grid-cols-3 lg:gap-x-2">
-              {testimonials.map((testimonial) => {
-                return (
-                  <div className="p-4 text-gray-800 rounded-lg shadow-lg w-full">
-                    <div className="mb-4">
-                      <div className="flex flex-col items-center justify-center">
-                        <div className="w-24 h-24 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
-                          <img
-                            src={testimonial.image}
-                            alt="img"
-                            className="object-cover object-center w-full h-full"
-                          />
-                        </div>
-                        <h5 className="font-bold text-indigo-600">
-                          {testimonial.name}
-                        </h5>
-                        <p className="text-sm text-gray-600">
-                          {testimonial.designation}
-                        </p>
-                      </div>
-                      <p className="mb-2 text-center text-gray-600 ">
-                        "{testimonial.content}"
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        }
-      </div>
-    );
+  const carouselRef = useRef<AliceCarousel>(null);
+
+  if (testimonials.length === 0) {
+    return <></>;
+  }
+
+  const responsive: Responsive = {
+    0: { items: 1 },
+    750: { items: 2 },
+    1000: { items: 3 },
+    1350: {
+      items: 4,
+    },
   };
 
   return (
-    <Carousel emulateTouch infiniteLoop className="w-2/3 mx-auto">
-      <Testimonial />
-      <Testimonial />
-    </Carousel>
+    <div>
+      <AliceCarousel
+        ref={carouselRef}
+        responsive={responsive}
+        autoHeight
+        autoPlay
+        autoPlayInterval={1500}
+        infinite
+        disableDotsControls
+        disableButtonsControls
+        controlsStrategy="alternate"
+        items={testimonials.map((testimonial) => (
+          <TestimonialCard testimonial={testimonial} />
+        ))}
+      />
+
+      {/* <IconButton
+        onClick={(e) => carouselRef.current?.slidePrev(e)}
+        style={{
+          position: "absolute",
+          left: 0,
+          top: "calc(50% - 1.5rem)",
+        }}
+      >
+        <Icons />
+      </IconButton>
+
+      <IconButton
+        onClick={(e) => carouselRef.current?.slideNext(e)}
+        style={{
+          position: "absolute",
+          right: 0,
+          top: "calc(50% - 1.5rem)",
+        }}
+      >
+        <KeyboardArrowRightIcon />
+      </IconButton> */}
+    </div>
   );
 };
 

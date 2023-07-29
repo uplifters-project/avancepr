@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["dummyimage.com"],
+    domains: ["localhost"],
   },
   env: {
     WHATSAPP_NO: process.env.WHATSAPP_NO,

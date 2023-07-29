@@ -4,13 +4,10 @@ import Footer from "../components/footer";
 import Body from "../components/body";
 import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
-import InfiniteScroll from "../components/infiniteScroll";
 import Testimonials from "@/components/testimonial";
 import News from "@/components/news";
 import Work from "@/components/work";
-import { Main } from "next/document";
 import ServiceItem from "../components/ServiceItem";
-/* import content_marketing from "public/content_marketing.jpg"; */
 import Link from "next/link";
 import { WHATSAPP_NO, EMAIL } from "../lib/constants";
 
@@ -27,6 +24,7 @@ import {
   getOurWork,
   getTestimonials,
 } from "../lib/apis";
+import ClientCarousel from "@/components/client-carousel";
 
 const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
@@ -144,6 +142,7 @@ export default function Home() {
           </div>
         </VAlign>
 
+        {/* Testimonials */}
         <VAlign>
           <div className="mx-auto my-5">
             <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
@@ -154,12 +153,22 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="">
-            <Testimonials testimonials={testimonials} />
-          </div>
+          <Testimonials testimonials={testimonials} />
         </VAlign>
 
-        <InfiniteScroll clients={clients} />
+        {/* Clients */}
+        <VAlign>
+          <div className="mx-auto my-5">
+            <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
+              Out Clients
+            </h2>
+            <p className="text-lg text-center text-gray-600">
+              What Clients say about us
+            </p>
+          </div>
+
+          <ClientCarousel clients={...clients} rowCount={2} />
+        </VAlign>
 
         <br></br>
         {/* Our work Component */}

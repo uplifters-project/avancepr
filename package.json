@@ -26,6 +26,7 @@
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
     "firebase": "^10.0.0",
+    "lucide-react": "^0.263.1",
     "next": "13.3.0",
     "paper": "^0.12.17",
     "postcss": "8.4.23",

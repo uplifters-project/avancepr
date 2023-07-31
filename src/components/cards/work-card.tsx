@@ -2,15 +2,14 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import Image from "next/image";
 
 const WorkCard: React.FC<{ work: Work }> = ({ work }) => {
   return (
-    <Card className="min-w-[250px] max-w-[300px] h-full mx-auto">
-      <CardHeader>
+    <Card className="min-w-[250px] max-w-[300px] h-auto mx-auto">
+      <CardHeader className="p-2 ">
         <Image
           src={work.image}
           alt="Work Image"
@@ -19,10 +18,10 @@ const WorkCard: React.FC<{ work: Work }> = ({ work }) => {
           className="h-[10rem] w-full max-w-full rounded-lg object-cover"
         />
       </CardHeader>
-      <CardContent className="flex flex-col gap-y-3 text-center">
-        <CardDescription>{work.content}</CardDescription>
+
+      <CardContent className="text-center w-full overflow-auto mt-2">
+        <CardDescription className="pt-2">{work.content}</CardDescription>
       </CardContent>
-      <CardFooter />
     </Card>
   );
 };

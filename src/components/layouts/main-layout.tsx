@@ -9,7 +9,7 @@ import { EMAIL, WHATSAPP_NO } from "@/lib/constants";
 
 const Whatsapp = () => {
   return (
-    <div className="fixed right-6 bottom-6">
+    <div className="fixed right-6 bottom-6 z-50">
       <Link href={`mailto:${EMAIL}`} target="_blank">
         <Image
           src="/email_icon.jpg"
@@ -42,7 +42,7 @@ const MainLayout: React.FC<{
   return (
     <div>
       <Header />
-      <div className="min-h-[300px]">
+      <div className="min-h-[300px] pb-16">
         <div className={className}>{children}</div>
       </div>
       <Whatsapp />

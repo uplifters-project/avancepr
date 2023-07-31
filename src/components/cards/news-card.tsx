@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import Image from "next/image";
@@ -10,7 +9,7 @@ import Image from "next/image";
 const NewsCard: React.FC<{ news: News }> = ({ news }) => {
   return (
     <Card className="min-w-[250px] max-w-[300px] h-full mx-auto">
-      <CardHeader>
+      <CardHeader className="p-2">
         <Image
           src={news.image}
           alt="Work Image"
@@ -19,10 +18,10 @@ const NewsCard: React.FC<{ news: News }> = ({ news }) => {
           className="h-[10rem] w-full max-w-full rounded-lg object-cover"
         />
       </CardHeader>
-      <CardContent className="flex flex-col gap-y-3 text-center">
+
+      <CardContent className="text-center w-full overflow-auto mt-2">
         <CardDescription>{news.content}</CardDescription>
       </CardContent>
-      <CardFooter />
     </Card>
   );
 };

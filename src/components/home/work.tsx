@@ -23,7 +23,7 @@ const OurWork: React.FC<{ workItems: Work[] }> = ({ workItems: workItems }) => {
   };
 
   return (
-    <div className="relative h-100">
+    <div className="relative">
       <AliceCarousel
         ref={carouselRef}
         responsive={responsive}

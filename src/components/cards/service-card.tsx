@@ -1,21 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const ServiceItem = ({ title, backgroundImg, projectUrl }) => {
+const ServiceCard: React.FC<{ title: string; image: string; url: string }> = ({
+  title,
+  image,
+  url,
+}) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#FFFF8F] to-[#FFAA33]">
+    <div className="relative flex items-center justify-center h-auto w-[300px] shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#FFFF8F] to-[#FFAA33]">
       <Image
         className="rounded-xl group-hover:opacity-10"
-        src={backgroundImg}
-        alt="/"
+        src={image}
+        alt={title}
+        width={300}
+        height={200}
       />
       <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] overflow-wrap: break-word;">
         <h3 className="text-2xl text-black font-bold tracking-wider text-center">
           {title}
         </h3>
+
         <br></br>
-        <Link href={projectUrl}>
+
+        <Link href={url}>
           <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
             More Info
           </p>
@@ -25,4 +32,4 @@ const ServiceItem = ({ title, backgroundImg, projectUrl }) => {
   );
 };
 
-export default ServiceItem;
+export default ServiceCard;

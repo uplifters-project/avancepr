@@ -9,8 +9,6 @@ import Image from "next/image";
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
 }) => {
-  console.log(testimonial);
-
   return (
     <Card className="w-[300px] mx-auto">
       <CardHeader>
@@ -19,10 +17,6 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
           alt={testimonial.name}
           height={500}
           width={500}
-          onErrorCapture={(event) => {
-            event.currentTarget.onerror = null;
-            event.currentTarget.src = "/Logo.jpg";
-          }}
           className="h-24 w-24 rounded-full mx-auto border"
         />
       </CardHeader>

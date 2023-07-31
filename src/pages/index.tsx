@@ -1,12 +1,5 @@
 import Testimonials from "@/components/home/testimonial";
-import ServiceItem from "../components/ServiceItem";
 
-/* importing the Images */
-import content_marketing from "public/images/content_marketing2.jpg";
-import influencer_marketing from "public/images/influencer_marketing.jpg";
-import public_relation from "public/images/public_relation.jpg";
-import social_media_marketing from "public/images/social_media_marketing.jpg";
-import event from "public/event.jpg";
 import { useEffect, useState } from "react";
 import {
   getLatestNews,
@@ -18,16 +11,35 @@ import ClientCarousel from "@/components/home/client-carousel";
 import OurWork from "@/components/home/work";
 import Featured from "@/components/home/featured";
 import MainLayout from "@/components/layouts/main-layout";
+import ServiceCard from "@/components/cards/service-card";
+import { servicesData } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
-const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <div className="flex justify-around p-5 m-10">{children}</div>;
-};
-
-const VAlign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const HomeSection: React.FC<{
+  id: string;
+  heading: string;
+  label: string;
+  children: React.ReactNode;
+  full?: boolean;
+}> = ({ id, heading, label, children, full = false }) => {
   return (
-    <div className="flex flex-col m-10 justify-center align-middle justify-items-center p-5 mx-auto">
+    <section
+      id={id}
+      className={cn(
+        "flex flex-col justify-center my-[5%]",
+        full ? "" : "container"
+      )}
+    >
+      <div className="mx-auto mt-12 mb-8">
+        <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
+          {heading}
+        </h2>
+
+        <p className="text-lg text-center text-gray-600 mt-2">{label}</p>
+      </div>
+
       {children}
-    </div>
+    </section>
   );
 };
 
@@ -55,12 +67,7 @@ export default function Home() {
 
   return (
     <MainLayout>
-      <Halign>
-        {/* <div className="my-5">
-            <div className="text-4xl">About Us</div>
-          </div>
-          <div className="max-w-[40%] text-center">Avance PR is a highly regarded and comprehensive PR agency headquartered in Gurugram. Our core expertise lies in cultivating impactful connections with influencers and crafting effective corporate communications strategies. We take pride in offering a diverse range of campaigns tailored to suit the unique needs of our esteemed clientele. Through strategic media engagement, we diligently work towards enhancing brand personality and reputation, bolstering our clients' market presence.
-          </div> */}
+      <div className="p-5 m-10">
         <video
           className="w-full rounded-xl shadow-xl animate-pulse"
           autoPlay
@@ -68,101 +75,49 @@ export default function Home() {
           muted
           src="/creative.mp4"
         />
-      </Halign>
+      </div>
 
-      <VAlign>
-        <div className="mx-auto my-5">
-          <div className="text-5xl text-center font-bold text-yellow-700">
-            Our Services
-          </div>
+      {/* Services */}
+      <HomeSection
+        id="services"
+        heading="Our Services"
+        label="What others say about us"
+      >
+        <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
+          {servicesData.map((item) => (
+            <ServiceCard {...item} />
+          ))}
         </div>
-        <div className="grid md:grid-cols-3 gap-8 ">
-          <ServiceItem
-            title="Content Marketing"
-            backgroundImg={content_marketing}
-            projectUrl=""
-          />
-          <ServiceItem
-            title="Influencer Marketing"
-            backgroundImg={influencer_marketing}
-            projectUrl=""
-          />
-          <ServiceItem
-            title="Public Relation"
-            backgroundImg={public_relation}
-            projectUrl=""
-          />
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 w-[66%] mx-auto my-8 ">
-          <ServiceItem
-            title="Social Media Marketing"
-            backgroundImg={social_media_marketing}
-            projectUrl=""
-          />
-          <ServiceItem
-            title="Event Management"
-            backgroundImg={event}
-            projectUrl=""
-          />
-        </div>
-      </VAlign>
+      </HomeSection>
 
       {/* Testimonials */}
-      <VAlign>
-        <div className="mx-auto my-5">
-          <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
-            Testimonials
-          </h2>
-          <p className="text-lg text-center text-gray-600">
-            What others say about us
-          </p>
-        </div>
-
+      <HomeSection
+        id="testimonials"
+        heading="Testimonials"
+        label="What others say about us"
+      >
         <Testimonials testimonials={testimonials} />
-      </VAlign>
+      </HomeSection>
 
       {/* Clients */}
-      <VAlign>
-        <div className="mx-auto my-5">
-          <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
-            Out Clients
-          </h2>
-          <p className="text-lg text-center text-gray-600">
-            What Clients say about us
-          </p>
-        </div>
-
+      <HomeSection
+        id="clients"
+        heading="Our Clients"
+        label="What Clients say about us"
+        full={true}
+      >
         <ClientCarousel clients={...clients} rowCount={2} />
-      </VAlign>
-
-      <br></br>
+      </HomeSection>
 
       {/* Our Work */}
-      <VAlign>
-        <div className="mx-auto my-5">
-          <div className="text-5xl text-center font-bold text-yellow-700">
-            Our Work
-          </div>
-          <br></br>
-        </div>
-
+      <HomeSection id="work" heading="Our Work" label="">
         <OurWork workItems={work} />
-      </VAlign>
-
-      <br></br>
+      </HomeSection>
 
       {/* Featured */}
-      <VAlign>
-        <div className="mx-auto my-5">
-          <div className="text-5xl text-center font-bold text-yellow-700">
-            We got Featured
-          </div>
-          <br></br>
-        </div>
-        <div className="">
-          <Featured newsItems={news} />
-        </div>
-      </VAlign>
+      <HomeSection id="featured" heading="We got Featured" label="">
+        <Featured newsItems={news} />
+      </HomeSection>
     </MainLayout>
   );
 }

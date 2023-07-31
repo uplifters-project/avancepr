@@ -26,18 +26,18 @@ function Navbar() {
                   />
                 </div>
                 <h1 className=" font-bold text-xl cursor-pointer">
-                  Avance<span className="text-yellow-900/70">PR</span>
+                  Avance <span className="text-yellow-900/70">PR</span>
                 </h1>
               </div>
               <div className="hidden md:block">
-                <div className="ml-10 flex space-x-4 flex justify-center items-center">
+                <div className="ml-10 flex space-x-4 justify-center items-center">
                   <Link
                     activeClass="about"
                     to="about"
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
+                    className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     About Us
                   </Link>
@@ -47,9 +47,9 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
+                    className="cursor-pointer tet-black  text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
-                    Our Services
+                    x Our Services
                   </Link>
 
                   <Link
@@ -58,7 +58,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
+                    className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Our Clients
                   </Link>
@@ -68,7 +68,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
+                    className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Blogs
                   </Link>
@@ -78,7 +78,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
+                    className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Our Work
                   </Link>
@@ -86,21 +86,21 @@ function Navbar() {
                   <Link
                     // activeClass="contact"
                     // to="contact"
-                    href="/contact"
+                    to="/contact"
                     // smooth={true}
                     // offset={50}
                     // duration={500}
-                    className="cursor-pointer text-black font-semibold px-3 py-2 text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
+                    className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Contact Us
                   </Link>
 
                   <Link>
                     <div>
-                      <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">
+                      <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
                         +91-9899707349
                       </p>
-                      <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">
+                      <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
                         {" "}
                         info@avancepr.in
                       </p>
@@ -126,10 +126,10 @@ function Navbar() {
             <div className="mr-12 flex md:hidden ">
               <Link>
                 <div>
-                  <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">
+                  <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
                     +91-9899707349
                   </p>
-                  <p className="cursor-pointer text-black font-semibold text-sm text-black hover:text-white hover:underline font-medium">
+                  <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
                     {" "}
                     info@avancepr.in
                   </p>

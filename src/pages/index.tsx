@@ -6,7 +6,6 @@ import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
 import Testimonials from "@/components/testimonial";
 import News from "@/components/news";
-import Work from "@/components/work";
 import ServiceItem from "../components/ServiceItem";
 import Link from "next/link";
 import { WHATSAPP_NO, EMAIL } from "../lib/constants";
@@ -25,6 +24,7 @@ import {
   getTestimonials,
 } from "../lib/apis";
 import ClientCarousel from "@/components/client-carousel";
+import WorkCard from "@/components/cards/work-card";
 
 const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
@@ -39,7 +39,7 @@ const VAlign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 export default function Home() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [testimonials, setTestimonials] = useState<Work[]>([]);
   const [work, setWork] = useState<Work[]>([]);
   const [clients, setClients] = useState<Client[]>([]);
   const [news, setNews] = useState<News[]>([]);
@@ -78,6 +78,7 @@ export default function Home() {
             src="/whatsapp.webp"
             width={80}
             height={80}
+            alt="Whatsapp"
             className="cursor-pointer hover:drop-shadow-md transition-all duration-100"
             onClick={() => {}}
           />
@@ -180,7 +181,9 @@ export default function Home() {
             <br></br>
           </div>
           <div className="">
-            <Work workItems={work} />
+            {work.map((item) => (
+              <WorkCard work={item} />
+            ))}
           </div>
         </VAlign>
 

@@ -5,7 +5,7 @@ import Body from "../components/body";
 import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
 import Testimonials from "@/components/home/testimonial";
-import News from "@/components/home/news";
+import News from "@/components/home/featured";
 import ServiceItem from "../components/ServiceItem";
 import Link from "next/link";
 import { WHATSAPP_NO, EMAIL } from "../lib/constants";
@@ -26,6 +26,7 @@ import {
 import ClientCarousel from "@/components/home/client-carousel";
 import WorkCard from "@/components/cards/work-card";
 import OurWork from "@/components/home/work";
+import Featured from "@/components/home/featured";
 
 const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
@@ -189,6 +190,7 @@ export default function Home() {
 
         <br></br>
 
+        {/* Featured */}
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-5xl text-center font-bold text-yellow-700">
@@ -197,7 +199,7 @@ export default function Home() {
             <br></br>
           </div>
           <div className="">
-            <News newsItems={news} />
+            <Featured newsItems={news} />
           </div>
         </VAlign>
       </Body>

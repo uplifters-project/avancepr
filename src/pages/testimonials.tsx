@@ -1,29 +1,32 @@
-import { useEffect, useState } from "react";
-import { getTestimonials } from "../lib/apis";
+import { getTestimonials } from "@/lib/apis";
 import TestimonialCard from "@/components/cards/testimonial-card";
-import MainLayout from "@/components/layouts/main-layout";
+import PageLaypout from "@/components/layouts/page-layout";
+import { GetStaticProps, NextPage } from "next";
+import { REVALIDATE_TIME } from "@/lib/constants";
 
-export default function TestimonialsPage() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-
-  useEffect(() => {
-    const loadData = async () => {
-      const testimonials = await getTestimonials();
-      setTestimonials([...testimonials]);
-    };
-
-    loadData();
-  }, []);
-
+const TestimonialsPage: NextPage<{
+  testimonials: Testimonial[];
+}> = ({ testimonials }) => {
   return (
-    <MainLayout className="py-24">
-      <div className="container">
-        <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-6">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard testimonial={testimonial} />
-          ))}
-        </div>
+    <PageLaypout heading="Testimonials" label="What others say about us">
+      <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
+        {testimonials.map((testimonial) => (
+          <TestimonialCard testimonial={testimonial} />
+        ))}
       </div>
-    </MainLayout>
+    </PageLaypout>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const testimonials = await getTestimonials();
+
+  return {
+    props: {
+      testimonials,
+    },
+    revalidate: REVALIDATE_TIME.TESTIMONIALS_PAGE,
+  };
+};
+
+export default TestimonialsPage;

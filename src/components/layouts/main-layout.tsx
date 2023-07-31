@@ -6,6 +6,7 @@ import Footer from "@/components/app/footer";
 import Link from "next/link";
 import Image from "next/image";
 import { EMAIL, WHATSAPP_NO } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 const Whatsapp = () => {
   return (
@@ -42,9 +43,7 @@ const MainLayout: React.FC<{
   return (
     <div>
       <Header />
-      <div className="min-h-[300px] pb-16">
-        <div className={className}>{children}</div>
-      </div>
+      <div className={cn("min-h-[300px] pb-16", className)}>{children}</div>
       <Whatsapp />
       <Footer />
       <PopupLayout /> {/* Add the Layout component here */}

@@ -1,6 +1,6 @@
 import { submitEnquiryForm } from "@/lib/apis";
 import React, { useState } from "react";
-import { toast } from "./ui/use-toast";
+import { toast } from "../ui/use-toast";
 
 const Popup = ({ setShow }) => {
   const [fullName, setFullName] = useState("");

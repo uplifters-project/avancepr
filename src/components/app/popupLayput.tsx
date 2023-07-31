@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Popup from "../components/Popup";
+import Popup from "@/components/app/Popup";
 
 const PopupLayout = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -14,12 +14,7 @@ const PopupLayout = () => {
     };
   }, []);
 
-  return (
-    <div>
-      {/* Rest of your layout code */}
-      {showPopup && <Popup setShow={setShowPopup} />}
-    </div>
-  );
+  return <div>{showPopup && <Popup setShow={setShowPopup} />}</div>;
 };
 
 export default PopupLayout;

@@ -1,7 +1,7 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import NewsItem from "../pages/NewsItem";
+import NewsItem from "../../pages/NewsItem";
 
 const News: React.FC<{
   newsItems: News[];

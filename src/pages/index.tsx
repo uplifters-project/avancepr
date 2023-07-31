@@ -4,8 +4,8 @@ import Footer from "../components/footer";
 import Body from "../components/body";
 import PopupLayout from "./popupLayput";
 import Gallery from "../components/clientGallery";
-import Testimonials from "@/components/testimonial";
-import News from "@/components/news";
+import Testimonials from "@/components/home/testimonial";
+import News from "@/components/home/news";
 import ServiceItem from "../components/ServiceItem";
 import Link from "next/link";
 import { WHATSAPP_NO, EMAIL } from "../lib/constants";
@@ -23,8 +23,9 @@ import {
   getOurWork,
   getTestimonials,
 } from "../lib/apis";
-import ClientCarousel from "@/components/client-carousel";
+import ClientCarousel from "@/components/home/client-carousel";
 import WorkCard from "@/components/cards/work-card";
+import OurWork from "@/components/home/work";
 
 const Halign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <div className="flex justify-around p-5 m-10">{children}</div>;
@@ -39,7 +40,7 @@ const VAlign: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 export default function Home() {
-  const [testimonials, setTestimonials] = useState<Work[]>([]);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [work, setWork] = useState<Work[]>([]);
   const [clients, setClients] = useState<Client[]>([]);
   const [news, setNews] = useState<News[]>([]);
@@ -68,6 +69,7 @@ export default function Home() {
             src="/email_icon.jpg"
             width={80}
             height={80}
+            alt="Email"
             className="cursor-pointer hover:drop-shadow-md transition-all duration-100 mx-auto"
             onClick={() => {}}
           />
@@ -172,7 +174,8 @@ export default function Home() {
         </VAlign>
 
         <br></br>
-        {/* Our work Component */}
+
+        {/* Our Work */}
         <VAlign>
           <div className="mx-auto my-5">
             <div className="text-5xl text-center font-bold text-yellow-700">
@@ -180,11 +183,8 @@ export default function Home() {
             </div>
             <br></br>
           </div>
-          <div className="">
-            {work.map((item) => (
-              <WorkCard work={item} />
-            ))}
-          </div>
+
+          <OurWork workItems={work} />
         </VAlign>
 
         <br></br>

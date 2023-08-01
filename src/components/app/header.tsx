@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+
 import Image from "next/image";
 
 function Navbar() {
@@ -84,71 +84,63 @@ function Navbar() {
                   </Link>
 
                   <Link
-                    // activeClass="contact"
-                    // to="contact"
                     to="/contact"
-                    // smooth={true}
-                    // offset={50}
-                    // duration={500}
                     className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Contact Us
                   </Link>
 
-                  <Link>
-                    <div>
-                      <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                        +91-9899707349
-                      </p>
-                      <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                        {" "}
-                        info@avancepr.in
-                      </p>
-                      <div className="flex space-x-2 mt-2 px-4">
-                        <FaInstagram
-                          className="text-2xl cursor-pointer hover:text-white"
-                          size={15}
-                        />
-                        <FaTwitter
-                          className="text-2xl cursor-pointer hover:text-white"
-                          size={15}
-                        />
-                        <FaLinkedin
-                          className="text-2xl cursor-pointer hover:text-white"
-                          size={15}
-                        />
-                      </div>
+                  <div>
+                    <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+                      +91-9899707349
+                    </p>
+                    <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+                      {" "}
+                      info@avancepr.in
+                    </p>
+                    <div className="flex space-x-2 mt-2 px-4">
+                      <FaInstagram
+                        className="text-2xl cursor-pointer hover:text-white"
+                        size={15}
+                      />
+                      <FaTwitter
+                        className="text-2xl cursor-pointer hover:text-white"
+                        size={15}
+                      />
+                      <FaLinkedin
+                        className="text-2xl cursor-pointer hover:text-white"
+                        size={15}
+                      />
                     </div>
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="mr-12 flex md:hidden ">
-              <Link>
-                <div>
-                  <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                    +91-9899707349
-                  </p>
-                  <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                    {" "}
-                    info@avancepr.in
-                  </p>
-                  <div className="flex space-x-2 mt-2 px-4">
-                    <FaInstagram
-                      className="text-2xl cursor-pointer hover:text-white"
-                      size={15}
-                    />
-                    <FaTwitter
-                      className="text-2xl cursor-pointer hover:text-white"
-                      size={15}
-                    />
-                    <FaLinkedin
-                      className="text-2xl cursor-pointer hover:text-white"
-                      size={15}
-                    />
-                  </div>
+              <div>
+                <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+                  +91-9899707349
+                </p>
+                <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+                  {" "}
+                  info@avancepr.in
+                </p>
+                <div className="flex space-x-2 mt-2 px-4">
+                  <FaInstagram
+                    className="text-2xl cursor-pointer hover:text-white"
+                    size={15}
+                  />
+                  <FaTwitter
+                    className="text-2xl cursor-pointer hover:text-white"
+                    size={15}
+                  />
+                  <FaLinkedin
+                    className="text-2xl cursor-pointer hover:text-white"
+                    size={15}
+                  />
                 </div>
-              </Link>
+              </div>
+
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"

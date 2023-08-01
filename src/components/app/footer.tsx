@@ -15,6 +15,7 @@ function Footer() {
               width={130}
               height={130}
               className="mx-auto"
+              alt="Logo"
             />
             <div className="text-black font-bold text-3xl pb-6 mx-auto text-center">
               Avance<span className="text-yellow-900">PR</span>

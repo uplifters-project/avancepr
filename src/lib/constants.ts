@@ -6,4 +6,5 @@ export const REVALIDATE_TIME = {
   CLIENT_PAGE: 60 * 60 * 24,
   WORK_PAGE: 60 * 60 * 24,
   FEATURED_PAGE: 60 * 60 * 24,
+  FAQPAGE: 60 * 60 * 24 * 7,
 };

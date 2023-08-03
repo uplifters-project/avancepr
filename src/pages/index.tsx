@@ -12,8 +12,9 @@ import OurWork from "@/components/home/work";
 import Featured from "@/components/home/featured";
 import MainLayout from "@/components/layouts/main-layout";
 import ServiceCard from "@/components/cards/service-card";
-import { servicesData } from "@/lib/data";
+import { faqData, servicesData } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import FAQs from "@/components/app/faq";
 
 const HomeSection: React.FC<{
   id: string;
@@ -117,6 +118,10 @@ export default function Home() {
       {/* Featured */}
       <HomeSection id="featured" heading="We got Featured" label="">
         <Featured newsItems={news} />
+      </HomeSection>
+
+      <HomeSection id="faq" heading="FAQ" label="All your question answered">
+        <FAQs faq={faqData} />
       </HomeSection>
     </MainLayout>
   );

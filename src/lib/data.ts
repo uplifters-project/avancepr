@@ -25,3 +25,15 @@ export const servicesData = [
     url: "#",
   },
 ];
+
+// TODO: Populate data
+export const faqData: FAQ[] = [
+  {
+    title: "Social Media Marketing",
+    description: "Social Media Marketing",
+  },
+  {
+    title: "Public Relation",
+    description: "Public Relation",
+  },
+];

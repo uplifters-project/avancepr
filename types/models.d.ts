@@ -42,3 +42,8 @@ interface EnquiryFormType {
   company_name: string;
   enquiry: string;
 }
+
+interface FAQ {
+  title: string;
+  description: string;
+}

@@ -14,7 +14,7 @@ const PopupLayout = () => {
     };
   }, []);
 
-  return <div>{showPopup && <Popup setShow={setShowPopup} />}</div>;
+  return <div>{<Popup setShow={setShowPopup} open={showPopup} />}</div>;
 };
 
 export default PopupLayout;

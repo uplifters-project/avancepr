@@ -136,7 +136,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center text-center  p-5 bg-black">
+      <div className="flex flex-col justify-center items-center text-center  p-2 m-0 bg-black">
         <h1 className=" text-yellow-300/80 font-semibold">
           © 2023 All rights reserved by{" "}
           <span className="hover:text-white font-semibold cursor-pointer">

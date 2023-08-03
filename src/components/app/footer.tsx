@@ -115,6 +115,24 @@ function Footer() {
                 </p>
               </div>
             </li>
+            <li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-0 rounded-md font-medium">
+              <div
+                className="flex items-center"
+                style={{ marginBottom: "10px" }}
+              >
+                <div className="rounded-full bg-white border border-black p-2">
+                  <FaEnvelope className="text-black text-1xl cursor-pointer hover:text-orange-600" />
+                </div>
+                <p className="ml-2">
+                  <a
+                    href="mailto:info@avancepr.in"
+                    className="text-black hover:underline"
+                  >
+                    ritika@avancepr.in
+                  </a>
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

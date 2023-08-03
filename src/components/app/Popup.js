@@ -75,8 +75,8 @@ const Popup = ({ setShow, open }) => {
     <Dialog open={open} onOpenChange={setShow}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Inquiry</DialogTitle>
-          <DialogDescription>Send us your inquiry</DialogDescription>
+          <DialogTitle className="text-yellow-700">SEND US YOUR INQUIRY</DialogTitle>
+          <DialogDescription></DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -133,8 +133,8 @@ const Popup = ({ setShow, open }) => {
           </div>
         </form>
 
-        <DialogFooter>
-          <Button onClick={handleSubmit} className="">
+        <DialogFooter className="flex justify-center">
+          <Button onClick={handleSubmit} className=" bg-yellow-700  hover:bg-yellow-600 text-sm">
             Send Request
           </Button>
         </DialogFooter>

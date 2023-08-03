@@ -49,7 +49,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer tet-black  text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
-                    x Our Services
+                    Our Services
                   </Link>
 
                   <Link

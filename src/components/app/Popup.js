@@ -133,7 +133,7 @@ const Popup = ({ setShow, open }) => {
           </div>
         </form>
 
-        <DialogFooter className="flex justify-center">
+        <DialogFooter className="flex flex-col justify-center">
           <Button onClick={handleSubmit} className=" bg-yellow-700  hover:bg-yellow-600 text-sm">
             Send Request
           </Button>

@@ -17,8 +17,8 @@ const FAQs: React.FC<{
       <Accordion type="single" collapsible>
         {faq.map((item, i) => (
           <AccordionItem value={i.toString()}>
-            <AccordionTrigger>{item.title}</AccordionTrigger>
-            <AccordionContent>{item.description}</AccordionContent>
+            <AccordionTrigger className="">{item.title}</AccordionTrigger>
+            <AccordionContent className="">{item.description}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
@@ -27,3 +27,5 @@ const FAQs: React.FC<{
 };
 
 export default FAQs;
+
+

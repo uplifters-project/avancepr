@@ -14,7 +14,6 @@ import MainLayout from "@/components/layouts/main-layout";
 import ServiceCard from "@/components/cards/service-card";
 import { faqData, servicesData } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import FAQs from "@/components/app/faq";
 
 const HomeSection: React.FC<{
   id: string;
@@ -120,9 +119,7 @@ export default function Home() {
         <Featured newsItems={news} />
       </HomeSection>
 
-      <HomeSection id="faq" heading="FAQ" label="All your question answered">
-        <FAQs faq={faqData} />
-      </HomeSection>
+     
     </MainLayout>
   );
 }

@@ -11,7 +11,9 @@ const FeaturedPage: NextPage<{
     <PageLaypout heading="We got Featured" label="">
       <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
         {news.map((item) => (
-          <NewsCard news={item} />
+          <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">
+            <NewsCard news={item} />
+          </a>
         ))}
       </div>
     </PageLaypout>

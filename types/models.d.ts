@@ -27,6 +27,7 @@ interface Client {
 }
 
 interface News {
+  link: string;
   id: number;
   order: number;
   content: string;

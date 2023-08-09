@@ -106,7 +106,7 @@ export default function Home() {
         label="What Clients say about us"
         full={true}
       >
-        <ClientCarousel clients={...clients} rowCount={2} />
+        <ClientCarousel clients={...clients} rowCount={1} />
       </HomeSection>
 
       {/* Our Work */}

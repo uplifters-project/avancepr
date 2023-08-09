@@ -73,8 +73,8 @@ const Popup = ({ setShow, open }) => {
 
   return (
     <Dialog open={open} onOpenChange={setShow}>
-      <DialogContent>
-        <DialogHeader>
+      <DialogContent className="shadow-lg shadow-yellow-700 md:shadow-xl">
+        <DialogHeader className="">
           <DialogTitle className="text-yellow-700">SEND US YOUR INQUIRY</DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogHeader>

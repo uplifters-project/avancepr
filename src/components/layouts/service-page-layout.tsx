@@ -35,15 +35,21 @@ const ServicePageLaypout: React.FC<{
         <p className="text-lg text-center text-gray-600 mt-2">{label}</p>
       </div>
 
-      <div className="flex flex-row gap-5 items-center">
-        <div className="w-2/3 pr-8">
+      <div className="flex flex-row gap-5 items-center my-8">
+        <div className={cn("w-2/3 pr-8", !description ? "w-0 hidden" : "")}>
           <h1 className="font-heading text-4xl mb-3">{title}</h1>
 
           <p>{description}</p>
         </div>
 
-        <div className="w-1/3">
-          <Image src={image} width={612} height={408} alt="Content Marketing" />
+        <div className={cn("w-1/3", !description ? "w-full text-center" : "")}>
+          <Image
+            src={image}
+            width={612}
+            height={408}
+            alt="Content Marketing"
+            className="mx-auto"
+          />
         </div>
       </div>
 

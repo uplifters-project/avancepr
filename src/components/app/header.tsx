@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
 
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -17,14 +18,16 @@ function Navbar() {
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center  mx-20  justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
-                <div className="mr-2">
-                  <Image
-                    src={"/Logo-modified.png"}
-                    alt="Logo"
-                    width={50}
-                    height={50}
-                  />
-                </div>
+                <NextLink href="/">
+                  <div className="mr-2">
+                    <Image
+                      src={"/Logo-modified.png"}
+                      alt="Logo"
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+                </NextLink>
                 <h1 className=" font-bold text-xl cursor-pointer">
                   Avance <span className="text-yellow-900/70">PR</span>
                 </h1>

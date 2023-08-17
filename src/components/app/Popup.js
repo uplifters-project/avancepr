@@ -73,19 +73,19 @@ const Popup = ({ setShow, open }) => {
 
   return (
     <Dialog open={open} onOpenChange={setShow}>
-      <DialogContent className="shadow-lg shadow-yellow-700 md:shadow-xl">
+      <DialogContent className="border-black shadow-lg shadow-yellow-700 md:shadow-xl">
         <DialogHeader className="">
           <DialogTitle className="text-yellow-700">SEND US YOUR INQUIRY</DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+          <div className="mb-4 ">
             <Input
               type="text"
               value={fullName}
               id="fullName"
               onChange={(e) => setFullName(e.target.value)}
-              className=""
+              className="border-yellow-700"
               placeholder="Enter your Full Name"
               required
             />
@@ -95,7 +95,7 @@ const Popup = ({ setShow, open }) => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className=""
+              className="border-yellow-700"
               placeholder="Enter your Email"
               required
             />
@@ -105,7 +105,7 @@ const Popup = ({ setShow, open }) => {
               type="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className=""
+              className="border-yellow-700"
               placeholder="Enter your Phone Number"
             />
           </div>
@@ -115,7 +115,7 @@ const Popup = ({ setShow, open }) => {
               type="text"
               value={companyName}
               onChange={(e) => setCompany(e.target.value)}
-              className=""
+              className="border-yellow-700"
               placeholder="Company Name"
               required
             />
@@ -127,7 +127,7 @@ const Popup = ({ setShow, open }) => {
               rows={5}
               value={inquiry}
               onChange={(e) => setInquiry(e.target.value)}
-              className=""
+              className="border-yellow-700"
               placeholder="Write your Inquiry"
             />
           </div>

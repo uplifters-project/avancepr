@@ -8,8 +8,8 @@ const ClientCard: React.FC<{ client: Client }> = ({ client }) => {
         <Image
           src={client.image}
           alt="Client Image"
-          height={720}
-          width={480}
+          height={900}
+          width={600}
           className="h-[10rem] w-full max-w-full rounded-lg object-cover"
         />
       </CardHeader>

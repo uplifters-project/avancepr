@@ -2,19 +2,12 @@ import { getOurClients } from "@/lib/apis";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
-import NewsCard from "@/components/cards/news-card";
-import ClientCard from "@/components/cards/client-card";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { FaInstagram, FaEnvelope } from "react-icons/fa";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
 import { FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
-
 
 const ContactPage: NextPage<{
   clients: Client[];
@@ -22,10 +15,11 @@ const ContactPage: NextPage<{
   return (
     <PageLaypout heading="Contact Us" label="Get in Touch with Us!">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-        <h2 className="text-xl text-yellow-700 font-bold">
-          Contact Us
+        <h2 className="text-xl text-yellow-700 font-bold">Contact Us</h2>
+        <h2 className="py-4">
+          Feel free to ask for details, don't save any questions!
         </h2>
-        <h2 className="py-4">Feel free to ask for details, don't save any questions!</h2>
+
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-yellow-700 rounded-xl p-4">
@@ -68,40 +62,39 @@ const ContactPage: NextPage<{
                         className="flex items-center"
                         style={{ marginBottom: "10px" }}
                       >
-                      <div className="rounded-full bg-white border border-black p-2">
-                        <FaEnvelope className="text-black text-1xl cursor-pointer hover:text-orange-600" />
+                        <div className="rounded-full bg-white border border-black p-2">
+                          <FaEnvelope className="text-black text-1xl cursor-pointer hover:text-orange-600" />
+                        </div>
+                        <p className="ml-2">
+                          <a
+                            href="mailto:info@avancepr.in"
+                            className="text-black hover:underline"
+                          >
+                            Email : info@avancepr.in
+                          </a>
+                        </p>
                       </div>
-                      <p className="ml-2">
-                        <a
-                          href="mailto:info@avancepr.in"
-                          className="text-black hover:underline"
-                        >
-                          Email : info@avancepr.in
-                        </a>
-                      </p>
-                    </div>
-                  </li>
-                  <li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-0 rounded-md font-medium">
-                    <div
-                      className="flex items-center"
-                      style={{ marginBottom: "10px" }}
-                    >
-                    <div className="rounded-full bg-white border border-black p-2">
-                      <FaEnvelope className="text-black text-1xl cursor-pointer hover:text-orange-600" />
-                    </div>
-                    <p className="ml-2">
-                      <a
-                       href="mailto:info@avancepr.in"
-                       className="text-black hover:underline"
+                    </li>
+                    <li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-0 rounded-md font-medium">
+                      <div
+                        className="flex items-center"
+                        style={{ marginBottom: "10px" }}
                       >
-                         Email : ritika@avancepr.in
-                      </a>
-                    </p>
-                   </div>
-                  </li>
-               </ul>
-              </div>
-            </div>
+                        <div className="rounded-full bg-white border border-black p-2">
+                          <FaEnvelope className="text-black text-1xl cursor-pointer hover:text-orange-600" />
+                        </div>
+                        <p className="ml-2">
+                          <a
+                            href="mailto:info@avancepr.in"
+                            className="text-black hover:underline"
+                          >
+                            Email : ritika@avancepr.in
+                          </a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -109,9 +102,12 @@ const ContactPage: NextPage<{
           {/* right */}
           <div className="col-span-3 w-full h-auto shadow-md shadow-yellow-700 rounded-xl lg:p-4">
             <h2 className="text-xl text-yellow-700 font-bold pt-6 pl-4">
-            Get a Call back
+              Get a Call back
             </h2>
-            <h2 className="py-4 pl-4">Please fill the form below with all the details. Our team would love to get in touch with you and understand your requirements.</h2>
+            <h2 className="py-4 pl-4">
+              Please fill the form below with all the details. Our team would
+              love to get in touch with you and understand your requirements.
+            </h2>
             <div className="p-4">
               <form
                 action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
@@ -170,6 +166,7 @@ const ContactPage: NextPage<{
             </div>
           </div>
         </div>
+      </div>
     </PageLaypout>
   );
 };

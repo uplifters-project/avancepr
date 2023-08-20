@@ -9,7 +9,7 @@ const PublicRelationsPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Event PR"
       label=""
-      image="/content_marketing.jpg"
+      image="/event.jpg"
       title=""
       data={[]}
       description={description}

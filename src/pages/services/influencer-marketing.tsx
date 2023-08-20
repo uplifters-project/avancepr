@@ -9,7 +9,7 @@ const PublicRelationsPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Influencer Marketing"
       label=""
-      image="/content_marketing.jpg"
+      image="/images/influencer_marketing.jpg"
       title=""
       data={[]}
       description={description}

@@ -48,3 +48,22 @@ interface FAQ {
   title: string;
   description: string;
 }
+
+interface BlogPreview {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+}
+
+interface Blog {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+  body?: string;
+  body_md?: string;
+  credits?: string;
+  created_at?: string;
+  updated_at?: string;
+}

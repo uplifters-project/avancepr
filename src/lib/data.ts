@@ -29,41 +29,47 @@ export const servicesData = [
 // TODO: Populate data
 export const faqData: FAQ[] = [
   {
-    title: "What is a full-service digital marketing agency?",
+    title: "How can a PR firm help me boost the reputation and exposure of my brand?",
     description:
-      "Every brand needs an online presence to succeed. Consider that in India 30 crore people check their Smartphones an average of 70 times a day, they also spend an average of 3 hours a day online. This makes the online space an invaluable medium for attracting customers and building a brand. A full-service digital marketing agency helps brands accomplish both. Digital marketing comprises of activities brands do to promote themselves and drive sales. The best way a brand can do both is by hiring a full-service digital marketing agency to manage every facet of its online presence. A full-service digital marketing agency ensures a brand is ranked well by search engines, manages its social media presence, writes relevant content about the brand, and develops and maintains its website. Such an agency has expertise in a wide range of activities to help promote a brand and drive sales.",
+      " A PR (Public Relations) firm can play a vital role in boosting the reputation and exposure of your brand. It can help with Strategic Planning, Media Relations, Brand Storytelling, Crisis Management, Influencer Partnerships, Content Creation etc.      ",
   },
   {
     title:
-      "What are the skill sets a full-service digital marketing agency must possess?",
+      "How can PR initiatives be evaluated for their effectiveness and impact?",
     description:
-      "A full-service digital marketing agency must have expertise in SEO or search engine optimization, social media management, content writing, website design, and maintenance.An exceptional digital marketing agency has a talented team of SEO experts that understands how to use keywords organically to help brands become ranked well by search engines. They also have a team that understands how to create engaging social media content that enhances how a brand is perceived.Its talented team of content writers are a vast storehouse of knowledge and possess the skill to craft content that is relevant to each client. Finally, its creative team of website designers knows how to create an attractive website that is easy to navigate, informative, and where visitors enjoy spending time.",
+      "We have experience working with top companies, and our area of expertise is boosting reputation and exposure. Our specialized PR tactics, broad media reach, and interesting content increase brand recognition and engagement. Join us for successful PR campaigns that are strategic.",
   },
   {
     title:
-      "Why should an organization hire a digital marketing agency instead of doing it in-house?",
+      "What are the anticipated timeframes and steps involved in creating and launching a PR campaign?",
     description:
-      "Every business is managed by professionals who excel in one or multiple domains. Their business is successful because they focus on their core competencies. Therefore, by expanding their scope of responsibility by hiring and installing a digital marketing team they do a disservice to their business because they expect to excel in a domain that isn’t their core competency. Every business, if it expects to thrive, must focus all its energy into its core competency and delegate other aspects of its business to those with relevant competencies.If an enterprise installs an in house digital marketing team while its competitors employ specialised digital marketing agencies, the former will certainly lose customers to competitors.",
+      "As a skilled PR firm, we adapt our development and implementation procedures to each PR campaign's complexity and objectives. Before developing a plan, media relations, content production, campaign implementation, monitoring, and assessment are all steps we take to better understand your brand and objectives. Within the set timeframes, we work to provide outcomes while maintaining a smooth workflow.",
   },
   {
-    title: "What is native advertising?",
+    title: "How qualified and experienced is your team?",
     description:
-      "Native advertising is effective because ads presented using native advertising don’t seem like advertisements at all. This is because native advertising matches the functionality of the platform where it is displayed. Content on online native sites is embedded so seamlessly within sites that native advertisements seem like advertorials. A native advertisement is displayed as an editorial, article, or video which consumers are eager to consume. A skilled digital marketing agency excels at ensuring its client's advertisements appear in reputed and well-read online platforms.",
+      "At AvancePR, we take great satisfaction in our remarkable team's outstanding performance. We are well-equipped to produce captivating PR campaigns that boost brand awareness and reputation thanks to our extensive expertise and solid relationships with the media and influencers. ",
   },
   {
-    title: "What is sponsored content?",
+    title: "What is the difference between PR and advertisement?",
     description:
-      "Sponsored content appears in online publications and is similar to regular editorial content except that it promotes a product or service. Sponsored content is paid for by advertisers. Exceptional digital marketing agencies ensure their client’s content appears in reputed publications that are well read.",
+      "The main objective of PR is to manage and improve the reputation and public perception of a company, a person, or a brand. Building strong relationships with the public, the media, stakeholders, and the target audience is the goal of PR. Advertising's main goal is to generate sales, raise awareness, and encourage people to take a certain action, such as making a purchase, by promoting a product, service, or brand. PR will lead other people to talk about you but in advertising you will talk about your brand.",
   },
   {
-    title: "What is a call to action?",
+    title: "How to choose a PR agency?",
     description:
-      "Its simple advertisers will be billed their ad spend directly from Google. Results will be transparent because we link your Ads account up to Google Analytics and you will receive monthly performance reports.",
+      " A perfect public relations agency customizes communication plans, produces outcomes, and excels at brand management to meet your company's demands. Public relations' versatility is one of its greatest assets. When it comes to PR and earned media campaigns that emphasize the needs of each firm, there is no one-size-fits-all strategy.",
   },
   {
     title:
-      "How do I know where my Google spend is going and what results I’m getting?",
+      "How does PR help startup firms? ",
     description:
-      "A full-service digital marketing agency must have expertise in SEO or search engine optimization, social media management, content writing, website design, and maintenance.An exceptional digital marketing agency has a talented team of SEO experts that understands how to use keywords organically to help brands become ranked well by search engines. They also have a team that understands how to create engaging social media content that enhances how a brand is perceived.Its talented team of content writers are a vast storehouse of knowledge and possess the skill to craft content that is relevant to each client. Finally, its creative team of website designers knows how to create an attractive website that is easy to navigate, informative, and where visitors enjoy spending time.",
+      " Startups have unique PR challenges since they have a blank canvas to work with. They thus want skilled PR specialists to assist them in becoming thought leaders. Starting with a short- and long-term focus on building brand recognition, PR agencies approach their objectives and challenges.",
+  },
+  {
+    title:
+      "What are the different types of PR?",
+    description:
+      "PR specialists are highly skilled at speaking to people on behalf of their clients. There are several forms of PR messaging to match various situations: Effective communication ,Public relations, Community engagement, Business communication, Crisis management, Public relations, Social Media Administration ",
   },
 ];

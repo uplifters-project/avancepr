@@ -8,6 +8,28 @@ const nextConfig = {
     WHATSAPP_NO: process.env.WHATSAPP_NO,
     EMAIL: process.env.EMAIL,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "upliftersstorage.blob.core.windows.net",
+        port: "",
+        pathname: "/media/**",
+      },
+      {
+        protocol: "https",
+        hostname: "avanceprstorage.blob.core.windows.net",
+        port: "",
+        pathname: "/media/**",
+      },
+    ],
+    domains: [
+      "avancepr.azurewebsites.net",
+      "uplifters.azurewebsites.net",
+      "upliftersstorage.blob.core.windows.net",
+      "avanceprstorage.blob.core.windows.net",
+    ],
+  },
 };
 
 module.exports = nextConfig;

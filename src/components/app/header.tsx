@@ -8,6 +8,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 import Image from "next/image";
+import { APP_ROUTES, EXTERNAL_LINKS } from "@/lib/constants";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ function Navbar() {
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center  mx-20  justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
-                <NextLink href="/">
+                <NextLink href={APP_ROUTES.HOME}>
                   <div className="mr-2">
                     <Image
                       src={"/Logo-modified.png"}
@@ -28,92 +29,89 @@ function Navbar() {
                     />
                   </div>
                 </NextLink>
+
                 <h1 className=" font-bold text-xl cursor-pointer">
                   Avance <span className="text-yellow-900/70">PR</span>
                 </h1>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex space-x-4 justify-center items-center">
-                  <Link
-                    activeClass="about"
-                    to="about"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  <NextLink
+                    href={APP_ROUTES.ABOUT}
                     className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     About Us
-                  </Link>
-                  <Link
-                    activeClass="service"
-                    to="service"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  </NextLink>
+
+                  <NextLink
+                    href={APP_ROUTES.OUR_SERVICES}
                     className="cursor-pointer tet-black  text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Our Services
-                  </Link>
+                  </NextLink>
 
-                  <Link
-                    activeClass="clients"
-                    to="clients"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  <NextLink
+                    href={APP_ROUTES.CLIENTS}
                     className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Our Clients
-                  </Link>
-                  <Link
-                    activeClass="blog"
-                    to="blog"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  </NextLink>
+
+                  <NextLink
+                    href={APP_ROUTES.ALL_BLOGS}
                     className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Blogs
-                  </Link>
-                  <Link
-                    activeClass="our_work"
-                    to="our_work"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  </NextLink>
+
+                  <NextLink
+                    href={APP_ROUTES.WORK}
                     className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Our Work
-                  </Link>
+                  </NextLink>
 
-                  <Link
-                    to="/contact"
+                  <NextLink
+                    href={APP_ROUTES.CONTACT}
                     className="cursor-pointer text-md hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium"
                   >
                     Contact Us
-                  </Link>
+                  </NextLink>
 
                   <div>
                     <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                      +91-9899707349
+                      <NextLink href={`tel:${EXTERNAL_LINKS.PHONE}`}>
+                        +91-9899707349
+                      </NextLink>
                     </p>
                     <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                      {" "}
-                      info@avancepr.in
+                      <NextLink
+                        href={`mailto:${EXTERNAL_LINKS.EMAIL_AVANCEPR}`}
+                      >
+                        {EXTERNAL_LINKS.EMAIL_AVANCEPR}
+                      </NextLink>
                     </p>
                     <div className="flex space-x-2 mt-2 px-4">
-                      <FaInstagram
-                        className="text-2xl cursor-pointer hover:text-white"
-                        size={15}
-                      />
-                      <FaTwitter
-                        className="text-2xl cursor-pointer hover:text-white"
-                        size={15}
-                      />
-                      <FaLinkedin
-                        className="text-2xl cursor-pointer hover:text-white"
-                        size={15}
-                      />
+                      <NextLink href={EXTERNAL_LINKS.INSTAGRAM} target="_blank">
+                        <FaInstagram
+                          className="text-2xl cursor-pointer hover:text-white"
+                          size={15}
+                        />
+                      </NextLink>
+
+                      <NextLink href={EXTERNAL_LINKS.TWITTER} target="_blank">
+                        <FaTwitter
+                          className="text-2xl cursor-pointer hover:text-white"
+                          size={15}
+                        />
+                      </NextLink>
+
+                      <NextLink href={EXTERNAL_LINKS.LINKEDIN} target="_blank">
+                        <FaLinkedin
+                          className="text-2xl cursor-pointer hover:text-white"
+                          size={15}
+                        />
+                      </NextLink>
                     </div>
                   </div>
                 </div>

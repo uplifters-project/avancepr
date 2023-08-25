@@ -14,3 +14,35 @@ export const APP_CONSTANTS = {
   BACKEND_URL: "https://avancepr.azurewebsites.net",
   UPLIFTERS_BACKEND_URL: "https://uplifters.azurewebsites.net",
 };
+
+export const APP_ROUTES = {
+  HOME: "/",
+  ABOUT: "/about",
+  CONTACT: "/contact",
+  ALL_BLOGS: "/blogs",
+  FAQ: "/faq",
+
+  WORK: "#",
+  CLIENTS: "#",
+  CAREERS: "#",
+  TESTIMONIALS: "#",
+  OUR_SERVICES: "#",
+
+  SERVICES: {
+    PUBLIC_RELATIONS: "/services/public-relations",
+    CONTENT_MARKETING: "/services/content-marketing",
+    SOCIAL_MEDIA_MARKETING: "/services/social-media-marketing",
+    INFLUENCER_MARKETING: "/services/influencer-marketing",
+    EVENT_MANAGEMENT: "/services/event-pr",
+  },
+};
+
+export const EXTERNAL_LINKS = {
+  INSTAGRAM: "",
+  TWITTER: "",
+  LINKEDIN: "",
+
+  PHONE: "+919899707349",
+  EMAIL_AVANCEPR: "info@avancepr.in",
+  EMAIL_PERSONAL: "ritika@avancepr.in",
+};

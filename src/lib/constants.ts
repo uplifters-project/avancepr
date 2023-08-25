@@ -22,11 +22,12 @@ export const APP_ROUTES = {
   ALL_BLOGS: "/blogs",
   FAQ: "/faq",
 
-  WORK: "#",
-  CLIENTS: "#",
+  WORK: "/#work",
+  CLIENTS: "/#clients",
   CAREERS: "#",
-  TESTIMONIALS: "#",
-  OUR_SERVICES: "#",
+  TESTIMONIALS: "/#testimonials",
+  OUR_SERVICES: "/#services",
+  NEWS: "/#featured",
 
   SERVICES: {
     PUBLIC_RELATIONS: "/services/public-relations",

@@ -10,14 +10,13 @@ import Link from "next/link";
 const NewsCard: React.FC<{ news: News }> = ({ news }) => {
   return (
     <Link href={news.link ?? "#"} target="_blank">
-      <Card className="min-w-[250px] max-w-[300px] h-full mx-auto">
-        <CardHeader className="p-2">
+      <Card className="w-[300px] h-full mx-auto">
+        <CardHeader className="relative w-full aspect-[1.25] p-2">
           <Image
             src={news.image}
             alt="Work Image"
-            height={540}
-            width={320}
-            className="h-[10rem] w-full max-w-full rounded-lg object-cover"
+            fill
+            className="object-cover p-2 rounded-lg"
           />
         </CardHeader>
 

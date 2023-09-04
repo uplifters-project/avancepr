@@ -14,6 +14,8 @@ interface Work {
   order: number;
   content: string;
   image: string;
+  banner: string;
+  description: string;
   updated_at: string;
   created_at: string;
 }

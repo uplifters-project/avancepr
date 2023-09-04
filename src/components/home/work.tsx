@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import AliceCarousel, { Responsive } from "react-alice-carousel";
-import TestimonialCard from "../cards/testimonial-card";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Button } from "../ui/button";
 import { Icons } from "../icons";

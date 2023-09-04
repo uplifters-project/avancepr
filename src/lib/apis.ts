@@ -36,6 +36,16 @@ const getOurWork = async (): Promise<Work[]> => {
   }
 };
 
+const getWorkById = async (id: string | number): Promise<Work | null> => {
+  try {
+    const res = await server_uplifters.get(`/api/data/our_work/${id}`);
+
+    return res.data as Work;
+  } catch (e: any) {
+    return null;
+  }
+};
+
 const getOurClients = async (): Promise<Client[]> => {
   try {
     const res = await server.get("/our_client");
@@ -91,6 +101,7 @@ const submitEnquiryForm = async (data: EnquiryFormType): Promise<boolean> => {
 export {
   getTestimonials,
   getOurWork,
+  getWorkById,
   getOurClients,
   getLatestNews,
   submitEnquiryForm,

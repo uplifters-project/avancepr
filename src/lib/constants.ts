@@ -8,6 +8,7 @@ export const REVALIDATE_TIME = {
   FEATURED_PAGE: 60 * 60 * 24,
   FAQPAGE: 60 * 60 * 24 * 7,
   BLOG_PAGES: 60 * 60 * 24,
+  WORK_PAGES: 60 * 60 * 24,
 };
 
 export const APP_CONSTANTS = {
@@ -39,9 +40,9 @@ export const APP_ROUTES = {
 };
 
 export const EXTERNAL_LINKS = {
-  INSTAGRAM: "",
-  TWITTER: "",
-  LINKEDIN: "",
+  INSTAGRAM: "https://www.instagram.com/avance.pr/",
+  TWITTER: "https://twitter.com/Avancepr_",
+  LINKEDIN: "https://www.linkedin.com/company/avancepr/",
 
   PHONE: "+919899707349",
   EMAIL_AVANCEPR: "info@avancepr.in",

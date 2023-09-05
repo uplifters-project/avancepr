@@ -36,7 +36,7 @@ const ContactPage: NextPage<{
               <div>
                 <h1 className="py-2">Business Enqiries</h1>
                 <p className="py-4">
-                  Mrs, Ritika (Founder) <br />
+                  Ms. Ritika Garg (Founder) <br />
                 </p>
 
                 <div className="p-5">

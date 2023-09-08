@@ -15,6 +15,7 @@ const ServicePageLaypout: React.FC<{
   }[];
   children: React.ReactNode;
   className?: string;
+  useOnlyChild?: boolean;
 }> = ({
   heading,
   label,
@@ -24,6 +25,7 @@ const ServicePageLaypout: React.FC<{
   title,
   children,
   className,
+  useOnlyChild = false,
 }) => {
   return (
     <MainLayout className={cn("container pt-16 pb-24", className)}>
@@ -53,11 +55,11 @@ const ServicePageLaypout: React.FC<{
         </div>
       </div>
 
-      {/* <div>
-        <ul className="max-w-xl space-y-1 text-gray-500 list-inside dark:text-gray-400">
+      {!useOnlyChild && (
+        <div className="w-full mt-16 text-gray-500 grid grid-cols-3 justify-center gap-4">
           {data.map((item) => {
             return (
-              <li className="flex flex-col">
+              <div className="flex flex-col">
                 <div className="flex justify-start items-center mb-2">
                   <svg
                     className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
@@ -75,37 +77,12 @@ const ServicePageLaypout: React.FC<{
                 </div>
 
                 <p className="mb-6">{item.text}</p>
-              </li>
+              </div>
             );
           })}
-        </ul>
-      </div> */}
-
-      <div className="w-full mt-16 text-gray-500 grid grid-cols-3 justify-center gap-4">
-        {data.map((item) => {
-          return (
-            <div className="flex flex-col">
-              <div className="flex justify-start items-center mb-2">
-                <svg
-                  className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-
-                <h3 className="font-heading text-2xl font-bold">
-                  {item.heading}
-                </h3>
-              </div>
-
-              <p className="mb-6">{item.text}</p>
-            </div>
-          );
-        })}
-      </div>
+        </div>
+      )}
+      {children}
     </MainLayout>
   );
 };

@@ -9,10 +9,7 @@ const BlogsPage: NextPage<{
   blogs: BlogPreview[];
 }> = ({ blogs }) => {
   return (
-    <PageLaypout
-      heading="Blogs"
-      label="Blog especially curated for students by our experts"
-    >
+    <PageLaypout heading="Blogs" label="">
       <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
         {blogs.map((item) => (
           <BlogCard blog={item} key={item.id} />

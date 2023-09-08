@@ -42,7 +42,7 @@ const ContactPage: NextPage<{
                 <div className="p-5">
                   <ul>
                     <p className="text-gray-800 font-bold text-2xl pb-4"></p>
-                    <li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-2 rounded-md font-medium">
+                    <li className="text-md pb-2 text-black px-3 py-2 rounded-md font-medium">
                       <div className="flex items-center">
                         <div className="rounded-full bg-white border border-black p-2">
                           <FaPhone className="text-black text-1xl cursor-pointer hover:text-orange-600" />
@@ -57,7 +57,7 @@ const ContactPage: NextPage<{
                         </p>
                       </div>
                     </li>
-                    <li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-0 rounded-md font-medium">
+                    <li className="text-md pb-2 text-black px-3 py-0 rounded-md font-medium mt-3">
                       <div
                         className="flex items-center"
                         style={{ marginBottom: "10px" }}
@@ -75,7 +75,7 @@ const ContactPage: NextPage<{
                         </p>
                       </div>
                     </li>
-                    <li className="text-gray-700 text-md pb-2 font-semibold text-black px-3 py-0 rounded-md font-medium">
+                    <li className="text-md pb-2 text-black px-3 py-0 rounded-md font-medium">
                       <div
                         className="flex items-center"
                         style={{ marginBottom: "10px" }}
@@ -155,11 +155,11 @@ const ContactPage: NextPage<{
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-yellow-700"
-                    rows={10}
+                    rows={5}
                     name="message"
-                  ></textarea>
+                  />
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
+                <button className="w-full p-4 text-gray-800 mt-4">
                   Send Message
                 </button>
               </form>

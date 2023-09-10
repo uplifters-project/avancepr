@@ -14,26 +14,26 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className=" shadow-sm  w-full z-10 bg-[#FF9F00]">
+      <nav className="shadow-sm  w-full z-10 bg-[#FF9F00]">
         <div className="w-full">
           <div className="flex items-center h-20 w-full">
-            <div className="flex items-center  mx-20  justify-between w-full">
+            <div className="flex items-center mx-4 md:mx-20 justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
                 <NextLink href={APP_ROUTES.HOME}>
-                  <div className="mr-2">
-                    <Image
-                      src={"/Logo-modified.png"}
-                      alt="Logo"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
+                  <Image
+                    src={"/Logo-modified.png"}
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className="mr-2"
+                  />
                 </NextLink>
 
-                <h1 className=" font-bold text-xl cursor-pointer">
+                <h1 className="font-bold text-xl cursor-pointer">
                   Avance <span className="text-yellow-900/70">PR</span>
                 </h1>
               </div>
+
               <div className="hidden md:block">
                 <div className="ml-10 flex space-x-4 justify-center items-center">
                   <NextLink
@@ -84,14 +84,16 @@ function Navbar() {
                         +91-9899707349
                       </NextLink>
                     </p>
-                    <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+
+                    <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium mx-auto">
                       <NextLink
                         href={`mailto:${EXTERNAL_LINKS.EMAIL_AVANCEPR}`}
                       >
                         {EXTERNAL_LINKS.EMAIL_AVANCEPR}
                       </NextLink>
                     </p>
-                    <div className="flex space-x-2 mt-2 px-4">
+
+                    <div className="flex space-x-2 mt-2 justify-center">
                       <NextLink href={EXTERNAL_LINKS.INSTAGRAM} target="_blank">
                         <FaInstagram
                           className="text-2xl cursor-pointer hover:text-white"
@@ -117,16 +119,18 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="mr-12 flex md:hidden ">
-              <div>
+
+            <div className="mr-4 md:mr-12 flex md:hidden">
+              <div className="hidden md:visible">
                 <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
                   +91-9899707349
                 </p>
+
                 <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                  {" "}
                   info@avancepr.in
                 </p>
-                <div className="flex space-x-2 mt-2 px-4">
+
+                <div className="flex space-x-2 mt-2 justify-center">
                   <FaInstagram
                     className="text-2xl cursor-pointer hover:text-white"
                     size={15}
@@ -150,6 +154,7 @@ function Navbar() {
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
+
                 {!isOpen ? (
                   <svg
                     className="block h-6 w-6"

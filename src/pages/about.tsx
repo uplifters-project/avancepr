@@ -33,7 +33,7 @@ const AboutPage: NextPage<{}> = ({}) => {
         <p>
           With a team of dedicated professionals, we are committed to adding
           significant brand value for our clients, aligned with their
-          overarching business goals. Our skilled PR experts bring a wealth of
+          overreaching business goals. Our skilled PR experts bring a wealth of
           knowledge and expertise to the table, implementing innovative and
           results-driven approaches that drive tangible outcomes. By leveraging
           our extensive network of media contacts and influencers, we secure

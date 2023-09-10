@@ -1,5 +1,5 @@
 import { submitEnquiryForm } from "@/lib/apis";
-import React, { useState } from "react";
+import React, { FormEventHandler, useState } from "react";
 import { toast } from "@/components/ui/use-toast";
 
 import {
@@ -16,7 +16,10 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
-const Popup = ({ setShow, open }) => {
+const Popup: React.FC<{
+  open: boolean;
+  setShow: (val: boolean) => void;
+}> = ({ setShow, open }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [inquiry, setInquiry] = useState("");
@@ -24,7 +27,7 @@ const Popup = ({ setShow, open }) => {
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
     if (loading) return;
@@ -55,7 +58,7 @@ const Popup = ({ setShow, open }) => {
       } else {
         throw new Error("Failed to submit form, please enter all the data");
       }
-    } catch (e) {
+    } catch (e: any) {
       toast({
         title: "Failed to submit form",
         type: "foreground",
@@ -75,7 +78,9 @@ const Popup = ({ setShow, open }) => {
     <Dialog open={open} onOpenChange={setShow}>
       <DialogContent className="border-black shadow-lg shadow-yellow-700 md:shadow-xl">
         <DialogHeader className="">
-          <DialogTitle className="text-yellow-700">SEND US YOUR INQUIRY</DialogTitle>
+          <DialogTitle className="text-yellow-700">
+            SEND US YOUR INQUIRY
+          </DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
@@ -123,7 +128,6 @@ const Popup = ({ setShow, open }) => {
 
           <div className="mb-4">
             <Textarea
-              type="text"
               rows={5}
               value={inquiry}
               onChange={(e) => setInquiry(e.target.value)}
@@ -134,7 +138,11 @@ const Popup = ({ setShow, open }) => {
         </form>
 
         <DialogFooter className="flex flex-col justify-center">
-          <Button onClick={handleSubmit} className=" bg-yellow-700  hover:bg-yellow-600 text-sm">
+          <Button
+            // onClick={handleSubmit}
+            type="submit"
+            className=" bg-yellow-700  hover:bg-yellow-600 text-sm"
+          >
             Send Request
           </Button>
         </DialogFooter>

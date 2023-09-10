@@ -29,7 +29,8 @@ export const servicesData = [
 // TODO: Populate data
 export const faqData: FAQ[] = [
   {
-    title: "How can a PR firm help me boost the reputation and exposure of my brand?",
+    title:
+      "How can a PR firm help me boost the reputation and exposure of my brand?",
     description:
       " A PR (Public Relations) firm can play a vital role in boosting the reputation and exposure of your brand. It can help with Strategic Planning, Media Relations, Brand Storytelling, Crisis Management, Influencer Partnerships, Content Creation etc.      ",
   },
@@ -61,14 +62,12 @@ export const faqData: FAQ[] = [
       " A perfect public relations agency customizes communication plans, produces outcomes, and excels at brand management to meet your company's demands. Public relations' versatility is one of its greatest assets. When it comes to PR and earned media campaigns that emphasize the needs of each firm, there is no one-size-fits-all strategy.",
   },
   {
-    title:
-      "How does PR help startup firms? ",
+    title: "How does PR help startup firms? ",
     description:
-      " Startups have unique PR challenges since they have a blank canvas to work with. They thus want skilled PR specialists to assist them in becoming thought leaders. Starting with a short- and long-term focus on building brand recognition, PR agencies approach their objectives and challenges.",
+      " Startups have unique PR challenges since they have a blank canvas to work with. They thus want skilled PR specialists to assist them in becoming thought leaders. Starting with a short and long-term focus on building brand recognition, PR agencies approach their objectives and challenges.",
   },
   {
-    title:
-      "What are the different types of PR?",
+    title: "What are the different types of PR?",
     description:
       "PR specialists are highly skilled at speaking to people on behalf of their clients. There are several forms of PR messaging to match various situations: Effective communication ,Public relations, Community engagement, Business communication, Crisis management, Public relations, Social Media Administration ",
   },

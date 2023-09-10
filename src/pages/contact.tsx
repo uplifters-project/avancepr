@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { FaInstagram, FaEnvelope } from "react-icons/fa";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
 import { FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 
 const ContactPage: NextPage<{
   clients: Client[];
@@ -34,7 +35,7 @@ const ContactPage: NextPage<{
                 />
               </div>
               <div>
-                <h1 className="py-2">Business Enqiries</h1>
+                <h1 className="py-2">Enqiries</h1>
                 <p className="py-4">
                   Ms. Ritika Garg (Founder) <br />
                 </p>
@@ -159,9 +160,15 @@ const ContactPage: NextPage<{
                     name="message"
                   />
                 </div>
-                <button className="w-full p-4 text-gray-800 mt-4">
-                  Send Message
-                </button>
+
+                <div className="flex justify-center">
+                  <Button
+                    type="submit"
+                    className="mt-4 mx-auto bg-yellow-700  hover:bg-yellow-600"
+                  >
+                    Send Message
+                  </Button>
+                </div>
               </form>
             </div>
           </div>

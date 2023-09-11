@@ -15,7 +15,15 @@ const ContactPage: NextPage<{
 }> = () => {
   return (
     <PageLaypout heading="Contact Us" label="Get in Touch with Us!">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+      <div className="max-w-screen-lg m-auto px-2 pb-16 w-full ">
+        <Image
+          src="/images/contact-us.jpeg"
+          height={300}
+          width={300}
+          alt="Contact Us"
+          className="mx-auto"
+        />
+
         <h2 className="text-xl text-yellow-700 font-bold">Contact Us</h2>
         <h2 className="py-4">
           Feel free to ask for details, don't save any questions!

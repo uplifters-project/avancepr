@@ -52,7 +52,8 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
 
       {/* <p className="mb-12 text-muted-foreground">{credits}</p> */}
 
-      <div className="text-left text-lg">
+      {/* TODO: Text Overflow */}
+      <div className="overflow-auto text-left text-lg">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{

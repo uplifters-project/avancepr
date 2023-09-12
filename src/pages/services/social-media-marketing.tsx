@@ -36,12 +36,17 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
       description={description}
       useOnlyChild={true}
     >
-      <div className="text-gray-500 grid grid-cols-2 lg:grid-cols-3 mt-16 w-full gap-4">
+      <div className="text-gray-500 grid grid-cols-2 lg:grid-cols-3 mt-16 w-full gap-4 text-center md:text-left">
         <div className="grid grid-cols-2 justify-center gap-4 col-span-2">
           {data.slice(0, 3).map((item, i) => {
             return (
-              <div className={cn("flex flex-col", i === 2 ? "col-span-2" : "")}>
-                <div className="flex justify-start items-center mb-2">
+              <div
+                className={cn(
+                  "flex flex-col col-span-2 md:col-span-1",
+                  i === 2 ? "col-span-2 md:col-span-2" : ""
+                )}
+              >
+                <div className="flex justify-center md:justify-start items-center mb-2">
                   <svg
                     className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                     aria-hidden="true"
@@ -64,7 +69,7 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
         </div>
 
         <div className="flex flex-col col-span-2 lg:col-span-1">
-          <div className="flex justify-start items-center mb-2">
+          <div className="flex justify-center md:justify-start items-center mb-2">
             <svg
               className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
               aria-hidden="true"

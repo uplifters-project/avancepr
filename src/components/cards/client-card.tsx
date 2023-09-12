@@ -4,7 +4,7 @@ import Image from "next/image";
 const ClientCard: React.FC<{ client: Client }> = ({ client }) => {
   return (
     <Card className="min-w-[350px] max-w-[400px] h-full mx-auto">
-      <CardHeader className="p-2">
+      <CardHeader className="p-2 relative">
         <Image
           src={client.image}
           alt="Client Image"

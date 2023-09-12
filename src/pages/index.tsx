@@ -84,8 +84,8 @@ export default function Home() {
         label="What others say about us"
       >
         <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
-          {servicesData.map((item) => (
-            <ServiceCard {...item} />
+          {servicesData.map((item, i) => (
+            <ServiceCard key={i} {...item} />
           ))}
         </div>
       </HomeSection>

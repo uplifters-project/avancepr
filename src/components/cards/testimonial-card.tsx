@@ -10,7 +10,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
 }) => {
   return (
-    <Card className="w-[250px] mx-auto border-black border-blur-100">
+    <Card className="w-[250px] mx-auto border-black border-blur-100 h-full">
       <CardHeader>
         <Image
           src={testimonial.image}

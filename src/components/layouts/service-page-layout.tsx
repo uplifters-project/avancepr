@@ -37,14 +37,24 @@ const ServicePageLaypout: React.FC<{
         <p className="text-lg text-center text-gray-600 mt-2">{label}</p>
       </div>
 
-      <div className="flex flex-row gap-5 items-center my-8">
-        <div className={cn("w-2/3 pr-8", !description ? "w-0 hidden" : "")}>
+      <div className="grid grid-cols-3 gap-5 items-center my-8">
+        <div
+          className={cn(
+            "text-center col-span-3 md:col-span-2 md:text-left pr-8",
+            !description ? "w-0 hidden" : ""
+          )}
+        >
           <h1 className="font-heading text-4xl mb-3">{title}</h1>
 
           <p>{description}</p>
         </div>
 
-        <div className={cn("w-1/3", !description ? "w-full text-center" : "")}>
+        <div
+          className={cn(
+            "col-span-3 md:col-span-1",
+            !description ? "w-full text-center" : ""
+          )}
+        >
           <Image
             src={image}
             width={612}
@@ -59,8 +69,8 @@ const ServicePageLaypout: React.FC<{
         <div className="w-full mt-16 text-gray-500 grid grid-cols-3 justify-center gap-4">
           {data.map((item) => {
             return (
-              <div className="flex flex-col">
-                <div className="flex justify-start items-center mb-2">
+              <div className="col-span-3 md:col-span-1 flex flex-col text-center md:text-left">
+                <div className="flex justify-center md:justify-start items-center mb-2">
                   <svg
                     className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                     aria-hidden="true"

@@ -7,7 +7,7 @@ const ServiceCard: React.FC<{ title: string; image: string; url: string }> = ({
   url,
 }) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-[300px] shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#FFFF8F] to-[#FFAA33]">
+    <div className="h-full relative flex items-center justify-center w-[300px] shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#FFFF8F] to-[#FFAA33]">
       <Image
         className="rounded-xl group-hover:opacity-10"
         src={image}

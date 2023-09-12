@@ -5,11 +5,15 @@ import Image from "next/image";
 
 const AboutPage: NextPage<{}> = ({}) => {
   return (
-    <PageLaypout heading="About Us" label="" className="text-center">
+    <PageLaypout
+      heading="About Us"
+      label=""
+      className="text-center md:text-left"
+    >
       <div className="max-w-6xl mx-auto flex flex-col gap-8">
-        <div className="grid gap-x-8 items-center grid-cols-5">
-          <div className="col-span-3 flex flex-col gap-4">
-            <p className="text-left">
+        <div className="grid gap-x-8 items-center grid-cols-5 gap-y-8">
+          <div className="col-span-5 md:col-span-3 flex flex-col gap-4">
+            <p className="">
               AvancePR is a highly regarded and comprehensive PR agency
               headquartered in Gurugram. Our core expertise lies in cultivating
               impactful connections with influencers and crafting effective
@@ -20,7 +24,7 @@ const AboutPage: NextPage<{}> = ({}) => {
               reputation, bolstering our clients' market presence.
             </p>
 
-            <p className="text-left">
+            <p className="">
               At AvancePR, we specialize in several key sectors, including
               Technology (B2B, B2C), Education, Consumer Technology,
               Infrastructure, Retail, Lifestyle, Cybersecurity, FMCG, Real
@@ -39,23 +43,23 @@ const AboutPage: NextPage<{}> = ({}) => {
             height={426}
             width={640}
             alt=""
-            className="col-span-2"
+            className="col-span-5 md:col-span-2"
           />
         </div>
 
         <Separator className="max-w-5xl mx-auto my-8" />
 
-        <div className="grid gap-x-8 items-center grid-cols-5">
+        <div className="grid gap-x-8 items-center grid-cols-5 gap-y-8">
           <Image
             src="/images/about_us_2.jpeg"
             height={480}
             width={640}
             alt=""
-            className="col-span-2"
+            className="col-span-5 md:col-span-2"
           />
 
-          <div className="col-span-3 flex flex-col gap-4">
-            <p className="text-left">
+          <div className="col-span-5 md:col-span-3 flex flex-col gap-4">
+            <p className="">
               With a team of dedicated professionals, we are committed to adding
               significant brand value for our clients, aligned with their
               overreaching business goals. Our skilled PR experts bring a wealth
@@ -66,7 +70,7 @@ const AboutPage: NextPage<{}> = ({}) => {
               narratives that resonate with the target audience.
             </p>
 
-            <p className="text-left">
+            <p className="">
               At AvancePR, our client-centric approach ensures that we fully
               understand the unique needs and aspirations of each brand we work
               with. We collaborate closely with our clients, developing
@@ -83,13 +87,13 @@ const AboutPage: NextPage<{}> = ({}) => {
 
       <Separator className="max-w-4xl mx-auto my-16" />
 
-      <div className="max-w-4xl mx-auto grid grid-cols-3">
-        <div className="col-span-2">
+      <div className="max-w-4xl mx-auto grid grid-cols-3 gap-y-8">
+        <div className="col-span-3 md:col-span-2">
           <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
             Founder & CEO
           </h2>
 
-          <div className="text-left flex flex-col gap-y-4 mt-8">
+          <div className="flex flex-col gap-y-4 mt-8">
             <p>
               Ms. Ritika Garg, the Founder & CEO of Avanace PR, brings with her
               a wealth of experience in the field. Over the years, she has
@@ -114,7 +118,7 @@ const AboutPage: NextPage<{}> = ({}) => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-y-4">
+        <div className="col-span-3 md:col-span-1 flex flex-col justify-center items-center gap-y-4">
           <Image
             src="/images/ritika.jpeg"
             height={500}

@@ -24,7 +24,16 @@ const PopupLayout = () => {
     };
   }, []);
 
-  return <div>{<Popup setShow={setShowPopup} open={showPopup} />}</div>;
+  return (
+    <div>
+      {
+        <Popup
+          setShow={setShowPopup}
+          open={process.env.NODE_ENV === "production" && showPopup}
+        />
+      }
+    </div>
+  );
 };
 
 export default PopupLayout;

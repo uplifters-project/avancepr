@@ -31,9 +31,10 @@ const ClientCarousel: React.FC<ClientCarouselProps> = ({
           direction={rowIndex % 2 === 0 ? "right" : "left"}
           pauseOnHover
           autoFill
+          speed={100}
         >
           {rowImages.map((client) => (
-            <div key={client.id} className="h-28 w-48 inline-block my-0 mx-8">
+            <div key={client.id} className="h-42 w-48 inline-block my-0 mx-8">
               <img
                 src={client.image}
                 alt="Client Image"

@@ -27,7 +27,7 @@ const Featured: React.FC<{ newsItems: News[] }> = ({ newsItems }) => {
         ref={carouselRef}
         responsive={responsive}
         autoHeight
-        // autoPlay
+        autoPlay={process.env.NODE_ENV === "production"}
         autoPlayInterval={1500}
         infinite
         disableDotsControls

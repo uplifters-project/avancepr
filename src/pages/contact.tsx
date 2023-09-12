@@ -14,20 +14,41 @@ const ContactPage: NextPage<{
   clients: Client[];
 }> = () => {
   return (
-    <PageLaypout heading="Contact Us" label="Get in Touch with Us!">
+    <PageLaypout heading="" label="">
       <div className="max-w-screen-lg m-auto px-2 pb-16 w-full ">
-        <Image
+        {/* <Image
           src="/images/contact-us.jpeg"
           height={300}
           width={300}
           alt="Contact Us"
           className="mx-auto"
-        />
+        /> */}
 
-        <h2 className="text-xl text-yellow-700 font-bold">Contact Us</h2>
+        <div className="absolute w-screen top-20 left-0 h-[300px] overflow-hidden bg-[url(/images/contact-us-long.jpeg)] bg-cover">
+          <div className="h-full w-full bg-black/20 flex flex-col justify-center items-center text-white">
+            <h1 className="text-5xl font-bold">Contact Us</h1>
+            <h3 className="text-xl text-white/70">
+              Feel free to ask for details, don't save any questions!
+            </h3>
+          </div>
+
+          {/* <Image
+            src="/images/contact-us-long.jpeg"
+            // height={425 * 2}
+            // width={640 * 2}
+            fill
+            alt="Contact Us"
+            className="mx-auto object-cover"
+          /> */}
+        </div>
+
+        {/* <h2 className="text-xl text-yellow-700 font-bold">Contact Us</h2>
         <h2 className="py-4">
           Feel free to ask for details, don't save any questions!
-        </h2>
+        </h2> */}
+
+        <div className="h-[160px]"></div>
+        <div className="h-12 md:h-20"></div>
 
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
@@ -43,7 +64,7 @@ const ContactPage: NextPage<{
                 />
               </div>
               <div>
-                <h1 className="py-2">Enqiries</h1>
+                <h1 className="py-2">Enquiries</h1>
                 <p className="py-4">
                   Ms. Ritika Garg (Founder) <br />
                 </p>

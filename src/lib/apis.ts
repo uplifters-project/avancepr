@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 export const server = axios.create({
   baseURL: "https://avancepr.azurewebsites.net",
@@ -68,9 +68,9 @@ const getLatestNews = async (): Promise<News[]> => {
 
 const getBlogs = async (): Promise<BlogPreview[]> => {
   try {
-    const res = await server_uplifters.get("/api/data/blogs/");
+    const res = await server.get("/blogs");
 
-    return res.data.results as BlogPreview[];
+    return res.data as BlogPreview[];
   } catch (e) {
     console.log(e);
 
@@ -80,7 +80,7 @@ const getBlogs = async (): Promise<BlogPreview[]> => {
 
 const getBlogById = async (id: string | number): Promise<Blog | null> => {
   try {
-    const res = await server_uplifters.get(`/api/data/blogs/${id}`);
+    const res = await server.get(`/blogs/${id}`);
 
     return res.data as Blog;
   } catch (e: any) {

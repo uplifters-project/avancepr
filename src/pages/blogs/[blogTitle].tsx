@@ -125,8 +125,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       throw new Error("Blog not found");
     }
 
-    console.log(blog);
-
     return {
       props: {
         error: null,

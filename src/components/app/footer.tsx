@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaEnvelope,
+  FaEnvelopeOpen,
+  FaEnvelopeSquare,
+} from "react-icons/fa";
 import { FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
 import Link from "next/link";
@@ -10,7 +15,7 @@ function Footer() {
   return (
     <>
       <div className="h-1/2 w-full p-4 pt-10 md:p-10 md:pt-16 bg-[#FF9F00]">
-        <div className="grid grid-cols-4 text-center gap-y-4">
+        <div className="grid grid-cols-4 text-center md:text-left gap-y-4">
           <div className="col-span-4 md:col-span-1">
             <ul>
               <Link href={APP_ROUTES.HOME}>
@@ -44,7 +49,7 @@ function Footer() {
 
           <div className="col-span-2 md:col-span-1">
             <ul>
-              <p className="text-gray-800 font-bold text-2xl pb-4">
+              <p className="text-gray-800 font-bold text-2xl px-3 pb-4">
                 Quick Links
               </p>
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
@@ -62,12 +67,15 @@ function Footer() {
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
                 <Link href={APP_ROUTES.TESTIMONIALS}>Testimonials</Link>
               </li>
+              <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
+                <Link href={APP_ROUTES.ALL_BLOGS}>Blogs</Link>
+              </li>
             </ul>
           </div>
 
           <div className="col-span-2 md:col-span-1">
             <ul>
-              <p className="text-gray-800 font-bold text-2xl pb-4">
+              <p className="text-gray-800 font-bold text-2xl px-3 pb-4">
                 Our Services
               </p>
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
@@ -152,7 +160,7 @@ function Footer() {
                   style={{ marginBottom: "10px" }}
                 >
                   <div className="rounded-full bg-white border border-black p-2">
-                    <FaEnvelope className="text-black text-1xl cursor-pointer hover:text-orange-600" />
+                    <FaEnvelope className=" text-1xl cursor-pointer hover:text-orange-600" />
                   </div>
                   <p className="ml-2">
                     <a

@@ -9,12 +9,17 @@ const PopupLayout = () => {
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
-      setShowPopup(true && sessionStorage.getItem("POPUP") !== "0");
+      setShowPopup(
+        true &&
+          sessionStorage.getItem("POPUP") !== "0" &&
+          sessionStorage.getItem("POPUP") !== "1"
+      );
+
       sessionStorage.setItem("POPUP", "0");
     }, POPUP_TIMEOUT_1);
 
     const timer2 = setTimeout(() => {
-      setShowPopup(true && sessionStorage.getItem("POPUP") !== "1");
+      setShowPopup(true && sessionStorage.getItem("POPUP") === "0");
       sessionStorage.setItem("POPUP", "1");
     }, POPUP_TIMEOUT_2);
 

@@ -6,7 +6,7 @@ export const servicesData = [
   },
   {
     title: "Influencer Marketing",
-    image: "/images/influencer_marketing.jpg",
+    image: "/images/likes-social-media.jpg",
     url: "/services/influencer-marketing",
   },
   {
@@ -16,12 +16,12 @@ export const servicesData = [
   },
   {
     title: "Social Media Marketing",
-    image: "/images/social_media_marketing.jpg",
+    image: "/images/social_media.jpg",
     url: "/services/social-media-marketing",
   },
   {
     title: "Event Management",
-    image: "/event.jpg",
+    image: "/images/event.jpg",
     url: "/services/event-pr",
   },
 ];

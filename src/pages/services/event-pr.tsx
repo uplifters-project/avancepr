@@ -22,7 +22,7 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Event PR"
       label=""
-      image="/images/event_management.jpg"
+      image="/images/event.jpg"
       title=""
       data={data}
       description={description}

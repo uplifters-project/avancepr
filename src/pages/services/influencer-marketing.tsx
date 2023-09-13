@@ -26,7 +26,7 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Influencer Marketing"
       label=""
-      image="/images/influencer_marketing.jpg"
+      image="/images/likes-social-media.jpg"
       title=""
       data={data}
       description={description}

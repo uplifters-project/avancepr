@@ -103,7 +103,7 @@ export default function Home() {
       <HomeSection
         id="clients"
         heading="Our Clients"
-        label="What Clients say about us"
+        label=""
         full={true}
       >
         <ClientCarousel clients={...clients} rowCount={1} />

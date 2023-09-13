@@ -95,7 +95,7 @@ const AboutPage: NextPage<{}> = ({}) => {
 
           <div className="flex flex-col gap-y-4 mt-8">
             <p>
-              Ms. Ritika Garg, the Founder & CEO of Avanace PR, brings with her
+              Ms. Ritika Garg, the Founder & CEO of Avance PR, brings with her
               a wealth of experience in the field. Over the years, she has
               worked for prestigious PR firms like Ogilvy, as well as smaller
               boutique agencies.

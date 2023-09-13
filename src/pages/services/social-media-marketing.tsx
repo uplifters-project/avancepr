@@ -30,7 +30,7 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Social Media Marketing"
       label=""
-      image="/images/social_media_marketing.jpg"
+      image="/images/social_media.jpg"
       title=""
       data={data}
       description={description}

@@ -1,7 +1,7 @@
 export const servicesData = [
   {
     title: "Content Marketing",
-    image: "/images/content_marketing2.jpg",
+    image: "/images/content.jpg",
     url: "/services/content-marketing",
   },
   {
@@ -11,7 +11,7 @@ export const servicesData = [
   },
   {
     title: "Public Relation",
-    image: "/images/public_relation.jpg",
+    image: "/images/final_public_relation.png",
     url: "/services/public-relations",
   },
   {

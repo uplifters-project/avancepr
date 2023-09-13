@@ -25,7 +25,7 @@ const PublicRelationsPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Public Relation"
       label=""
-      image="/images/public Relations.jpg"
+      image="/images/final_public_relation.png"
       title=""
       data={data}
       description={description}

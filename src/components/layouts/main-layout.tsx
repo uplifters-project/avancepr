@@ -13,9 +13,9 @@ const Whatsapp = () => {
     <div className="fixed right-6 bottom-6 z-50">
       <Link href={`mailto:${EMAIL}`} target="_blank">
         <Image
-          src="/email_icon.jpg"
-          width={80}
-          height={80}
+          src="/final_email_icon.jpeg"
+          width={60}
+          height={60}
           alt="Email"
           className="cursor-pointer hover:drop-shadow-md transition-all duration-100 mx-auto"
           onClick={() => {}}

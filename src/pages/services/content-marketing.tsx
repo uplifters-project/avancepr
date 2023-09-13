@@ -34,7 +34,7 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Content Marketing"
       label=""
-      image="/images/content_marketing2.jpg"
+      image="/images/content.jpg"
       title=""
       data={data}
       description={description}

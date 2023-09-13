@@ -31,7 +31,7 @@ const nextConfig = {
       "upliftersstorage.blob.core.windows.net",
     ],
   },
-  output: "standalone",
+  output: "export",
 };
 
 module.exports = nextConfig;

@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ["dummyimage.com", "127.0.0.1", "127.0.0.1:8000"],
-  },
   env: {
     WHATSAPP_NO: process.env.WHATSAPP_NO,
     EMAIL: process.env.EMAIL,
@@ -29,9 +26,12 @@ const nextConfig = {
       "ambitious-hill-028cf7800.3.azurestaticapps.net",
       "uplifters.azurewebsites.net",
       "upliftersstorage.blob.core.windows.net",
+      "dummyimage.com",
+      "127.0.0.1",
+      "127.0.0.1:8000",
     ],
   },
-  output: "export",
+  // output: "standalone",
 };
 
 module.exports = nextConfig;

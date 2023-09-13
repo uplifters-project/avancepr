@@ -25,9 +25,10 @@ const nextConfig = {
     ],
     domains: [
       "avancepr.azurewebsites.net",
+      "avanceprstorage.blob.core.windows.net",
+      "ambitious-hill-028cf7800.3.azurestaticapps.net",
       "uplifters.azurewebsites.net",
       "upliftersstorage.blob.core.windows.net",
-      "avanceprstorage.blob.core.windows.net",
     ],
   },
   output: "standalone",

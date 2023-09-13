@@ -31,8 +31,8 @@ jobs:
           api_location: "api" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           app_build_command: "npm run build"
-          api_build_command: "rm -rf ./node_modules/@next/swc-*"
-          # api_build_command: "rm -rf ./node_modules/@next/swc-* && rm -rf ./.next/cache"
+          # api_build_command: "rm -rf ./node_modules/@next/swc-*"
+          api_build_command: "rm -rf ./node_modules/@next/swc-* && rm -rf ./.next/cache"
           ###### End of Repository/Build Configurations ######
         env:
           WHATSAPP_NO: ${{ vars.WHATSAPP_NO }}

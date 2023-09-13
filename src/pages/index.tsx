@@ -69,7 +69,7 @@ export default function Home() {
     <MainLayout>
       <div className="p-5 m-10">
         <video
-          className="w-full rounded-xl shadow-xl animate-pulse"
+          className="w-full h-50 rounded-xl shadow-xl animate-pulse object-cover"
           autoPlay
           loop
           muted

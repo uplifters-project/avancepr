@@ -30,6 +30,7 @@ const nextConfig = {
       "avanceprstorage.blob.core.windows.net",
     ],
   },
+  output: "standalone",
 };
 
 module.exports = nextConfig;

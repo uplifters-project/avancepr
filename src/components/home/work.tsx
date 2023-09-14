@@ -27,7 +27,7 @@ const OurWork: React.FC<{ workItems: Work[] }> = ({ workItems: workItems }) => {
         ref={carouselRef}
         responsive={responsive}
         autoHeight
-        autoPlay
+        autoPlay={process.env.NODE_ENV === "production"}
         autoPlayInterval={1500}
         infinite
         disableDotsControls

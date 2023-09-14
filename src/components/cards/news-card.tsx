@@ -21,7 +21,7 @@ const NewsCard: React.FC<{ news: News }> = ({ news }) => {
         </CardHeader>
 
         <CardContent className="text-center w-full overflow-auto mt-2">
-          <CardDescription>{news.content}</CardDescription>
+          <CardDescription className="p-2">{news.content}</CardDescription>
         </CardContent>
       </Card>
     </Link>

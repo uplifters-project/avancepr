@@ -69,7 +69,7 @@ export default function Home() {
     <MainLayout>
       <div className="p-5 m-10">
         <video
-          className="w-full h-50 rounded-xl shadow-xl animate-pulse object-cover"
+          className="w-full xl:max-h-[80vh] rounded-xl shadow-xl animate-pulse object-cover"
           autoPlay
           loop
           muted
@@ -100,12 +100,7 @@ export default function Home() {
       </HomeSection>
 
       {/* Clients */}
-      <HomeSection
-        id="clients"
-        heading="Our Clients"
-        label=""
-        full={true}
-      >
+      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
         <ClientCarousel clients={...clients} rowCount={1} />
       </HomeSection>
 

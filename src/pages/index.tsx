@@ -82,7 +82,7 @@ export default function Home() {
       <HomeSection
         id="services"
         heading="Our Services"
-        label="What others say about us"
+        label=""
       >
         <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
           {servicesData.map((item, i) => (

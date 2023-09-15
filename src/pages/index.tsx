@@ -74,6 +74,7 @@ export default function Home() {
           loop
           muted
           src="/creative.mp4"
+          style={{ width: '150%' }} 
         />
       </div>
 

@@ -20,7 +20,7 @@ const NewsCard: React.FC<{ news: News }> = ({ news }) => {
           />
         </CardHeader>
 
-        <CardContent className="text-center w-full overflow-auto mt-2">
+        <CardContent className="text-center text-lg text-black w-full overflow-auto mt-2">
           <CardDescription className="p-2">{news.content}</CardDescription>
         </CardContent>
       </Card>

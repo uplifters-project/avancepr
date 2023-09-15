@@ -21,7 +21,7 @@ const WorkCard: React.FC<{ work: Work }> = ({ work }) => {
           />
         </CardHeader>
 
-        <CardContent className="text-center w-full overflow-auto mt-2">
+        <CardContent className="text-center text-lg w-full overflow-auto mt-2">
           <CardTitle className="">{work.content}</CardTitle>
         </CardContent>
       </Card>

@@ -78,6 +78,7 @@ export default function Home() {
         />
       </div>
 
+
       {/* Services */}
       <HomeSection
         id="services"
@@ -91,6 +92,19 @@ export default function Home() {
         </div>
       </HomeSection>
 
+
+      {/* Clients */}
+      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
+        <ClientCarousel clients={...clients} rowCount={1} />
+      </HomeSection>
+
+      
+      {/* Our Work */}
+      <HomeSection id="work" heading="Our Work" label="">
+        <OurWork workItems={work} />
+      </HomeSection>
+
+
       {/* Testimonials */}
       <HomeSection
         id="testimonials"
@@ -100,15 +114,6 @@ export default function Home() {
         <Testimonials testimonials={testimonials} />
       </HomeSection>
 
-      {/* Clients */}
-      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
-        <ClientCarousel clients={...clients} rowCount={1} />
-      </HomeSection>
-
-      {/* Our Work */}
-      <HomeSection id="work" heading="Our Work" label="">
-        <OurWork workItems={work} />
-      </HomeSection>
 
       {/* Featured */}
       <HomeSection id="featured" heading="We got Featured" label="">

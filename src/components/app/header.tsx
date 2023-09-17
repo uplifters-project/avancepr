@@ -36,27 +36,39 @@ function Navbar() {
           </div>
 
           <div className="visible md:hidden mr-3">
-            <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-              +91-9899707349
-            </p>
+            <NextLink href={`tel:${EXTERNAL_LINKS.PHONE}`}>
+              <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+                {EXTERNAL_LINKS.PHONE}
+              </p>
+            </NextLink>
 
-            <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-              info@avancepr.in
-            </p>
+            <NextLink href={`mailto:${EXTERNAL_LINKS.EMAIL_AVANCEPR}`}>
+              <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+                {EXTERNAL_LINKS.EMAIL_AVANCEPR}
+              </p>
+            </NextLink>
 
             <div className="flex space-x-2 mt-2 justify-center">
-              <FaInstagram
-                className="text-2xl cursor-pointer hover:text-white"
-                size={15}
-              />
-              <FaTwitter
-                className="text-2xl cursor-pointer hover:text-white"
-                size={15}
-              />
-              <FaLinkedin
-                className="text-2xl cursor-pointer hover:text-white"
-                size={15}
-              />
+              <NextLink href={`${EXTERNAL_LINKS.INSTAGRAM}`}>
+                <FaInstagram
+                  className="text-2xl cursor-pointer hover:text-white"
+                  size={15}
+                />
+              </NextLink>
+
+              <NextLink href={`${EXTERNAL_LINKS.TWITTER}`}>
+                <FaTwitter
+                  className="text-2xl cursor-pointer hover:text-white"
+                  size={15}
+                />
+              </NextLink>
+
+              <NextLink href={`${EXTERNAL_LINKS.LINKEDIN}`}>
+                <FaLinkedin
+                  className="text-2xl cursor-pointer hover:text-white"
+                  size={15}
+                />
+              </NextLink>
             </div>
           </div>
 
@@ -145,31 +157,6 @@ function Navbar() {
         </div>
 
         <div className="mr-4 md:mr-12 flex md:hidden">
-          <div className="hidden md:visible">
-            <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-              +91-9899707349
-            </p>
-
-            <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-              info@avancepr.in
-            </p>
-
-            <div className="flex space-x-2 mt-2 justify-center">
-              <FaInstagram
-                className="text-2xl cursor-pointer hover:text-white"
-                size={15}
-              />
-              <FaTwitter
-                className="text-2xl cursor-pointer hover:text-white"
-                size={15}
-              />
-              <FaLinkedin
-                className="text-2xl cursor-pointer hover:text-white"
-                size={15}
-              />
-            </div>
-          </div>
-
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"

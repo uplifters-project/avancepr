@@ -74,6 +74,7 @@ export default function Home() {
           loop
           muted
           src="/creative.mp4"
+          style={{ width: '150%' }} 
         />
       </div>
 
@@ -90,6 +91,18 @@ export default function Home() {
         </div>
       </HomeSection>
 
+      {/* Clients */}
+      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
+        <ClientCarousel clients={...clients} rowCount={1} />
+      </HomeSection>
+
+
+      {/* Our Work */}
+      <HomeSection id="work" heading="Our Work" label="">
+        <OurWork workItems={work} />
+      </HomeSection>
+
+
       {/* Testimonials */}
       <HomeSection
         id="testimonials"
@@ -97,16 +110,6 @@ export default function Home() {
         label="What others say about us"
       >
         <Testimonials testimonials={testimonials} />
-      </HomeSection>
-
-      {/* Clients */}
-      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
-        <ClientCarousel clients={...clients} rowCount={1} />
-      </HomeSection>
-
-      {/* Our Work */}
-      <HomeSection id="work" heading="Our Work" label="">
-        <OurWork workItems={work} />
       </HomeSection>
 
       {/* Featured */}

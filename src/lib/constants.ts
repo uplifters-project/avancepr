@@ -48,3 +48,18 @@ export const EXTERNAL_LINKS = {
   EMAIL_AVANCEPR: "info@avancepr.in",
   EMAIL_PERSONAL: "ritika@avancepr.in",
 };
+
+export const EXTERNAL_IMAGES = {
+  CONTENT_MARKETING:
+    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/content.jpg",
+  EVENT_PR:
+    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/event.jpg",
+  PUBLIC_RELATION:
+    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/final_public_relation.png",
+  SOCIAL_MEDIA_MARKETING:
+    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/social_media.jpg",
+  INCLUENCER_MARKETING:
+    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/likes-social-media.jpg",
+  CREATIVE:
+    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/creative.mp4",
+};

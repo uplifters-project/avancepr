@@ -14,6 +14,7 @@ import MainLayout from "@/components/layouts/main-layout";
 import ServiceCard from "@/components/cards/service-card";
 import { servicesData } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { EXTERNAL_IMAGES } from "@/lib/constants";
 
 const HomeSection: React.FC<{
   id: string;
@@ -73,8 +74,8 @@ export default function Home() {
           autoPlay
           loop
           muted
-          src="/creative.mp4"
-          style={{ width: '150%' }} 
+          src={EXTERNAL_IMAGES.CREATIVE}
+          style={{ width: "150%" }}
         />
       </div>
 
@@ -96,12 +97,10 @@ export default function Home() {
         <ClientCarousel clients={...clients} rowCount={1} />
       </HomeSection>
 
-
       {/* Our Work */}
       <HomeSection id="work" heading="Our Work" label="">
         <OurWork workItems={work} />
       </HomeSection>
-
 
       {/* Testimonials */}
       <HomeSection

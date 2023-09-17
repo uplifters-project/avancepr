@@ -35,8 +35,9 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
       data={data}
       description={description}
       useOnlyChild={true}
+      // textRightPadding
     >
-      <div className="text-gray-500 grid grid-cols-2 lg:grid-cols-3 mt-16 w-full gap-4 text-center md:text-left">
+      <div className="text-gray-500 grid grid-cols-2 lg:grid-cols-3 mt-16 w-full gap-4 md:text-left">
         <div className="grid grid-cols-2 justify-center gap-4 col-span-2">
           {data.slice(0, 3).map((item, i) => {
             return (
@@ -46,7 +47,7 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
                   i === 2 ? "col-span-2 md:col-span-2" : ""
                 )}
               >
-                <div className="flex justify-center md:justify-start items-center mb-2">
+                <div className="flex justify-start items-center mb-2">
                   <svg
                     className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                     aria-hidden="true"
@@ -62,7 +63,7 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
                   </h3>
                 </div>
 
-                <p className="mb-6">{item.text}</p>
+                <p className="mb-6 pl-7 md:pl-0">{item.text}</p>
               </div>
             );
           })}
@@ -85,7 +86,7 @@ const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
             </h3>
           </div>
 
-          <p className="mb-6">{data[3].text}</p>
+          <p className="mb-6 pl-7 md:pl-0">{data[3].text}</p>
         </div>
       </div>
     </ServicePageLaypout>

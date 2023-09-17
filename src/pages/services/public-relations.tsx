@@ -18,8 +18,8 @@ const data = [
   },
 ];
 
-const description = 'Event PR, the art of weaving an enchanting narrative around your occasion, precisely promoting it to a targeted audience, and nurturing media attention to amplify its reach and impact, is a vital facet of public relations. This specialized discipline involves the expert orchestration of public relations events, serving as a linchpin in capturing the attention of the local community and potential consumers for a business, client, product, or service. By executing these events with finesse, organizations can enhance their reputation and significantly boost brand visibility. Ultimately, its about creating an immersive experience that not only captures hearts and minds but also grabs headlines.';
-
+const description =
+  "Event PR, the art of weaving an enchanting narrative around your occasion, precisely promoting it to a targeted audience, and nurturing media attention to amplify its reach and impact, is a vital facet of public relations. This specialized discipline involves the expert orchestration of public relations events, serving as a linchpin in capturing the attention of the local community and potential consumers for a business, client, product, or service. By executing these events with finesse, organizations can enhance their reputation and significantly boost brand visibility. Ultimately, its about creating an immersive experience that not only captures hearts and minds but also grabs headlines.";
 
 const PublicRelationsPage: NextPage<{}> = ({}) => {
   return (
@@ -30,6 +30,7 @@ const PublicRelationsPage: NextPage<{}> = ({}) => {
       title=""
       data={data}
       description={description}
+      textRightPadding
     >
       <></>
     </ServicePageLaypout>

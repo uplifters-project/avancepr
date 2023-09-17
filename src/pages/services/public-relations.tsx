@@ -2,6 +2,7 @@ import { NextPage } from "next";
 
 import ServicePageLaypout from "@/components/layouts/service-page-layout";
 import Image from "next/image";
+import { EXTERNAL_IMAGES } from "@/lib/constants";
 
 const data = [
   {
@@ -26,7 +27,7 @@ const PublicRelationsPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Public Relation"
       label=""
-      image="/images/final_public_relation.png"
+      image={EXTERNAL_IMAGES.PUBLIC_RELATION}
       title=""
       data={data}
       description={description}

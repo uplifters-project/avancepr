@@ -2,6 +2,7 @@ import { NextPage } from "next";
 
 import ServicePageLaypout from "@/components/layouts/service-page-layout";
 import Image from "next/image";
+import { EXTERNAL_IMAGES } from "@/lib/constants";
 
 const data = [
   {
@@ -34,7 +35,7 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Content Marketing"
       label=""
-      image="/images/content.jpg"
+      image={EXTERNAL_IMAGES.CONTENT_MARKETING}
       title=""
       data={data}
       description={description}

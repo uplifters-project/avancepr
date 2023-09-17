@@ -107,6 +107,9 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
                 }}
               />
             ),
+            ul: (props) => (
+              <ul {...props} className="cursor-pointer list-disc" />
+            ),
             a: (props) => (
               <a
                 {...props}

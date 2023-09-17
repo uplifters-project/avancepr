@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { Markup } from "interweave";
+import { cn } from "@/lib/utils";
 
 interface BlogPageProps {
   error?: string | null;
@@ -26,8 +27,8 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
   }
 
   return (
-    <PageLaypout heading={content} label={""} className="text-center">
-      <div className="mt-8 mx-auto mb-4 h-[50vh] max-h-[50vh] max-w-full">
+    <PageLaypout heading={""} label={""} className="text-center">
+      {/* <div className="mt-8 mx-auto mb-4 h-[50vh] max-h-[50vh] max-w-full">
         {image ? (
           <Image
             src={banner}
@@ -48,7 +49,32 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
             }}
           ></div>
         )}
+      </div> */}
+
+      <div
+        className={cn(
+          "absolute w-screen top-20 left-0 h-[300px] overflow-hidden bg-cover"
+        )}
+        style={{
+          backgroundImage: `url('${banner}')`,
+        }}
+      >
+        <div className="h-full w-full bg-black/50 flex flex-col justify-center items-center text-white">
+          <h1 className="text-5xl font-bold">{content}</h1>
+        </div>
+
+        {/* <Image
+            src="/images/contact-us-long.jpeg"
+            // height={425 * 2}
+            // width={640 * 2}
+            fill
+            alt="Contact Us"
+            className="mx-auto object-cover"
+          /> */}
       </div>
+
+      <div className="h-[160px]"></div>
+      <div className="h-12 md:h-20"></div>
 
       {/* <p className="mb-12 text-muted-foreground">{credits}</p> */}
 

@@ -67,23 +67,21 @@ export default function Home() {
 
   return (
     <MainLayout>
-      <div className="p-5 m-10">
+      <div className="p-0 md:p-5 my-10 mx-4 mb-0">
         <video
           className="w-full xl:max-h-[80vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
           autoPlay
           loop
           muted
           src="/creative.mp4"
-          style={{ width: '150%' }} 
         />
       </div>
-
 
       {/* Services */}
       <HomeSection
         id="services"
         heading="Our Services"
-        label=""
+        label="What others say about us"
       >
         <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
           {servicesData.map((item, i) => (
@@ -91,19 +89,6 @@ export default function Home() {
           ))}
         </div>
       </HomeSection>
-
-
-      {/* Clients */}
-      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
-        <ClientCarousel clients={...clients} rowCount={1} />
-      </HomeSection>
-
-      
-      {/* Our Work */}
-      <HomeSection id="work" heading="Our Work" label="">
-        <OurWork workItems={work} />
-      </HomeSection>
-
 
       {/* Testimonials */}
       <HomeSection
@@ -114,6 +99,15 @@ export default function Home() {
         <Testimonials testimonials={testimonials} />
       </HomeSection>
 
+      {/* Clients */}
+      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
+        <ClientCarousel clients={...clients} rowCount={1} />
+      </HomeSection>
+
+      {/* Our Work */}
+      <HomeSection id="work" heading="Our Work" label="">
+        <OurWork workItems={work} />
+      </HomeSection>
 
       {/* Featured */}
       <HomeSection id="featured" heading="We got Featured" label="">

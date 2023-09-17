@@ -19,7 +19,10 @@ function Navbar() {
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center mx-4 md:mx-20 justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
-                <NextLink href={APP_ROUTES.HOME}>
+                <NextLink
+                  href={APP_ROUTES.HOME}
+                  className="flex flex-row items-center"
+                >
                   <Image
                     src={"/Logo-modified.png"}
                     alt="Logo"
@@ -27,11 +30,11 @@ function Navbar() {
                     height={50}
                     className="mr-2"
                   />
-                </NextLink>
 
-                <h1 className="font-bold text-xl cursor-pointer">
-                  Avance <span className="text-yellow-900/70">PR</span>
-                </h1>
+                  <h1 className="font-bold text-xl cursor-pointer">
+                    Avance <span className="text-yellow-900/70">PR</span>
+                  </h1>
+                </NextLink>
               </div>
 
               <div className="hidden md:block">

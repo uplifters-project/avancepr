@@ -60,7 +60,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
         }}
       >
         <div className="h-full w-full bg-black/50 flex flex-col justify-center items-center text-white">
-          <h1 className="text-5xl font-bold">{content}</h1>
+          {/* <h1 className="text-5xl font-bold">{content}</h1> */}
         </div>
 
         {/* <Image

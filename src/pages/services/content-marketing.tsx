@@ -2,7 +2,6 @@ import { NextPage } from "next";
 
 import ServicePageLaypout from "@/components/layouts/service-page-layout";
 import Image from "next/image";
-import { EXTERNAL_IMAGES } from "@/lib/constants";
 
 const data = [
   {
@@ -35,7 +34,7 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
     <ServicePageLaypout
       heading="Content Marketing"
       label=""
-      image={EXTERNAL_IMAGES.CONTENT_MARKETING}
+      image="/images/content.jpg"
       title=""
       data={data}
       description={description}
@@ -45,8 +44,8 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
         <div className="grid grid-cols-2 justify-center gap-4 col-span-2">
           {data.slice(0, 4).map((item) => {
             return (
-              <div className="col-span-2 sm:col-span-1 flex flex-col  md:text-left">
-                <div className="flex justify-start md:justify-start items-center mb-2">
+              <div className="col-span-2 sm:col-span-1 flex flex-col text-center md:text-left">
+                <div className="flex justify-center md:justify-start items-center mb-2">
                   <svg
                     className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                     aria-hidden="true"
@@ -68,8 +67,8 @@ const ContentMarketingPage: NextPage<{}> = ({}) => {
           })}
         </div>
 
-        <div className="flex flex-col col-span-2 lg:col-span-1  md:text-left">
-          <div className="flex justify-start md:justify-start items-center mb-2">
+        <div className="flex flex-col col-span-2 lg:col-span-1 text-center md:text-left">
+          <div className="flex justify-center md:justify-start items-center mb-2">
             <svg
               className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
               aria-hidden="true"

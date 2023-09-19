@@ -16,7 +16,6 @@ const ServicePageLaypout: React.FC<{
   children: React.ReactNode;
   className?: string;
   useOnlyChild?: boolean;
-  textRightPadding?: boolean;
 }> = ({
   heading,
   label,
@@ -27,7 +26,6 @@ const ServicePageLaypout: React.FC<{
   children,
   className,
   useOnlyChild = false,
-  textRightPadding = false,
 }) => {
   return (
     <MainLayout className={cn("container pt-16 pb-24", className)}>
@@ -42,7 +40,7 @@ const ServicePageLaypout: React.FC<{
       <div className="grid grid-cols-3 gap-5 items-center my-8">
         <div
           className={cn(
-            "col-span-3 md:col-span-2 md:text-left pr-8",
+            "text-center col-span-3 md:col-span-2 md:text-left pr-8",
             !description ? "w-0 hidden" : ""
           )}
         >
@@ -71,8 +69,8 @@ const ServicePageLaypout: React.FC<{
         <div className="w-full mt-16 text-gray-500 grid grid-cols-3 justify-center gap-4">
           {data.map((item) => {
             return (
-              <div className="col-span-3 md:col-span-1 flex flex-col md:text-left">
-                <div className="flex justify-start md:justify-start items-center mb-2">
+              <div className="col-span-3 md:col-span-1 flex flex-col text-center md:text-left">
+                <div className="flex justify-center md:justify-start items-center mb-2">
                   <svg
                     className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
                     aria-hidden="true"
@@ -88,11 +86,7 @@ const ServicePageLaypout: React.FC<{
                   </h3>
                 </div>
 
-                <p
-                  className={cn("mb-6", textRightPadding ? "pl-7 md:pl-0" : "")}
-                >
-                  {item.text}
-                </p>
+                <p className="mb-6">{item.text}</p>
               </div>
             );
           })}

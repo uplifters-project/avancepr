@@ -1,29 +1,27 @@
-import { EXTERNAL_IMAGES } from "./constants";
-
 export const servicesData = [
   {
     title: "Content Marketing",
-    image: EXTERNAL_IMAGES.CONTENT_MARKETING,
+    image: "/images/content.jpg",
     url: "/services/content-marketing",
   },
   {
     title: "Influencer Marketing",
-    image: EXTERNAL_IMAGES.INCLUENCER_MARKETING,
+    image: "/images/likes-social-media.jpg",
     url: "/services/influencer-marketing",
   },
   {
     title: "Public Relation",
-    image: EXTERNAL_IMAGES.PUBLIC_RELATION,
+    image: "/images/final_public_relation.png",
     url: "/services/public-relations",
   },
   {
     title: "Social Media Marketing",
-    image: EXTERNAL_IMAGES.SOCIAL_MEDIA_MARKETING,
+    image: "/images/social_media.jpg",
     url: "/services/social-media-marketing",
   },
   {
     title: "Event Management",
-    image: EXTERNAL_IMAGES.EVENT_PR,
+    image: "/images/event.jpg",
     url: "/services/event-pr",
   },
 ];

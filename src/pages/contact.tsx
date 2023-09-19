@@ -1,85 +1,18 @@
-import { getOurClients, submitEnquiryForm } from "@/lib/apis";
+import { getOurClients } from "@/lib/apis";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
+import React, { useState } from "react";
 import { FaInstagram, FaEnvelope } from "react-icons/fa";
 import { FaLinkedin, FaPhone } from "react-icons/fa";
 import { FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { toast } from "@/components/ui/use-toast";
 
 const ContactPage: NextPage<{
   clients: Client[];
 }> = () => {
-  const [data, setData] = useState({
-    fullName: "",
-    email: "",
-    inquiry: "",
-    companyName: "",
-    phone: "",
-  });
-  const [loading, setLoading] = useState(false);
-
-  const { fullName, email, inquiry, companyName, phone } = data;
-
-  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
-
-    if (loading) return;
-
-    try {
-      setLoading(true);
-
-      const res = await submitEnquiryForm({
-        full_name: fullName,
-        email: email,
-        enquiry: inquiry,
-        phone: phone,
-        company_name: companyName,
-      });
-
-      if (res) {
-        toast({
-          title: "Form submitted successfully",
-          type: "foreground",
-        });
-
-        setData({
-          fullName: "",
-          companyName: "",
-          email: "",
-          inquiry: "",
-          phone: "",
-        });
-      } else {
-        throw new Error("Failed to submit form, please enter all the data");
-      }
-    } catch (e: any) {
-      toast({
-        title: "Failed to submit form",
-        type: "foreground",
-        description:
-          e?.message ?? "Failed to submit form, please enter all the data",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (
-    e
-  ) => {
-    const newData = {
-      ...data,
-      [e.target.name]: e.target.value,
-    };
-
-    setData(newData);
-  };
-
   return (
     <PageLaypout heading="" label="">
       <div className="max-w-screen-lg m-auto px-2 pb-16 w-full ">
@@ -206,16 +139,17 @@ const ContactPage: NextPage<{
               love to get in touch with you and understand your requirements.
             </h2>
             <div className="p-4">
-              <form onSubmit={handleSubmit}>
+              <form
+                action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
+                method="POST"
+              >
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Full Name</label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-yellow-700"
                       type="text"
-                      name="fullName"
-                      value={fullName}
-                      onChange={onChange}
+                      name="name"
                     />
                   </div>
                   <div className="flex flex-col">
@@ -226,8 +160,6 @@ const ContactPage: NextPage<{
                       className="border-2 rounded-lg p-3 flex border-yellow-700"
                       type="text"
                       name="phone"
-                      value={phone}
-                      onChange={onChange}
                     />
                   </div>
                 </div>
@@ -239,8 +171,6 @@ const ContactPage: NextPage<{
                     className="border-2 rounded-lg p-3 flex border-yellow-700"
                     type="email"
                     name="email"
-                    value={email}
-                    onChange={onChange}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -248,9 +178,7 @@ const ContactPage: NextPage<{
                   <input
                     className="border-2 rounded-lg p-3 flex border-yellow-700"
                     type="text"
-                    name="companyName"
-                    value={companyName}
-                    onChange={onChange}
+                    name="subject"
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -258,9 +186,7 @@ const ContactPage: NextPage<{
                   <textarea
                     className="border-2 rounded-lg p-3 border-yellow-700"
                     rows={5}
-                    name="inquiry"
-                    value={inquiry}
-                    onChange={onChange}
+                    name="message"
                   />
                 </div>
 

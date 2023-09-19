@@ -77,14 +77,13 @@ const Popup: React.FC<{
   return (
     <Dialog open={open} onOpenChange={setShow}>
       <DialogContent className="border-black shadow-lg shadow-yellow-700 md:shadow-xl">
+        <DialogHeader className="">
+          <DialogTitle className="text-yellow-700">
+            SEND US YOUR INQUIRY
+          </DialogTitle>
+          <DialogDescription></DialogDescription>
+        </DialogHeader>
         <form onSubmit={handleSubmit}>
-          <DialogHeader className="">
-            <DialogTitle className="text-yellow-700">
-              SEND US YOUR INQUIRY
-            </DialogTitle>
-            <DialogDescription></DialogDescription>
-          </DialogHeader>
-
           <div className="mb-4 ">
             <Input
               type="text"
@@ -136,16 +135,17 @@ const Popup: React.FC<{
               placeholder="Write your Inquiry"
             />
           </div>
-
-          <DialogFooter className="flex flex-col justify-center">
-            <Button
-              type="submit"
-              className=" bg-yellow-700  hover:bg-yellow-600 text-sm"
-            >
-              Send Request
-            </Button>
-          </DialogFooter>
         </form>
+
+        <DialogFooter className="flex flex-col justify-center">
+          <Button
+            // onClick={handleSubmit}
+            type="submit"
+            className=" bg-yellow-700  hover:bg-yellow-600 text-sm"
+          >
+            Send Request
+          </Button>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );

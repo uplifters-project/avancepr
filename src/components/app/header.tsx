@@ -123,26 +123,40 @@ function Navbar() {
             <div className="mr-4 md:mr-12 flex md:hidden">
               <div className="hidden md:visible">
                 <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                  +91-9899707349
+                  <NextLink href={`tel:${EXTERNAL_LINKS.PHONE}`}>
+                    +91-9899707349
+                  </NextLink>
                 </p>
 
                 <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                  info@avancepr.in
+                  <NextLink
+                    href={`mailto:${EXTERNAL_LINKS.EMAIL_AVANCEPR}`}
+                  >
+                    {EXTERNAL_LINKS.EMAIL_AVANCEPR}
+                  </NextLink>
                 </p>
 
                 <div className="flex space-x-2 mt-2 justify-center">
-                  <FaInstagram
-                    className="text-2xl cursor-pointer hover:text-white"
-                    size={15}
-                  />
-                  <FaTwitter
-                    className="text-2xl cursor-pointer hover:text-white"
-                    size={15}
-                  />
-                  <FaLinkedin
-                    className="text-2xl cursor-pointer hover:text-white"
-                    size={15}
-                  />
+                  <NextLink href={EXTERNAL_LINKS.INSTAGRAM} target="_blank">
+                    <FaInstagram
+                      className="text-2xl cursor-pointer hover:text-white"
+                      size={15}
+                    />
+                  </NextLink>
+
+                  <NextLink href={EXTERNAL_LINKS.TWITTER} target="_blank">
+                    <FaTwitter
+                      className="text-2xl cursor-pointer hover:text-white"
+                      size={15}
+                    />
+                  </NextLink>
+
+                  <NextLink href={EXTERNAL_LINKS.LINKEDIN} target="_blank">
+                    <FaLinkedin
+                      className="text-2xl cursor-pointer hover:text-white"
+                      size={15}
+                    />
+                  </NextLink>
                 </div>
               </div>
 
@@ -208,68 +222,50 @@ function Navbar() {
                 ref={ref}
                 className="bg-white-300/70 px-2 pt-2 pb-3 space-y-1 sm:px-3"
               >
-                <Link
-                  activeClass="about"
-                  to="about"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  About Us
-                </Link>
-                <Link
-                  activeClass="service"
-                  to="service"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Our Services
-                </Link>
 
-                <Link
-                  activeClass="clients"
-                  to="clients"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Our Clients
-                </Link>
-                <Link
-                  activeClass="blog"
-                  to="blog"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Blogs
-                </Link>
-                <Link
-                  activeClass="testimonials"
-                  to="testimonials"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Testimonials
-                </Link>
+                <NextLink
+                    href={APP_ROUTES.ABOUT}
+                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    About Us
+                </NextLink>
 
-                <Link
-                  activeClass="contact"
-                  to="contact"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Contact Us
-                </Link>
+
+                <NextLink
+                    href={APP_ROUTES.OUR_SERVICES}
+                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    Our Services
+                </NextLink>
+                 
+                
+                <NextLink
+                    href={APP_ROUTES.CLIENTS}
+                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    Our Clients
+                </NextLink>
+                
+                <NextLink
+                    href={APP_ROUTES.ALL_BLOGS}
+                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    Blogs
+                </NextLink>
+
+                <NextLink
+                    href={APP_ROUTES.WORK}
+                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    Our Work
+                </NextLink>
+
+                <NextLink
+                    href={APP_ROUTES.CONTACT}
+                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    Contact Us
+                </NextLink>
               </div>
             </div>
           )}

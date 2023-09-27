@@ -156,54 +156,52 @@ function Navbar() {
           </div>
         </div>
 
-            <div className="mr-4 md:mr-12 flex md:hidden">
-              <div className="hidden md:visible">
-                <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                  <NextLink href={`tel:${EXTERNAL_LINKS.PHONE}`}>
-                    +91-9899707349
-                  </NextLink>
-                </p>
+        <div className="mr-4 md:mr-12 flex md:hidden">
+          <div className="hidden md:visible">
+            <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+              <NextLink href={`tel:${EXTERNAL_LINKS.PHONE}`}>
+                +91-9899707349
+              </NextLink>
+            </p>
 
-                <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
-                  <NextLink
-                    href={`mailto:${EXTERNAL_LINKS.EMAIL_AVANCEPR}`}
-                  >
-                    {EXTERNAL_LINKS.EMAIL_AVANCEPR}
-                  </NextLink>
-                </p>
+            <p className="cursor-pointer text-sm text-black hover:text-white hover:underline font-medium">
+              <NextLink href={`mailto:${EXTERNAL_LINKS.EMAIL_AVANCEPR}`}>
+                {EXTERNAL_LINKS.EMAIL_AVANCEPR}
+              </NextLink>
+            </p>
 
-                <div className="flex space-x-2 mt-2 justify-center">
-                  <NextLink href={EXTERNAL_LINKS.INSTAGRAM} target="_blank">
-                    <FaInstagram
-                      className="text-2xl cursor-pointer hover:text-white"
-                      size={15}
-                    />
-                  </NextLink>
+            <div className="flex space-x-2 mt-2 justify-center">
+              <NextLink href={EXTERNAL_LINKS.INSTAGRAM} target="_blank">
+                <FaInstagram
+                  className="text-2xl cursor-pointer hover:text-white"
+                  size={15}
+                />
+              </NextLink>
 
-                  <NextLink href={EXTERNAL_LINKS.TWITTER} target="_blank">
-                    <FaTwitter
-                      className="text-2xl cursor-pointer hover:text-white"
-                      size={15}
-                    />
-                  </NextLink>
+              <NextLink href={EXTERNAL_LINKS.TWITTER} target="_blank">
+                <FaTwitter
+                  className="text-2xl cursor-pointer hover:text-white"
+                  size={15}
+                />
+              </NextLink>
 
-                  <NextLink href={EXTERNAL_LINKS.LINKEDIN} target="_blank">
-                    <FaLinkedin
-                      className="text-2xl cursor-pointer hover:text-white"
-                      size={15}
-                    />
-                  </NextLink>
-                </div>
-              </div>
+              <NextLink href={EXTERNAL_LINKS.LINKEDIN} target="_blank">
+                <FaLinkedin
+                  className="text-2xl cursor-pointer hover:text-white"
+                  size={15}
+                />
+              </NextLink>
+            </div>
+          </div>
 
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-                className="h-10 w-10 bg-black inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            type="button"
+            className="h-10 w-10 bg-black inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
 
             {!isOpen ? (
               <svg
@@ -242,71 +240,68 @@ function Navbar() {
         </div>
       </div>
 
-        <Transition
-          show={isOpen}
-          enter="transition ease-out duration-100 transform"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="transition ease-in duration-75 transform"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          {(ref) => (
-            <div className="md:10" id="mobile-menu">
-              <div
-                ref={ref}
-                className="bg-white-300/70 px-2 pt-2 pb-3 space-y-1 sm:px-3"
+      <Transition
+        show={isOpen}
+        enter="transition ease-out duration-100 transform"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="transition ease-in duration-75 transform"
+        leaveFrom="opacity-100 scale-100"
+        leaveTo="opacity-0 scale-95"
+      >
+        {(ref) => (
+          <div className="md:10" id="mobile-menu">
+            <div
+              ref={ref}
+              className="bg-white-300/70 px-2 pt-2 pb-3 space-y-1 sm:px-3"
+            >
+              <NextLink
+                href={APP_ROUTES.ABOUT}
+                className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
+                About Us
+              </NextLink>
 
-                <NextLink
-                    href={APP_ROUTES.ABOUT}
-                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    About Us
-                </NextLink>
+              <NextLink
+                href={APP_ROUTES.OUR_SERVICES}
+                className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Our Services
+              </NextLink>
 
+              <NextLink
+                href={APP_ROUTES.CLIENTS}
+                className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Our Clients
+              </NextLink>
 
-                <NextLink
-                    href={APP_ROUTES.OUR_SERVICES}
-                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Our Services
-                </NextLink>
-                 
-                
-                <NextLink
-                    href={APP_ROUTES.CLIENTS}
-                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Our Clients
-                </NextLink>
-                
-                <NextLink
-                    href={APP_ROUTES.ALL_BLOGS}
-                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Blogs
-                </NextLink>
+              <NextLink
+                href={APP_ROUTES.ALL_BLOGS}
+                className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Blogs
+              </NextLink>
 
-                <NextLink
-                    href={APP_ROUTES.WORK}
-                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Our Work
-                </NextLink>
+              <NextLink
+                href={APP_ROUTES.WORK}
+                className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Our Work
+              </NextLink>
 
-                <NextLink
-                    href={APP_ROUTES.CONTACT}
-                    className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Contact Us
-                </NextLink>
-              </div>
+              <NextLink
+                href={APP_ROUTES.CONTACT}
+                className="cursor-pointer hover:bg-black text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Contact Us
+              </NextLink>
             </div>
-          )}
-        </Transition>
-      </nav>
-    </div>
+          </div>
+        )}
+      </Transition>
+    </nav>
+    // </div>
   );
 }
 

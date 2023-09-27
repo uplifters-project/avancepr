@@ -68,14 +68,14 @@ export default function Home() {
 
   return (
     <MainLayout>
-      <div className="p-0 md:p-5 my-10 mx-4 mb-0">
+      <div className="p-0 md:p-5 mx-4 my-5 md:my-0">
         <video
-          className="w-full xl:max-h-[80vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
+          className="w-full xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
           autoPlay
           loop
           muted
           src={EXTERNAL_IMAGES.CREATIVE}
-          style={{ width: "150%" }}
+          // style={{ width: "150%" }}
         />
       </div>
 

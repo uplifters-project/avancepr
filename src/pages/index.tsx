@@ -70,11 +70,7 @@ export default function Home({
       </div>
 
       {/* Services */}
-      <HomeSection
-        id="services"
-        heading="Our Services"
-        label="What others say about us"
-      >
+      <HomeSection id="services" heading="Our Services" label="">
         <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
           {servicesData.map((item, i) => (
             <ServiceCard key={i} {...item} />
@@ -93,11 +89,7 @@ export default function Home({
       </HomeSection>
 
       {/* Testimonials */}
-      <HomeSection
-        id="testimonials"
-        heading="Testimonials"
-        label="What others say about us"
-      >
+      <HomeSection id="testimonials" heading="Testimonials" label="">
         <Testimonials testimonials={testimonials} />
       </HomeSection>
 

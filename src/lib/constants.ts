@@ -9,6 +9,7 @@ export const REVALIDATE_TIME = {
   FAQPAGE: 60 * 60 * 24 * 7,
   BLOG_PAGES: 60 * 60 * 24,
   WORK_PAGES: 60 * 60 * 24,
+  HOME_PAGE: 60 * 60 * 24,
 };
 
 export const APP_CONSTANTS = {

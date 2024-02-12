@@ -94,7 +94,7 @@ export default function Home() {
 
       {/* Clients */}
       <HomeSection id="clients" heading="Our Clients" label="" full={true}>
-        <ClientCarousel clients={...clients} rowCount={1} />
+        <ClientCarousel clients={clients} rowCount={2} />
       </HomeSection>
 
       {/* Our Work */}

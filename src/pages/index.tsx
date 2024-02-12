@@ -26,7 +26,7 @@ const HomeSection: React.FC<{
     <section
       id={id}
       className={cn(
-        "flex flex-col justify-center my-[5%]",
+        "flex flex-col justify-center my-[1.5%]",
         full ? "" : "container"
       )}
     >

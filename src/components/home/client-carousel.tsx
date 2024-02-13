@@ -32,9 +32,13 @@ const ClientCarousel: React.FC<ClientCarouselProps> = ({
           pauseOnHover
           autoFill
           speed={100}
+          // play={process.env.NODE_ENV === "production"}
         >
           {rowImages.map((client) => (
-            <div key={client.id} className="h-42 w-48 inline-block my-0 mx-8">
+            <div
+              key={client.id}
+              className="h-42 w-48 inline-flex items-center justify-center my-auto mx-8"
+            >
               <img
                 src={client.image}
                 alt="Client Image"

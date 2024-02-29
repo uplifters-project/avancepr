@@ -22,15 +22,6 @@ const fontHeading = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={cn(fontSans.variable, fontHeading.variable)}>
-      {/* <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        :root {
-          --font-sans: ${fontSans.variable};
-          --font-heading: ${fontHeading.variable}
-        }`,
-        }}
-      /> */}
       <Component {...pageProps} />
       <Toaster />
     </div>

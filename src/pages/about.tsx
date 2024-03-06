@@ -39,7 +39,7 @@ const AboutPage: NextPage<{}> = ({}) => {
           </div>
 
           <Image
-            src="/images/about_us_1.jpeg"
+            src="/images/about_us_1.png"
             height={426}
             width={640}
             alt=""
@@ -51,7 +51,7 @@ const AboutPage: NextPage<{}> = ({}) => {
 
         <div className="grid gap-x-8 items-center grid-cols-5 gap-y-8">
           <Image
-            src="/images/about_us_2.jpeg"
+            src="/images/about_us_2.png"
             height={480}
             width={640}
             alt=""
@@ -95,10 +95,10 @@ const AboutPage: NextPage<{}> = ({}) => {
 
           <div className="flex flex-col gap-y-4 mt-8">
             <p>
-              Ms. Ritika Garg, the Founder & CEO of Avance PR, brings with her
-              a wealth of experience in the field. Over the years, she has
-              worked for prestigious PR firms like Ogilvy, as well as smaller
-              boutique agencies.
+              Ms. Ritika Garg, the Founder & CEO of Avance PR, brings with her a
+              wealth of experience in the field. Over the years, she has worked
+              for prestigious PR firms like Ogilvy, as well as smaller boutique
+              agencies.
             </p>
 
             <p>

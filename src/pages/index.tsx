@@ -14,6 +14,13 @@ import { servicesData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { EXTERNAL_IMAGES, REVALIDATE_TIME } from "@/lib/constants";
 import type { InferGetStaticPropsType, GetStaticProps } from "next";
+import Popup from "@/components/app/Popup";
+import { FormEventHandler, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
+import { submitEnquiryForm } from "@/lib/apis";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 const HomeSection: React.FC<{
   id: string;
@@ -56,17 +63,137 @@ export default function Home({
   work = [],
   news = [],
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [inquiry, setInquiry] = useState("");
+  const [companyName, setCompany] = useState("");
+  const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+
+    if (loading) return;
+
+    try {
+      setLoading(true);
+
+      const res = await submitEnquiryForm({
+        full_name: fullName,
+        email: email,
+        enquiry: inquiry,
+        phone: phone,
+        company_name: companyName,
+      });
+
+      if (res) {
+        toast({
+          title: "Form submitted successfully",
+          type: "foreground",
+        });
+
+        setFullName("");
+        setEmail("");
+        setInquiry("");
+        setCompany("");
+        setPhone("");
+
+        //redirect to thank you page
+        window.location.href = "/thank-you";
+      } else {
+        throw new Error("Failed to submit form, please enter all the data");
+      }
+    } catch (e: any) {
+      toast({
+        title: "Failed to submit form",
+        type: "foreground",
+        description:
+          e?.message ?? "Failed to submit form, please enter all the data",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <MainLayout>
-      <div className="p-0 md:p-5 mx-4 my-5 md:my-0">
+      <div className="p-0 md:p-5 mx-4 my-5 md:my-0 flex gap-2">
         <video
-          className="w-full xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
+          className="max-w-[70%] xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
           autoPlay
           loop
           muted
           src={EXTERNAL_IMAGES.CREATIVE}
           // style={{ width: "150%" }}
         />
+        <div className="!w-1/4 my-auto mx-auto">
+          <form onSubmit={handleSubmit}>
+              <div className="text-yellow-700">
+                SEND US YOUR INQUIRY
+              </div>
+
+            <div className="mb-4 ">
+              <Input
+                type="text"
+                value={fullName}
+                id="fullName"
+                onChange={(e) => setFullName(e.target.value)}
+                className="border-yellow-700"
+                placeholder="Enter your Full Name"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border-yellow-700"
+                placeholder="Enter your Email"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <Input
+                type="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="border-yellow-700"
+                placeholder="Enter your Phone Number"
+              />
+            </div>
+
+            <div className="mb-4">
+              <Input
+                type="text"
+                value={companyName}
+                onChange={(e) => setCompany(e.target.value)}
+                className="border-yellow-700"
+                placeholder="Company Name"
+                required
+              />
+            </div>
+
+            <div className="mb-4">
+              <Textarea
+                rows={5}
+                value={inquiry}
+                onChange={(e) => setInquiry(e.target.value)}
+                className="border-yellow-700"
+                placeholder="Write your Inquiry"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <Button
+                type="submit"
+                className=" bg-yellow-700  hover:bg-yellow-600 text-sm"
+              >
+                Send Request
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
 
       {/* Services */}

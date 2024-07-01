@@ -117,16 +117,16 @@ export default function Home({
 
   return (
     <MainLayout>
-      <div className="p-0 md:p-5 mx-4 my-5 md:my-0 flex gap-2">
+      <div className="p-0 md:p-5 mx-4 my-5 md:my-0 flex flex-col lg:flex-row gap-2">
         <video
-          className="max-w-[70%] xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
+          className="lg:max-w-[70%] xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
           autoPlay
           loop
           muted
           src={EXTERNAL_IMAGES.CREATIVE}
           // style={{ width: "150%" }}
         />
-        <div className="!w-1/4 my-auto mx-auto">
+        <div className="w-full px-5 lg:px-0 lg:w-1/4 my-auto lg:mx-auto">
           <form onSubmit={handleSubmit}>
               <div className="text-yellow-700">
                 SEND US YOUR INQUIRY

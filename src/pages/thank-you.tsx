@@ -4,12 +4,14 @@ import Script from "next/script";
 export default function ThankYou() {
     return <MainLayout>
         <head>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16466088790" />
-            <Script>
-                {`if(typeof window != 'undefined'){
-                    gtag('event', 'conversion', {'send_to': 'AW-16466088790/wws4CNuJwr0ZENam0qs9'});
-                }`}
-            </Script>
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLF4N81TNH"></script>
+         <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KLF4N81TNH');
+        </script>
+        <script> gtag('event', 'conversion', {'send_to': 'AW-16466088790/wws4CNuJwr0ZENam0qs9'}); </script>
         </head>
         <div className="my-20">
         <div className="text-center font-medium md:text-3xl my-5">

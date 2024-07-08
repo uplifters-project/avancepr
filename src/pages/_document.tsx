@@ -5,10 +5,13 @@ export default function Document() {
   return (
     <Html lang="en" suppressHydrationWarning>
       <Head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16466088790"/>
-        <Script>
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16466088790');` }
-        </Script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLF4N81TNH"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KLF4N81TNH');
+        </script>
       </Head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <Main />

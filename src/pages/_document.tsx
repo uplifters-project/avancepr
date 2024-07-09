@@ -8,7 +8,7 @@ export default function Document() {
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLF4N81TNH"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-KLF4N81TNH');
         </script>

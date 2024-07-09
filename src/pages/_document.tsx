@@ -7,10 +7,10 @@ export default function Document() {
       <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLF4N81TNH"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
+          { window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-KLF4N81TNH');
+          gtag('config', 'G-KLF4N81TNH'); }
         </script>
       </Head>
       <body className="min-h-screen bg-background font-sans antialiased">

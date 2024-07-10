@@ -54,6 +54,9 @@ const ContactPage: NextPage<{
           inquiry: "",
           phone: "",
         });
+
+          //redirect to thank you page
+        window.location.href = "/thank-you";
       } else {
         throw new Error("Failed to submit form, please enter all the data");
       }

@@ -26,6 +26,11 @@ export const servicesData = [
     image: EXTERNAL_IMAGES.EVENT_PR,
     url: "/services/event-pr",
   },
+  {
+    title: "Services",
+    image: EXTERNAL_IMAGES.EVENT_PR,
+    url: "/services/event-pr",
+  },
 ];
 
 // TODO: Populate data

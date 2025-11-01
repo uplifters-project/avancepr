@@ -21,6 +21,8 @@ import { toast } from "@/components/ui/use-toast";
 import { submitEnquiryForm } from "@/lib/apis";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { Separator } from "@radix-ui/react-separator";
 
 const HomeSection: React.FC<{
   id: string;
@@ -37,7 +39,7 @@ const HomeSection: React.FC<{
         full ? "" : "container"
       )}
     >
-      <div className="mx-auto mt-12 mb-8">
+      <div className="mx-auto mt-12 mb-10">
         <h2 className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter">
           {heading}
         </h2>
@@ -124,13 +126,13 @@ export default function Home({
           loop
           muted
           src={EXTERNAL_IMAGES.CREATIVE}
-          // style={{ width: "150%" }}
+        // style={{ width: "150%" }}
         />
         <div className="w-full px-5 lg:px-0 lg:w-1/4 my-auto lg:mx-auto">
           <form onSubmit={handleSubmit}>
-              <div className="text-yellow-700">
-                SEND US YOUR INQUIRY
-              </div>
+            <div className="text-yellow-700">
+              SEND US YOUR INQUIRY
+            </div>
 
             <div className="mb-4 ">
               <Input
@@ -220,8 +222,61 @@ export default function Home({
         <Testimonials testimonials={testimonials} />
       </HomeSection>
 
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-10 px-4 my-16">
+        {/* Image on the left */}
+        <div className="order-1 md:order-1 flex flex-col justify-center items-center gap-y-4">
+          <Image
+            src="/images/ritika.jpeg"
+            height={500}
+            width={500}
+            alt="Ritika Garg"
+            className="w-60 md:w-72 aspect-square rounded-full object-cover"
+          />
+
+          <h2 className="text-2xl font-bold text-muted-foreground text-center">
+            Ritika Garg
+          </h2>
+        </div>
+
+        {/* Text on the right */}
+        <div className="order-2 md:order-2 col-span-2">
+          <h2 className="text-5xl text-center md:text-left font-bold text-yellow-700 animate-showLetterByLetter">
+            Founder & CEO
+          </h2>
+
+          <div className="flex flex-col gap-y-4 mt-8 text-justify text-gray-700">
+            <p>
+              Ms. Ritika Garg, the Founder & CEO of Avance PR, brings with her a
+              wealth of experience in the field. Over the years, she has worked for
+              prestigious PR firms like Ogilvy, as well as smaller boutique agencies.
+            </p>
+
+            <p>
+              During her career, Ms. Ritika has collaborated with more than 50 brands
+              and influential celebrities. She possesses strong media relations skills
+              and a talent for crafting strategic plans that benefit brands across
+              different industries.
+            </p>
+
+            <p>
+              Currently based in Gurgaon, she leads a team of 10+ PR professionals at
+              Avance PR. Her primary focus is on elevating Avance PR's reputation to
+              become a renowned brand in the industry. With her dedication and hard
+              work, she is actively striving towards achieving this goal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
       {/* Featured */}
       <HomeSection id="featured" heading="We got Featured" label="">
+        <Featured newsItems={news} />
+      </HomeSection>
+
+      {/* Awarded */}
+      <HomeSection id="awarded" heading="We have been Awarded" label="">
         <Featured newsItems={news} />
       </HomeSection>
     </MainLayout>

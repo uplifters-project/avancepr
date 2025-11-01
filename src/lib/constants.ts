@@ -30,6 +30,7 @@ export const APP_ROUTES = {
   TESTIMONIALS: "/#testimonials",
   OUR_SERVICES: "/#services",
   NEWS: "/#featured",
+  PRIVACY_POLICY: "/privacy-policy",
 
   SERVICES: {
     PUBLIC_RELATIONS: "/services/public-relations",

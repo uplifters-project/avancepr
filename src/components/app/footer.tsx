@@ -70,6 +70,9 @@ function Footer() {
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
                 <Link href={APP_ROUTES.ALL_BLOGS}>Blogs</Link>
               </li>
+              <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
+                <Link href={APP_ROUTES.PRIVACY_POLICY}>Privacy Policy</Link>
+              </li>
             </ul>
           </div>
 

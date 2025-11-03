@@ -2,9 +2,9 @@ import { EXTERNAL_IMAGES } from "./constants";
 
 export const servicesData = [
   {
-    title: "Content Marketing",
+    title: "PR For Startups",
     image: EXTERNAL_IMAGES.CONTENT_MARKETING,
-    url: "/services/content-marketing",
+    url: "/services/startup-pr",
   },
   {
     title: "Influencer Marketing",
@@ -12,24 +12,24 @@ export const servicesData = [
     url: "/services/influencer-marketing",
   },
   {
-    title: "Public Relation",
+    title: "Corporate Communication",
     image: EXTERNAL_IMAGES.PUBLIC_RELATION,
-    url: "/services/public-relations",
+    url: "/services/corporate-communication",
   },
   {
-    title: "Social Media Marketing",
+    title: "Social Media Management",
     image: EXTERNAL_IMAGES.SOCIAL_MEDIA_MARKETING,
     url: "/services/social-media-marketing",
   },
   {
-    title: "Event Management",
+    title: "Crisis Management",
     image: EXTERNAL_IMAGES.EVENT_PR,
-    url: "/services/event-pr",
+    url: "/services/crisis-management",
   },
   {
-    title: "Services",
+    title: "Personal Branding",
     image: EXTERNAL_IMAGES.EVENT_PR,
-    url: "/services/event-pr",
+    url: "/services/personal-branding",
   },
 ];
 

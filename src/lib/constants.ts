@@ -33,11 +33,12 @@ export const APP_ROUTES = {
   PRIVACY_POLICY: "/privacy-policy",
 
   SERVICES: {
-    PUBLIC_RELATIONS: "/services/public-relations",
-    CONTENT_MARKETING: "/services/content-marketing",
+    STARTUPS_PR: "/services/startup-pr",
     SOCIAL_MEDIA_MARKETING: "/services/social-media-marketing",
     INFLUENCER_MARKETING: "/services/influencer-marketing",
-    EVENT_MANAGEMENT: "/services/event-pr",
+    CRISIS_MANAGEMENT: "/services/crisis-management",
+    CORPORATE_COMMUNICATION: "/services/corporate-communication",
+    PERSONAL_BRANDING: "/services/personal-branding"
   },
 };
 

@@ -14,7 +14,6 @@ import { servicesData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { EXTERNAL_IMAGES, REVALIDATE_TIME } from "@/lib/constants";
 import type { InferGetStaticPropsType, GetStaticProps } from "next";
-import Popup from "@/components/app/Popup";
 import { FormEventHandler, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
@@ -22,7 +21,7 @@ import { submitEnquiryForm } from "@/lib/apis";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Separator } from "@radix-ui/react-separator";
+import Head from "next/head";
 
 const HomeSection: React.FC<{
   id: string;
@@ -119,6 +118,22 @@ export default function Home({
 
   return (
     <MainLayout>
+
+      <Head>
+        <title>Avance PR: Best PR Agency in India | Top PR Firms for Startups</title>
+        <meta name="description" content="Avance PR is a leading public relations agency in India. We offer PR for startups, crisis management, influencer & corporate communication. Free consultation." />
+        <meta property="og:title" content="Avance PR: Best PR Agency in India | Top PR Firms for Startups" />
+        <meta property="og:description" content="Avance PR is a leading public relations agency in India. We offer PR for startups, crisis management, influencer & corporate communication. Free consultation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.avancepr.in/" />
+        <meta property="og:image" content="https://www.avancepr.in/og-image.png" />
+      </Head>
+
+
+      <p className="text-center mt-10 text-xl md:text-2xl font-semibold text-yellow-900 bg-yellow-50 py-4 px-6 rounded-xl shadow-sm max-w-5xl mx-auto mb-6 border-l-4 border-yellow-700">
+        Power Your Brand Growth with Avance PR — India's Leading Strategic Communications Agency Driving Visibility, Credibility, and Influence through Media, Influencer, and Digital Platforms.
+      </p>
+
       <div className="p-0 md:p-5 mx-4 my-5 md:my-0 flex flex-col lg:flex-row gap-2">
         <video
           className="lg:max-w-[70%] xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
@@ -131,7 +146,7 @@ export default function Home({
         <div className="w-full px-5 lg:px-0 lg:w-1/4 my-auto lg:mx-auto">
           <form onSubmit={handleSubmit}>
             <div className="text-yellow-700">
-              SEND US YOUR INQUIRY
+              Get Free PR Strategy Consultation
             </div>
 
             <div className="mb-4 ">
@@ -199,7 +214,7 @@ export default function Home({
       </div>
 
       {/* Services */}
-      <HomeSection id="services" heading="Our Services" label="">
+      <HomeSection id="services" heading="Our Services" label="From Startup PR to Crisis Management and Corporate Communications — Avance PR creates visibility that strengthens credibility, fosters trust, and enhances brand equity across India">
         <div className="flex flex-row gap-5 flex-auto flex-wrap justify-center">
           {servicesData.map((item, i) => (
             <ServiceCard key={i} {...item} />
@@ -208,17 +223,17 @@ export default function Home({
       </HomeSection>
 
       {/* Clients */}
-      <HomeSection id="clients" heading="Our Clients" label="" full={true}>
+      <HomeSection id="clients" heading="Our Clients" label="Trusted by over 100+ brands across India, Avance PR partners with some of the nation&rsquo;s most innovative, fast-growing, and purpose-driven companies to shape their narrative and amplify visibility" full={true}>
         <ClientCarousel clients={clients} rowCount={2} />
       </HomeSection>
 
       {/* Our Work */}
-      <HomeSection id="work" heading="Our Work" label="">
+      <HomeSection id="work" heading="Case Studies" label="Each success story we share represents a partnership built on trust, creativity, and results, where strategic PR meets authentic communication to build brands that truly stand out">
         <OurWork workItems={work} />
       </HomeSection>
 
       {/* Testimonials */}
-      <HomeSection id="testimonials" heading="Testimonials" label="">
+      <HomeSection id="testimonials" heading="Testimonials" label="The strongest validation of our work comes from those who&rsquo;ve experienced it,  here&rsquo;s what our clients have to say.">
         <Testimonials testimonials={testimonials} />
       </HomeSection>
 
@@ -241,28 +256,20 @@ export default function Home({
         {/* Text on the right */}
         <div className="order-2 md:order-2 col-span-2">
           <h2 className="text-5xl text-center md:text-left font-bold text-yellow-700 animate-showLetterByLetter">
-            Founder & CEO
+            Meet the Founder
           </h2>
 
           <div className="flex flex-col gap-y-4 mt-8 text-justify text-gray-700">
             <p>
-              Ms. Ritika Garg, the Founder & CEO of Avance PR, brings with her a
-              wealth of experience in the field. Over the years, she has worked for
-              prestigious PR firms like Ogilvy, as well as smaller boutique agencies.
+              An award-winning entrepreneur recognized by ET 40 Under 40 and ET Women Leaders Awards, Ritika Garg founded Avance PR to redefine how brands communicate and connect.
             </p>
 
             <p>
-              During her career, Ms. Ritika has collaborated with more than 50 brands
-              and influential celebrities. She possesses strong media relations skills
-              and a talent for crafting strategic plans that benefit brands across
-              different industries.
+              A communications strategist who began her career at Ogilvy, Ritika brings deep expertise in media relations, corporate communications, and influencer strategy. Under her leadership, Avance PR has grown into one of India’s fastest-emerging strategic communications agencies, trusted by over 100+ brands across technology, education, sustainability, hospitality, finance and other sectors.
             </p>
 
             <p>
-              Currently based in Gurgaon, she leads a team of 10+ PR professionals at
-              Avance PR. Her primary focus is on elevating Avance PR's reputation to
-              become a renowned brand in the industry. With her dedication and hard
-              work, she is actively striving towards achieving this goal.
+              Guided by her belief that PR is not just about visibility but credibility, influence, and growth, Ritika continues to lead with innovation, empathy, and a people-first vision.
             </p>
           </div>
         </div>
@@ -276,9 +283,29 @@ export default function Home({
       </HomeSection>
 
       {/* Awarded */}
-      <HomeSection id="awarded" heading="We have been Awarded" label="">
+      <HomeSection id="awarded" heading="Awards & Recognitions" label="Each award stands as a testament to our team&rsquo;s relentless pursuit of excellence, innovation, and influence reaffirming our place among India’s leading PR and communications agencies.">
         <Featured newsItems={news} />
       </HomeSection>
+
+      <div className="bg-yellow-50 pt-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-yellow-900 mb-6 leading-tight">
+            Ready to amplify your brand's narrative?
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+            Let's craft stories that make headlines. Connect with Avance PR today for a free strategy consultation and discover how we can drive visibility, credibility, and growth tailored to your goals.
+          </p>
+          <Button
+            className="bg-yellow-700 mb-10 hover:bg-yellow-600 text-white text-lg px-8 py-3 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+            onClick={() => {
+              // You might want to add a method to scroll to the inquiry form or open a modal
+              document.getElementById('inquiry-form')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
+            Get Free PR Strategy Consultation
+          </Button>
+        </div>
+      </div>
     </MainLayout>
   );
 }

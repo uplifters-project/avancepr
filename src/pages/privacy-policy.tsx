@@ -1,96 +1,89 @@
 import MainLayout from "@/components/layouts/main-layout";
-import Script from "next/script";
 
 export default function PrivacyPolicy() {
   return (
     <MainLayout>
-      {/* Optional Google Tag Manager or Analytics scripts */}
-      <head>
-        {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-KLF4N81TNH" />
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-KLF4N81TNH');
-          `}
-        </Script> */}
-      </head>
-
       <div className="max-w-4xl mx-auto my-20 px-6 text-gray-700 leading-relaxed">
         <h1 className="text-4xl font-bold text-center text-yellow-700 mb-10">
           Privacy Policy
         </h1>
 
         <p>
-          At Avance PR, accessible from{" "}
-          <span className="font-medium">www.avancepr.com</span>, one of our main
-          priorities is the privacy of our visitors. This Privacy Policy
-          document contains types of information that are collected and recorded
-          by Avance PR and how we use it.
+          At <span className="font-semibold">Avance PR</span>, your privacy is our priority. 
+          This Privacy Policy explains how we collect, use, protect, and share information 
+          when you visit our website, engage with our services, or communicate with our team. 
+          We are committed to maintaining the confidentiality and security of your personal 
+          data at every step.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-2">
-          1. Information We Collect
+        <h2 className="text-2xl font-semibold mt-8 mb-3">
+          Information We Collect
         </h2>
-        <p>
-          We may collect personal information such as your name, email address,
-          phone number, and company name when you fill out forms on our website
-          or contact us directly. We also automatically collect certain data
-          like your IP address, browser type, and device information to improve
-          our website experience.
+        <p>We collect information that you voluntarily provide to us, such as when you:</p>
+        <ul className="list-disc ml-6 mt-2 space-y-1">
+          <li>Fill out a contact form on our website</li>
+          <li>Subscribe to our newsletters or updates</li>
+          <li>Share feedback or testimonials about our services</li>
+          <li>Contact us with queries or requests for collaboration</li>
+        </ul>
+        <p className="mt-3">
+          This information may include your name, email address, phone number, 
+          organization details, and any other information you choose to share.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-2">
-          2. How We Use Your Information
+        <h2 className="text-2xl font-semibold mt-8 mb-3">
+          How We Use the Information
         </h2>
         <p>
-          The information we collect is used to:
+          We use the information collected to better understand your needs and 
+          deliver a seamless experience. Specifically, we may use it for:
         </p>
-        <ul className="list-disc ml-6 mt-2">
-          <li>Respond to your inquiries and provide services</li>
-          <li>Improve our website and user experience</li>
-          <li>Send updates or marketing communications (with consent)</li>
-          <li>Comply with legal obligations</li>
+        <ul className="list-disc ml-6 mt-2 space-y-1">
+          <li>Maintaining internal records and client databases</li>
+          <li>Improving our services, communication, and offerings</li>
+          <li>Responding to your inquiries and feedback promptly</li>
+          <li>Sharing updates, insights, or newsletters (only if you have opted in)</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-2">
-          3. Cookies and Tracking Technologies
+        <h2 className="text-2xl font-semibold mt-8 mb-3">
+          Use of Cookies
         </h2>
         <p>
-          We use cookies to store information about visitors’ preferences and
-          optimize the user experience by customizing our web page content based
-          on visitors’ browser type and other information.
+          Our website uses cookies — small text files placed on your device — to enhance 
+          your browsing experience. Cookies help us analyze web traffic, understand user 
+          behavior, and improve our content and interface. These cookies collect only 
+          technical or usage-related information and do not identify you personally.
+        </p>
+        <p className="mt-3">
+          You may choose to disable cookies through your browser settings, though some 
+          parts of the website may not function optimally as a result.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-2">
-          4. Data Sharing and Security
+        <h2 className="text-2xl font-semibold mt-8 mb-3">
+          Data Retention
         </h2>
         <p>
-          We do not sell or rent your personal data to third parties. We may
-          share information with trusted service providers who assist in
-          operating our website, as long as they agree to keep your data secure
-          and confidential.
+          We retain your personal data only for as long as necessary to fulfill the 
+          purposes described in this policy or as required by applicable laws. Once 
+          your data is no longer needed, it will be securely deleted or anonymized.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-2">5. Your Rights</h2>
-        <p>
-          You have the right to access, correct, or delete your personal
-          information. You can contact us at any time to exercise these rights.
-        </p>
-
-        <h2 className="text-2xl font-semibold mt-8 mb-2">
-          6. Changes to This Policy
+        <h2 className="text-2xl font-semibold mt-8 mb-3">
+          Children’s Privacy
         </h2>
         <p>
-          We may update this Privacy Policy from time to time. Changes will be
-          posted on this page with an updated revision date.
+          Our services and communications are intended for professionals and business 
+          representatives. We do not knowingly collect personal information from 
+          individuals under the age of 16 (or the applicable age of consent in your 
+          jurisdiction). If such data is inadvertently collected, we will delete it promptly.
         </p>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-2">7. Contact Us</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-3">
+          Contact Us
+        </h2>
         <p>
-          If you have any questions about our Privacy Policy or how we handle
-          your information, please contact us at{" "}
+          If you have any questions or concerns regarding this Privacy Policy or how we 
+          handle your data, please contact us at{" "}
           <a
             href="mailto:info@avancepr.com"
             className="text-yellow-700 font-medium hover:underline"

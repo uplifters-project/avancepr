@@ -80,7 +80,7 @@ const Popup: React.FC<{
         <form onSubmit={handleSubmit}>
           <DialogHeader className="">
             <DialogTitle className="text-yellow-700">
-              SEND US YOUR INQUIRY
+              Get Free PR Strategy Consultation
             </DialogTitle>
             <DialogDescription></DialogDescription>
           </DialogHeader>

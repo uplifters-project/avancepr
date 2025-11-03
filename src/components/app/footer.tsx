@@ -82,13 +82,13 @@ function Footer() {
                 Our Services
               </p>
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
-                <Link href={APP_ROUTES.SERVICES.PUBLIC_RELATIONS}>
-                  Public Relation
+                <Link href={APP_ROUTES.SERVICES.STARTUPS_PR}>
+                  PR for Startups
                 </Link>
               </li>
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
-                <Link href={APP_ROUTES.SERVICES.CONTENT_MARKETING}>
-                  Content Marketing
+                <Link href={APP_ROUTES.SERVICES.SOCIAL_MEDIA_MARKETING}>
+                  Social Media Marketing
                 </Link>
               </li>
               <li className="ext-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
@@ -97,13 +97,18 @@ function Footer() {
                 </Link>
               </li>
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
-                <Link href={APP_ROUTES.SERVICES.EVENT_MANAGEMENT}>
-                  Event Management
+                <Link href={APP_ROUTES.SERVICES.CRISIS_MANAGEMENT}>
+                  Crisis Management
                 </Link>
               </li>{" "}
               <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
-                <Link href={APP_ROUTES.SERVICES.SOCIAL_MEDIA_MARKETING}>
-                  Social Media Marketing
+                <Link href={APP_ROUTES.SERVICES.CORPORATE_COMMUNICATION}>
+                  Corporate Communication
+                </Link>
+              </li>
+              <li className="text-md pb-2 hover:bg-black text-black hover:text-white px-3 py-2 rounded-md font-medium">
+                <Link href={APP_ROUTES.SERVICES.PERSONAL_BRANDING}>
+                  Personal Branding
                 </Link>
               </li>
             </ul>

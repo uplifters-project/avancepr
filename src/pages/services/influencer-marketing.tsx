@@ -3,41 +3,60 @@ import { NextPage } from "next";
 import ServicePageLaypout from "@/components/layouts/service-page-layout";
 import Image from "next/image";
 import { EXTERNAL_IMAGES } from "@/lib/constants";
+import Head from "next/head";
 
 const data = [
   {
     heading:
-      "Instagram: Influencer Magic Can Help You Improve Your Instagram Game",
-    text: " Say goodbye to the mundane and welcome to the remarkable. AvancePR provides the power of Influencer Marketing designed just for Instagram. Consider showcasing your business to thousands of engaged followers with stunning images and real tales. We're your secret weapon for increasing likes, followers, and achieving genuine business outcomes. Are you prepared to make your feed the talk of the town? Let's get started. ",
+      "Influencer Strategy & Campaign Design: Turning Objectives Into Authentic Engagement",
+    text: "We begin by understanding your brand objectives, audience, and message — then design influencer campaigns that blend creativity with conversion. Every campaign is tailored to spark organic engagement and long-term brand affinity. Our strategic approach ensures that every influencer partnership moves your brand forward, creating meaningful connections that resonate with your target audience.",
   },
   {
     heading:
-      "Facebook: AvancePR Can Help You Unlock the Potential of Influencer Marketing",
-    text: "Are you ready to elevate your company's social media presence? Introducing our specialist Influencer Marketing services, which are specifically intended to increase your Facebook exposure and interaction. We're here to help your company shine brighter than before, from selecting the ideal influencers to creating fascinating content. Join forces with us and let's build a buzz that lasts across time.    ",
+      "Talent Discovery & Collaboration: Finding the Perfect Voices for Your Brand",
+    text: "With access to a wide network of influencers, creators, and digital storytellers across industries, we identify voices that align with your brand ethos. We manage negotiations, briefing, and coordination to ensure seamless execution. From macro creators to micro-influencers and niche community leaders, we connect you with authentic partners who can tell your story in ways that truly matter.",
   },
   {
     heading:
-      "Youtube:Do you want to attract the attention of video-savvy audiences? ",
-    text: "There is no need to look any further! YouTube Influencer Marketing by AvancePR converts views into followers and subscribers into customers. Let's work together to find influencers that can represent your business in engaging, shareable films that reach millions of people. Are you ready to put your brand in the spotlight? Let's get the camera rolling! ",
+      "Content Planning & Creative Direction: Crafting Stories That Captivate",
+    text: "We work closely with influencers to co-create authentic, platform-optimized content that resonates with their audience while staying true to your brand identity. From Instagram reels to YouTube videos — every piece is designed for impact. Our creative direction ensures that each collaboration produces content that feels genuine, engages audiences, and drives meaningful action.",
+  },
+  {
+    heading:
+      "Performance Tracking & ROI Measurement: Data-Driven Success",
+    text: "Data drives everything we do. We measure engagement, reach, conversions, and sentiment to evaluate campaign effectiveness ensuring your investment translates into tangible outcomes. Our comprehensive analytics provide clear insights into campaign performance, helping you understand not just what worked, but why it worked and how to replicate success.",
+  },
+  {
+    heading:
+      "Celebrity & Thought-Leader Endorsements: Elevating Brand Aspirations",
+    text: "Beyond digital influencers, we also facilitate collaborations with celebrities, industry leaders, and public figures, helping brands build aspirational value and large-scale awareness. These high-profile partnerships create powerful brand moments that capture attention, drive conversations, and establish your brand as a category leader.",
   },
 ];
 
-const description = `The skill of creating a captivating story around your event, carefully advertising it to a specific audience, and cultivating media coverage that increases its exposure and influence is known as event PR. Event PR entails the proficient management and execution of public relations events, which play a pivotal role in garnering the interest of both the local community and prospective consumers towards a business, client, product, or service. By orchestrating these events with the utmost expertise, organizations can effectively bolster their reputation and significantly augment brand awareness. It all comes down to crafting an immersive experience that grabs hearts, minds, and headlines. AvancePR, as a leading provider of event PR services, excels at leveraging these strategic initiatives to elevate our clients' brands to new heights. Our skilled communicators craft great press releases, captivating pitches, and meaningful content that reaches journalists and influencers. We carefully harness media ties to acquire coverage that broadens the impact of your events.`;
+const description = `At AvancePR, we understand that today's audiences trust people more than promotions and that's where influencers become your most powerful storytellers. Our Influencer Marketing services are built to connect brands with authentic voices who inspire, engage, and convert. We don't just collaborate with influencers — we craft strategic partnerships that amplify credibility, drive conversations, and build communities around your brand. From campaign strategy and talent curation to execution and performance analysis, we manage the entire influencer journey ensuring every collaboration aligns with your brand's vision, tone, and target audience. Whether it's macro creators, micro-influencers, or niche community leaders, we help you turn influence into measurable impact. Our approach goes beyond simple endorsements; we create authentic relationships between brands and influencers that result in compelling narratives, genuine engagement, and lasting brand loyalty.`;
 
-const ContentMarketingPage: NextPage<{}> = ({}) => {
+const InfluencerMarketingPage: NextPage<{}> = ({ }) => {
   return (
     <ServicePageLaypout
       heading="Influencer Marketing"
-      label=""
+      label="Transform Influence Into Impact"
       image={EXTERNAL_IMAGES.INCLUENCER_MARKETING}
-      title=""
+      title="Where Authentic Voices Meet Brand Stories"
       data={data}
       description={description}
       textRightPadding={true}
     >
-      <></>
+      <Head>
+        <title>Influencer Marketing Agency India ‐ Avance PR</title>
+        <meta name="description" content="Avance PR connects you with relevant influencers to amplify your brand. End-to-end influencer campaigns for lifestyle, tech & consumer brands." />
+        <meta property="og:title" content="Influencer Marketing Agency India ‐ Avance PR" />
+        <meta property="og:description" content="Avance PR connects you with relevant influencers to amplify your brand. End-to-end influencer campaigns for lifestyle, tech & consumer brands." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.avancepr.in/services/influencer-marketing" />
+        <meta property="og:image" content="https://www.avancepr.in/og-image.png" />
+      </Head>
     </ServicePageLaypout>
   );
 };
 
-export default ContentMarketingPage;
+export default InfluencerMarketingPage;

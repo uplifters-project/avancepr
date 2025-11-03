@@ -1,94 +1,102 @@
 import { NextPage } from "next";
-
 import ServicePageLaypout from "@/components/layouts/service-page-layout";
 import { cn } from "@/lib/utils";
 import { EXTERNAL_IMAGES } from "@/lib/constants";
+import Head from "next/head";
 
 const data = [
   {
-    heading: "Social media handles",
-    text: "Our Social Media Team provides a comprehensive suite of services that includes the development of a Social Media Plan and Calendar, ensuring the client’s social media handles are optimized and utilized effectively. ",
+    heading: "Social Media Strategy & Planning",
+    text: "We develop platform-specific strategies aligned with your business goals, audience behavior, and brand tone. Every post, campaign, and interaction is guided by a clear objective — from awareness to advocacy.",
   },
   {
-    heading: "Analytics Report",
-    text: "At Avance PR, we believe that data-driven decision-making is essential for achieving your business objectives. That's why we provide comprehensive Analytics Reporting that offers valuable insights into your social media performance. ",
+    heading: "Content Creation & Calendar Management",
+    text: "Our creative team designs visually striking, story-led content including static posts, reels, carousels, and brand stories supported by an organized content calendar for consistency and performance.",
   },
   {
-    heading: "Campaign planning",
-    text: "Campaign planning is essential for achieving your business objectives. Our experienced team works closely to develop targeted campaigns that are designed to engage the audience, increase brand awareness, and drive conversions. We utilize the latest technologies and techniques to ensure that your campaigns are optimized for maximum impact. ",
+    heading: "Community Engagement & Growth",
+    text: "We don't just post, we build conversations. Our engagement specialists ensure active interaction with followers, influencers, and communities to foster trust and strengthen brand loyalty.",
   },
   {
-    heading: "Performance marketing and lead generation",
-    text: "At AvancePR, we understand that Performance Marketing and Lead Generation are vital components of any successful marketing strategy. Our experienced team works closely with clients to develop targeted campaigns that are designed to drive traffic, generate leads, and increase conversions. We utilize the latest technologies and techniques to ensure that your campaigns are optimized for maximum impact, including social media advertising, email marketing, and search engine optimization. With AvancePR,  Performance Marketing and Lead Generation strategies are effective and tailored to your specific business needs.    ",
+    heading: "Performance Tracking & Optimization",
+    text: "We monitor analytics across platforms, tracking metrics like reach, engagement, sentiment, and conversions. Our reports don't just show data, they uncover insights that drive better creative and business outcomes.",
+  },
+  {
+    heading: "Paid Campaigns & Influencer Integrations",
+    text: "We combine organic strategies with targeted paid promotions and influencer tie-ins to maximize visibility and ensure every campaign reaches the right audience at the right time.",
   },
 ];
 
-const description = `Social media has evolved into a tool for building personalized connections with clients and potential clients. Our knowledgeable Social Media Team works with your company to embrace sponsored media, owned media, and earned media while integrating the most recent social media trends, techniques, and helpful advice. AvancePR utilizes
-the appropriate technologies to reach your target audience.`;
+const description = `At Avance PR, we believe social media is more than just posts and hashtags — it's where your brand builds relationships, reputation, and relevance. Our Social Media Management services are designed to help you create a powerful digital presence that tells your story consistently, creatively, and strategically. From crafting engaging content to driving meaningful engagement, we manage your brand's voice across platforms to ensure it inspires, informs, and influences.
 
-const SocialMediaMarketingPage: NextPage<{}> = ({}) => {
+We blend data-driven insights with storytelling expertise to design social strategies that strengthen community connections and amplify visibility. Whether you're a startup looking to build awareness or an established brand aiming to deepen engagement, we ensure your digital footprint reflects your identity and fuels growth.`;
+
+// Extracted checkmark icon component
+const CheckmarkIcon = () => (
+  <svg
+    className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+  </svg>
+);
+
+// Extracted service item component
+const ServiceItem = ({
+  heading,
+  text,
+  className
+}: {
+  heading: string;
+  text: string;
+  className?: string
+}) => (
+  <div className={cn("flex flex-col", className)}>
+    <div className="flex justify-start items-center mb-2">
+      <CheckmarkIcon />
+      <h3 className="font-heading text-2xl font-bold">{heading}</h3>
+    </div>
+    <p className="mb-6">{text}</p>
+  </div>
+);
+
+const SocialMediaMarketingPage: NextPage = () => {
   return (
     <ServicePageLaypout
-      heading="Social Media Marketing"
+      heading="Social Media Management"
       label=""
       image={EXTERNAL_IMAGES.SOCIAL_MEDIA_MARKETING}
       title=""
       data={data}
       description={description}
       useOnlyChild={true}
-      // textRightPadding
     >
-      <div className="text-gray-500 grid grid-cols-2 lg:grid-cols-3 mt-16 w-full gap-4 md:text-left">
-        <div className="grid grid-cols-2 justify-center gap-4 col-span-2">
-          {data.slice(0, 3).map((item, i) => {
-            return (
-              <div
-                className={cn(
-                  "flex flex-col col-span-2 md:col-span-1",
-                  i === 2 ? "col-span-2 md:col-span-2" : ""
-                )}
-              >
-                <div className="flex justify-start items-center mb-2">
-                  <svg
-                    className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                  </svg>
 
-                  <h3 className="font-heading text-2xl font-bold">
-                    {item.heading}
-                  </h3>
-                </div>
+      <Head>
+        <title>Social Media Marketing Agency India ‐ Avance PR</title>
+        <meta name="description" content="Let Avance PR create engaging social media strategies, content & campaigns to grow your followers, engagement & brand visibility online." />
+        <meta property="og:title" content="Social Media Marketing Agency India ‐ Avance PR" />
+        <meta property="og:description" content="Let Avance PR create engaging social media strategies, content & campaigns to grow your followers, engagement & brand visibility online." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.avancepr.in/services/social-media-marketing" />
+        <meta property="og:image" content="https://www.avancepr.in/og-image.png" />
+      </Head>
 
-                <p className="mb-6 pl-7 md:pl-0">{item.text}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="flex flex-col col-span-2 lg:col-span-1">
-          <div className="flex justify-center md:justify-start items-center mb-2">
-            <svg
-              className="w-5 h-5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-
-            <h3 className="font-heading text-2xl font-bold">
-              {data[3].heading}
-            </h3>
-          </div>
-
-          <p className="mb-6 pl-7 md:pl-0">{data[3].text}</p>
-        </div>
+      <div className="text-gray-500 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 w-full gap-4 md:text-left">
+        {data.map((item, index) => (
+          <ServiceItem
+            key={item.heading}
+            heading={item.heading}
+            text={item.text}
+            className={cn(
+              // Make the last item span full width on medium screens
+              index === 4 && "md:col-span-2 lg:col-span-1"
+            )}
+          />
+        ))}
       </div>
     </ServicePageLaypout>
   );

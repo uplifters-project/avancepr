@@ -1,40 +1,50 @@
 import PageLaypout from "@/components/layouts/page-layout";
 import { Separator } from "@/components/ui/separator";
 import { NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 
-const AboutPage: NextPage<{}> = ({}) => {
+const AboutPage: NextPage = () => {
   return (
     <PageLaypout
       heading="About Us"
       label=""
       className="text-center md:text-left"
     >
+      <Head>
+        <title>About Avance PR – PR Services & Experts in India</title>
+        <meta name="description" content="Meet Avance PR: Gurugram-based PR firm specializing in startup PR, corporate communications and brand reputation. Strong media & influencer networks." />
+        <meta property="og:title" content="About Avance PR – PR Services & Experts in India" />
+        <meta property="og:description" content="Meet Avance PR: Gurugram-based PR firm specializing in startup PR, corporate communications and brand reputation. Strong media & influencer networks." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.avancepr.in/about" />
+        <meta property="og:image" content="https://www.avancepr.in/og-image.png" />
+      </Head>
+
       <div className="max-w-6xl mx-auto flex flex-col gap-8">
         <div className="grid gap-x-8 items-center grid-cols-5 gap-y-8">
           <div className="col-span-5 md:col-span-3 flex flex-col gap-4">
             <p className="">
-              AvancePR is a highly regarded and comprehensive PR agency
-              headquartered in Gurugram. Our core expertise lies in cultivating
-              impactful connections with influencers and crafting effective
-              corporate communications strategies. We take pride in offering a
-              diverse range of campaigns tailored to suit the unique needs of
-              our esteemed clientele. Through strategic media engagement, we
-              diligently work towards enhancing brand personality and
-              reputation, bolstering our clients' market presence.
+              Avance PR is a highly regarded and comprehensive public relations agency
+              headquartered in Gurugram, known for crafting powerful narratives that drive
+              visibility, credibility, and influence. We don&rsquo;t believe in a one-size-fits-all
+              approach — because every brand is different. Our strength lies in understanding
+              each client&rsquo;s unique story, audience, and ambition, and then designing tailored
+              communication strategies that truly reflect their identity. From strategic media
+              engagement and influencer collaborations to reputation and crisis management,
+              every campaign we craft is built to create meaningful impact and measurable results.
             </p>
 
             <p className="">
-              At AvancePR, we specialize in several key sectors, including
-              Technology (B2B, B2C), Education, Consumer Technology,
-              Infrastructure, Retail, Lifestyle, Cybersecurity, FMCG, Real
-              Estate, D2C, B2B2C, Startups, Travel, Astro Tech, Hospitality,
-              Logistics, Healthcare, and Pharma. Our in-depth industry knowledge
-              and extensive experience enable us to provide targeted and
-              impactful PR solutions within these sectors. We understand the
-              distinct challenges and opportunities that each industry presents,
-              allowing us to devise tailored strategies that effectively meet
-              our clients' specific objectives.
+              With a proven track record across industries including Technology (B2B & B2C),
+              Education, Consumer Tech, Infrastructure, Retail, Lifestyle, Cybersecurity, FMCG,
+              Real Estate, D2C, B2B2C, Startups, Travel, Astro Tech, Hospitality, Logistics,
+              Healthcare, and Pharma, Avance PR brings together creativity, strategy, and insight
+              to deliver exceptional outcomes. Our team of experienced professionals partners
+              closely with clients to strengthen brand narratives, build trust, and enhance
+              reputation across traditional and digital platforms. At Avance PR, we don&rsquo;t just
+              tell stories — we shape perceptions, spark conversations, and help brands grow
+              with purpose.
             </p>
           </div>
 
@@ -59,33 +69,46 @@ const AboutPage: NextPage<{}> = ({}) => {
           />
 
           <div className="col-span-5 md:col-span-3 flex flex-col gap-4">
-            <p className="">
-              With a team of dedicated professionals, we are committed to adding
-              significant brand value for our clients, aligned with their
-              overreaching business goals. Our skilled PR experts bring a wealth
-              of knowledge and expertise to the table, implementing innovative
-              and results-driven approaches that drive tangible outcomes. By
-              leveraging our extensive network of media contacts and
-              influencers, we secure valuable exposure and create compelling
-              narratives that resonate with the target audience.
-            </p>
-
-            <p className="">
-              At AvancePR, our client-centric approach ensures that we fully
-              understand the unique needs and aspirations of each brand we work
-              with. We collaborate closely with our clients, developing
-              strategic PR campaigns that align with their vision and
-              aspirations. By meticulously crafting compelling messages and
-              leveraging a mix of traditional and digital PR channels, we strive
-              to elevate brand awareness, foster positive perceptions, and
-              facilitate meaningful connections between our clients and their
-              target market.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">
+              Here&rsquo;s what makes us different (and effective):
+            </h2>
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-4">
+                <span className="text-yellow-700 font-bold">•</span>
+                <div>
+                  <strong>Strategic Positioning:</strong> We go beyond press releases. We dig into your story, find your voice, and align it with what the media and your audience actually care about.
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-yellow-700 font-bold">•</span>
+                <div>
+                  <strong>High-Impact Media Relations:</strong> With a strong network of top journalists and editors, we help you earn visibility in major outlets not ads, but editorial stories that build real trust.
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-yellow-700 font-bold">•</span>
+                <div>
+                  <strong>Influencers & Celebrity Connects:</strong> We foster media-influencer conversations that amplify reach organically and authentically.
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-yellow-700 font-bold">•</span>
+                <div>
+                  <strong>LinkedIn Thought Leadership:</strong> Founders who are visible get funded, followed, and featured. We manage CXO LinkedIn profiles to build your personal brand and grow a strong community of investors, collaborators, and future customers. Because your network is your net worth.
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-yellow-700 font-bold">•</span>
+                <div>
+                  <strong>Tailored Campaigns for Your Industry:</strong> We&rsquo;ve delivered results for over 100 clients in various sectors like Tech, Fintech, EdTech, D2C, Healthcare, Cybersecurity, Real Estate, EV, Hospitality and more.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <Separator className="max-w-4xl mx-auto my-16" />
+      <Separator className="max-w-5xl mx-auto my-8" />
 
       <div className="max-w-4xl mx-auto grid grid-cols-3 gap-y-8">
         <div className="col-span-3 md:col-span-2">
@@ -95,25 +118,31 @@ const AboutPage: NextPage<{}> = ({}) => {
 
           <div className="flex flex-col gap-y-4 mt-8">
             <p>
-              Ms. Ritika Garg, the Founder & CEO of Avance PR, brings with her a
-              wealth of experience in the field. Over the years, she has worked
-              for prestigious PR firms like Ogilvy, as well as smaller boutique
-              agencies.
+              Driven by a passion for storytelling and a vision to redefine India&rsquo;s PR landscape, Ritika Garg founded Avance PR with one clear mission to help brands communicate with clarity, creativity, and credibility.
             </p>
 
             <p>
-              During her career, Ms. Ritika has collaborated with more than 50
-              brands and influential celebrities. She possesses strong media
-              relations skills and a talent for crafting strategic plans that
-              benefit brands across different industries.
+              Under her leadership, Avance PR has evolved from a boutique agency into one of India&rsquo;s fastest-growing strategic communications firms, trusted by over 100 brands across industries including technology, education, sustainability, hospitality, and finance.
             </p>
 
             <p>
-              Currently based in Gurgaon, She leads a team of 10+ PR
-              professionals at Avance PR. Her primary focus is on elevating
-              Avance PR's reputation to become a renowned brand in the industry.
-              With her dedication and hard work, she is actively striving
-              towards achieving this goal.
+              Ritika&rsquo;s professional journey began at Ogilvy, one of the world&rsquo;s most respected communication networks, where she honed her expertise in strategic communications, media relations, and brand storytelling. Her experience across diverse sectors has shaped her belief that PR is not just about visibility, it&rsquo;s about building trust, influence, and business impact.
+            </p>
+
+            <p>
+              Her leadership philosophy is rooted in data-driven storytelling and purpose-led branding. Over the years, she has spearheaded campaigns that have generated extensive national media coverage, elevated brand reputation, and created tangible results for startups and corporates alike.
+            </p>
+
+            <p>
+              Recognized by The Economic Times 40 Under 40 and ET Women Leaders Awards, Ritika stands among India&rsquo;s most promising young entrepreneurs known for her ability to blend creative vision with strategic execution.
+            </p>
+
+            <p>
+              Today, she continues to champion innovation, authenticity, and people-first leadership, inspiring her team and clients to think bigger, communicate bolder, and build brands that truly make an impact.
+            </p>
+
+            <p>
+              At Avance PR, she believes every brand has a story worth telling and telling it right makes all the difference.
             </p>
           </div>
         </div>

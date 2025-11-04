@@ -61,8 +61,16 @@ export const EXTERNAL_IMAGES = {
     "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/final_public_relation.png",
   SOCIAL_MEDIA_MARKETING:
     "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/social_media.jpg",
-  INCLUENCER_MARKETING:
+  INFLUENCER_MARKETING:
     "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/likes-social-media.jpg",
   CREATIVE:
     "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/creative.mp4",
+  CORPORATE_COMMUNICATION:
+    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/Corporate_Communication.jpg",
+  CRISIS_MANAGEMENT:
+    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/Crisis_Management.jpg",
+  STARTUPS_PR:
+    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/PR_For_startup.png",
+  PERSONAL_BRANDING:
+    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/Personal_Branding.png"
 };

@@ -4,6 +4,7 @@ import {
   getOurClients,
   getOurWork,
   getTestimonials,
+  getAwards
 } from "../lib/apis";
 import ClientCarousel from "@/components/home/client-carousel";
 import OurWork from "@/components/home/work";
@@ -22,6 +23,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Head from "next/head";
+import { useAtom } from "jotai";
+import { showPopupAtom } from "@/atom/index.atom";
 
 const HomeSection: React.FC<{
   id: string;
@@ -63,6 +66,7 @@ export default function Home({
   clients = [],
   work = [],
   news = [],
+  awards = []
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -70,6 +74,8 @@ export default function Home({
   const [companyName, setCompany] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
+  const [,setShowPopup] = useAtom(showPopupAtom);
+
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
@@ -284,7 +290,7 @@ export default function Home({
 
       {/* Awarded */}
       <HomeSection id="awarded" heading="Awards & Recognitions" label="Each award stands as a testament to our team&rsquo;s relentless pursuit of excellence, innovation, and influence reaffirming our place among India’s leading PR and communications agencies.">
-        <Featured newsItems={news} />
+        <Featured newsItems={awards} />
       </HomeSection>
 
       <div className="bg-yellow-50 pt-16 px-4">
@@ -298,8 +304,7 @@ export default function Home({
           <Button
             className="bg-yellow-700 mb-10 hover:bg-yellow-600 text-white text-lg px-8 py-3 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1"
             onClick={() => {
-              // You might want to add a method to scroll to the inquiry form or open a modal
-              document.getElementById('inquiry-form')?.scrollIntoView({ behavior: 'smooth' })
+              setShowPopup(true);
             }}
           >
             Get Free PR Strategy Consultation
@@ -311,15 +316,16 @@ export default function Home({
 }
 
 export const getStaticProps = (async (context) => {
-  const [testimonials, work, clients, news] = await Promise.all([
+  const [testimonials, work, clients, news, awards] = await Promise.all([
     getTestimonials(),
     getOurWork(),
     getOurClients(),
     getLatestNews(),
+    getAwards()
   ]);
 
   return {
-    props: { testimonials, work, clients, news },
+    props: { testimonials, work, clients, news, awards },
     revalidate: REVALIDATE_TIME.HOME_PAGE,
   };
 }) satisfies GetStaticProps<HomeProps>;

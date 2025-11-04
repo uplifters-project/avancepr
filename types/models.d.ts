@@ -38,6 +38,16 @@ interface News {
   created_at: string;
 }
 
+interface Awards {
+  link: string;
+  id: number;
+  order: number;
+  content: string;
+  image: string;
+  updated_at: string;
+  created_at: string;
+}
+
 interface EnquiryFormType {
   full_name: string;
   email: string;

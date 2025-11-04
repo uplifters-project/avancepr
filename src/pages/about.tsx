@@ -61,7 +61,7 @@ const AboutPage: NextPage = () => {
 
         <div className="grid gap-x-8 items-center grid-cols-5 gap-y-8">
           <Image
-            src="/images/about_us_2.png"
+            src="https://upliftersstorage.blob.core.windows.net/avanceprstatic/Team_imageabout_us.jpg"
             height={480}
             width={640}
             alt=""

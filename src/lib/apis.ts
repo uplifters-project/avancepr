@@ -66,6 +66,16 @@ const getLatestNews = async (): Promise<News[]> => {
   }
 };
 
+const getAwards = async (): Promise<Awards[]> => {
+  try {
+    const res = await server.get("/awards");
+
+    return res.data as Awards[];
+  } catch (e) {
+    return [];
+  }
+};
+
 const getBlogs = async (): Promise<BlogPreview[]> => {
   try {
     const res = await server.get("/blogs");
@@ -107,4 +117,5 @@ export {
   submitEnquiryForm,
   getBlogs,
   getBlogById,
+  getAwards
 };

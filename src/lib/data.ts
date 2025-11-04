@@ -3,17 +3,17 @@ import { EXTERNAL_IMAGES } from "./constants";
 export const servicesData = [
   {
     title: "PR For Startups",
-    image: EXTERNAL_IMAGES.CONTENT_MARKETING,
+    image: EXTERNAL_IMAGES.STARTUPS_PR,
     url: "/services/startup-pr",
   },
   {
     title: "Influencer Marketing",
-    image: EXTERNAL_IMAGES.INCLUENCER_MARKETING,
+    image: EXTERNAL_IMAGES.INFLUENCER_MARKETING,
     url: "/services/influencer-marketing",
   },
   {
     title: "Corporate Communication",
-    image: EXTERNAL_IMAGES.PUBLIC_RELATION,
+    image: EXTERNAL_IMAGES.CORPORATE_COMMUNICATION,
     url: "/services/corporate-communication",
   },
   {
@@ -23,12 +23,12 @@ export const servicesData = [
   },
   {
     title: "Crisis Management",
-    image: EXTERNAL_IMAGES.EVENT_PR,
+    image: EXTERNAL_IMAGES.CRISIS_MANAGEMENT,
     url: "/services/crisis-management",
   },
   {
     title: "Personal Branding",
-    image: EXTERNAL_IMAGES.EVENT_PR,
+    image: EXTERNAL_IMAGES.PERSONAL_BRANDING,
     url: "/services/personal-branding",
   },
 ];

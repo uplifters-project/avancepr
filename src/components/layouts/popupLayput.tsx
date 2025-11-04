@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Popup from "@/components/app/Popup";
+import { useAtom } from "jotai";
+import { showPopupAtom } from "@/atom/index.atom";
+
 
 const POPUP_TIMEOUT_1 = 10_000;
 const POPUP_TIMEOUT_2 = 60_000;
 
 const PopupLayout = () => {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useAtom(showPopupAtom);
 
   useEffect(() => {
     const timer1 = setTimeout(() => {

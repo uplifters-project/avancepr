@@ -40,7 +40,7 @@ const InfluencerMarketingPage: NextPage<{}> = ({ }) => {
     <ServicePageLaypout
       heading="Influencer Marketing"
       label="Transform Influence Into Impact"
-      image={EXTERNAL_IMAGES.INCLUENCER_MARKETING}
+      image={EXTERNAL_IMAGES.INFLUENCER_MARKETING}
       title="Where Authentic Voices Meet Brand Stories"
       data={data}
       description={description}

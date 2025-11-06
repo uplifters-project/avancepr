@@ -233,8 +233,8 @@ export default function Home({
         <ClientCarousel clients={clients} rowCount={2} />
       </HomeSection>
 
-      {/* Our Work */}
-      <HomeSection id="work" heading="Case Studies" label="Each success story we share represents a partnership built on trust, creativity, and results, where strategic PR meets authentic communication to build brands that truly stand out">
+      {/* Case Studies */}
+      <HomeSection id="case_studies" heading="Case Studies" label="Each success story we share represents a partnership built on trust, creativity, and results, where strategic PR meets authentic communication to build brands that truly stand out">
         <OurWork workItems={work} />
       </HomeSection>
 

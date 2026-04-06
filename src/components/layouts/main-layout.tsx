@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "@/components/app/header";
-import PopupLayout from "@/components/layouts/popupLayput";
+// import PopupLayout from "@/components/layouts/popupLayput";
 import Footer from "@/components/app/footer";
 import Link from "next/link";
 import Image from "next/image";
@@ -46,7 +46,7 @@ const MainLayout: React.FC<{
       <div className={cn("min-h-[300px] pb-16", className)}>{children}</div>
       <Whatsapp />
       <Footer />
-      <PopupLayout /> {/* Add the Layout component here */}
+      {/* <PopupLayout /> */}
     </div>
   );
 };

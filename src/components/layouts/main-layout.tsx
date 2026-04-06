@@ -24,7 +24,7 @@ const Whatsapp = () => {
 
       <Link href={`https://wa.me/${WHATSAPP_NO}`} target="_blank">
         <Image
-          src="/whatsapp.webp"
+          src="/whatsapp.png"
           width={80}
           height={80}
           alt="Whatsapp"

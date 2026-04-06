@@ -39,14 +39,12 @@ const ClientCarousel: React.FC<ClientCarouselProps> = ({
               key={client.id}
               className="h-42 w-48 inline-flex items-center justify-center my-auto mx-8"
             >
-              <img
+              <Image
                 src={client.image}
                 alt="Client Image"
-                // fill
-                style={{
-                  objectFit: "contain",
-                }}
-                className="h-full w-auto relative p-2"
+                width={192}
+                height={168}
+                className="h-full w-auto relative p-2 object-contain"
               />
             </div>
           ))}

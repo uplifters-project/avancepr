@@ -32,6 +32,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, blog }) => {
             src={image}
             alt="Blog Image"
             fill
+            sizes="100vw"
             style={{
               objectFit: "contain",
             }}

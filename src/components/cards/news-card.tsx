@@ -16,6 +16,7 @@ const NewsCard: React.FC<{ news: News }> = ({ news }) => {
             src={news.image}
             alt="Work Image"
             fill
+            sizes="300px"
             className="object-cover p-2 rounded-lg"
           />
         </CardHeader>

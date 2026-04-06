@@ -17,6 +17,7 @@ const WorkCard: React.FC<{ work: Work }> = ({ work }) => {
             src={work.image}
             alt="Work Image"
             fill
+            sizes="300px"
             className="object-cover p-2 rounded-lg"
           />
         </CardHeader>

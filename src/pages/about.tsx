@@ -52,8 +52,9 @@ const AboutPage: NextPage = () => {
           <div className="relative">
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/about_us_1.png"
+                src="/images/about_us_1.jpg"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 alt="Avance PR Office"
                 className="object-cover"
               />
@@ -72,6 +73,7 @@ const AboutPage: NextPage = () => {
               <Image
                 src="https://upliftersstorage.blob.core.windows.net/avanceprstatic/Team_imageabout_us.jpg"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 alt="Avance PR Team"
                 className="object-cover"
               />
@@ -175,6 +177,7 @@ const AboutPage: NextPage = () => {
                   <Image
                     src="/images/ritika.jpeg"
                     fill
+                    sizes="256px"
                     alt="Ritika Garg"
                     className="rounded-full object-cover shadow-2xl"
                   />

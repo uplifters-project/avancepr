@@ -142,12 +142,14 @@ export default function Home({
 
       <div className="p-0 md:p-5 mx-4 my-5 md:my-0 flex flex-col lg:flex-row gap-2">
         <video
-          className="lg:max-w-[70%] xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl animate-pulse object-cover"
+          className="lg:max-w-[70%] xl:max-h-[85vh] xl:w-auto mx-auto rounded-xl shadow-xl object-cover"
           autoPlay
           loop
           muted
+          playsInline
+          preload="metadata"
+          poster="/video-poster.jpg"
           src={EXTERNAL_IMAGES.CREATIVE}
-        // style={{ width: "150%" }}
         />
         <div className="w-full px-5 lg:px-0 lg:w-1/4 my-auto lg:mx-auto">
           <form onSubmit={handleSubmit}>

@@ -15,10 +15,6 @@ const Featured: React.FC<FeaturedProps> = ({ newsItems }) => {
   const touchStartRef = useRef<number>(0);
   const touchEndRef = useRef<number>(0);
 
-  if (newsItems.length === 0) {
-    return null;
-  }
-
   // Calculate items per view based on screen width
   useEffect(() => {
     const handleResize = () => {
@@ -122,6 +118,10 @@ const Featured: React.FC<FeaturedProps> = ({ newsItems }) => {
   };
 
   const translateValue = -(currentIndex * (100 / itemsPerView));
+
+  if (newsItems.length === 0) {
+    return null;
+  }
 
   return (
     <div className="relative min-h-[400px]">

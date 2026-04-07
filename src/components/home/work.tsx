@@ -15,10 +15,6 @@ const OurWork: React.FC<OurWorkProps> = ({ workItems }) => {
   const touchStartRef = useRef<number>(0);
   const touchEndRef = useRef<number>(0);
 
-  if (workItems.length === 0) {
-    return null;
-  }
-
   // Calculate items per view based on screen width
   useEffect(() => {
     const handleResize = () => {
@@ -122,6 +118,10 @@ const OurWork: React.FC<OurWorkProps> = ({ workItems }) => {
   };
 
   const translateValue = -(currentIndex * (100 / itemsPerView));
+
+  if (workItems.length === 0) {
+    return null;
+  }
 
   return (
     <div className="relative min-h-[400px]">

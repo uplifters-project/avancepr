@@ -1,5 +1,6 @@
 import PageLaypout from "@/components/layouts/page-layout";
 import { getBlogById, getBlogs } from "@/lib/apis";
+import { fetchWithCache } from "@/lib/static-cache";
 import { REVALIDATE_TIME } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
@@ -103,7 +104,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, blog }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (context) => {
-  const blogs = await getBlogs();
+  const blogs = await fetchWithCache("blogs", getBlogs);
 
   const paths = blogs.map((blog) => {
     return { params: { blogTitle: blog.id.toString() } };
@@ -120,7 +121,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     const blogId = parseInt(blogTitle?.toString() ?? "");
-    const blog = await getBlogById(blogId);
+    const blog = await fetchWithCache(`blog-${blogId}`, () =>
+      getBlogById(blogId)
+    );
 
     if (!blog || blog.id !== blogId) {
       throw new Error("Blog not found");

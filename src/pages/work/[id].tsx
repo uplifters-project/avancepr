@@ -1,5 +1,6 @@
 import PageLaypout from "@/components/layouts/page-layout";
 import { getOurWork } from "@/lib/apis";
+import { fetchWithCache } from "@/lib/static-cache";
 import { REVALIDATE_TIME } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
@@ -132,7 +133,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (context) => {
-  const workItems = await getOurWork();
+  const workItems = await fetchWithCache("our_work", getOurWork);
 
   const paths = workItems.map((work) => {
     return { params: { id: work.id.toString() } };
@@ -149,7 +150,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     const workId = parseInt(id?.toString() ?? "");
-    const workItems = await getOurWork();
+    const workItems = await fetchWithCache("our_work", getOurWork);
 
     const work = workItems.find((w) => w.id === workId);
 

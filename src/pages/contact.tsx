@@ -1,4 +1,5 @@
 import { getOurClients, submitEnquiryForm } from "@/lib/apis";
+import { fetchWithCache } from "@/lib/static-cache";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
@@ -285,7 +286,7 @@ const ContactPage: NextPage<{
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const clients = await getOurClients();
+  const clients = await fetchWithCache("our_client", getOurClients);
 
   return {
     props: {

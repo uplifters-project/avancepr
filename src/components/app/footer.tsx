@@ -122,9 +122,9 @@ function Footer() {
                     <FaMapMarkerAlt className="text-black text-1xl cursor-pointer hover:text-yellow-600" />
                   </div>
                   <div className="ml-2">
-                    <p className="text-black">10, Poorvi Marg</p>
-                    <p className="text-black">DLF Phase 2, Sector 25</p>
-                    <p className="text-black">Gurugram - 122002</p>
+                    <p className="text-black">Truworx - Vatika Triangle</p>
+                    <p className="text-black">5th Floor, MG Road, Sector 28</p>
+                    <p className="text-black">Gurugram, Haryana 122009</p>
                   </div>
                 </div>
 
@@ -187,7 +187,7 @@ function Footer() {
 
       <div className="flex flex-col justify-center items-center text-center  p-2 m-0 bg-black">
         <h1 className=" text-yellow-300/80 font-semibold">
-          © 2023 All rights reserved by{" "}
+          © 2026 All rights reserved by{" "}
           <span className="hover:text-white font-semibold cursor-pointer">
             AvancePR{" "}
           </span>

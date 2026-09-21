@@ -1,4 +1,3 @@
-import { getOurWork } from "@/lib/apis";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";

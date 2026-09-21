@@ -1,5 +1,4 @@
-import { getOurClients, submitEnquiryForm } from "@/lib/apis";
-import { fetchWithCache } from "@/lib/static-cache";
+import { submitEnquiryForm } from "@/lib/apis";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
@@ -12,9 +11,7 @@ import { FaTwitter, FaMapMarkerAlt } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 
-const ContactPage: NextPage<{
-  clients: Client[];
-}> = () => {
+const ContactPage: NextPage = () => {
   const [data, setData] = useState({
     fullName: "",
     email: "",
@@ -286,12 +283,8 @@ const ContactPage: NextPage<{
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const clients = await fetchWithCache("our_client", getOurClients);
-
   return {
-    props: {
-      clients,
-    },
+    props: {},
     revalidate: REVALIDATE_TIME.CLIENT_PAGE,
   };
 };

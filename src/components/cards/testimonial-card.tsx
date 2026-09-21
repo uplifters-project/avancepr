@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import { useState } from "react";
+import { Markup } from "interweave";
 
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
@@ -36,10 +37,9 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
           <p className="text-sm text-yellow-700">{testimonial.designation}</p>
         </CardHeader>
         <CardContent className="flex-1 px-6 pb-6 pt-0">
-          <p
-            dangerouslySetInnerHTML={{ __html: testimonial.content }}
-            className="text-sm text-center text-gray-600 leading-relaxed line-clamp-6"
-          ></p>
+          <div className="text-sm text-center text-gray-600 leading-relaxed line-clamp-6">
+            <Markup content={testimonial.content} />
+          </div>
         </CardContent>
       </Card>
 
@@ -60,10 +60,9 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
               {testimonial.designation}
             </DialogDescription>
           </DialogHeader>
-          <div
-            dangerouslySetInnerHTML={{ __html: testimonial.content }}
-            className="text-sm text-center text-gray-600 leading-relaxed mt-2"
-          />
+          <div className="text-sm text-center text-gray-600 leading-relaxed mt-2">
+            <Markup content={testimonial.content} />
+          </div>
         </DialogContent>
       </Dialog>
     </>

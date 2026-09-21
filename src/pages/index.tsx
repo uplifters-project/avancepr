@@ -5,14 +5,13 @@ import {
   getOurWork,
   getTestimonials,
   getAwards
-} from "../lib/apis";
+} from "@/lib/queries";
 import ClientCarousel from "@/components/home/client-carousel";
 import OurWork from "@/components/home/work";
 import Featured from "@/components/home/featured";
 import MainLayout from "@/components/layouts/main-layout";
 import ServiceCard from "@/components/cards/service-card";
 import { servicesData } from "@/lib/data";
-import { fetchWithCache } from "@/lib/static-cache";
 import { cn } from "@/lib/utils";
 import { EXTERNAL_IMAGES, REVALIDATE_TIME } from "@/lib/constants";
 import type { InferGetStaticPropsType, GetStaticProps } from "next";
@@ -320,11 +319,11 @@ export default function Home({
 
 export const getStaticProps = (async (context) => {
   const [testimonials, work, clients, news, awards] = await Promise.all([
-    fetchWithCache("testimonials", getTestimonials),
-    fetchWithCache("our_work", getOurWork),
-    fetchWithCache("our_client", getOurClients),
-    fetchWithCache("latest_news", getLatestNews),
-    fetchWithCache("awards", getAwards),
+    getTestimonials(),
+    getOurWork(),
+    getOurClients(),
+    getLatestNews(),
+    getAwards(),
   ]);
 
   return {

@@ -1,6 +1,5 @@
 import PageLaypout from "@/components/layouts/page-layout";
-import { getOurWork } from "@/lib/apis";
-import { fetchWithCache } from "@/lib/static-cache";
+import { getOurWork } from "@/lib/queries";
 import { REVALIDATE_TIME } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
@@ -11,21 +10,23 @@ import { cn } from "@/lib/utils";
 
 interface BlogPageProps {
   error?: string | null;
-  work: Work;
+  work: Work | null;
 }
 
 const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
-  const { id, image, banner, content, description, created_at, updated_at } =
-    work;
-
-  if (error) {
-    <PageLaypout
-      heading="Not Found"
-      label={`Blog with given ID does not exists, please go back to homepage`}
-    >
-      <p>{error}</p>
-    </PageLaypout>;
+  if (error || !work) {
+    return (
+      <PageLaypout
+        heading="Not Found"
+        label="This work item does not exist, please go back to homepage"
+      >
+        <p>{error}</p>
+      </PageLaypout>
+    );
   }
+
+  const { image, banner, content, description, created_at, updated_at } =
+    work;
 
   return (
     <PageLaypout heading={""} label={""} className="text-center">
@@ -133,7 +134,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (context) => {
-  const workItems = await fetchWithCache("our_work", getOurWork);
+  const workItems = await getOurWork();
 
   const paths = workItems.map((work) => {
     return { params: { id: work.id.toString() } };
@@ -150,7 +151,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     const workId = parseInt(id?.toString() ?? "");
-    const workItems = await fetchWithCache("our_work", getOurWork);
+    const workItems = await getOurWork();
 
     const work = workItems.find((w) => w.id === workId);
 

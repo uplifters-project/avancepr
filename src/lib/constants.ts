@@ -12,11 +12,6 @@ export const REVALIDATE_TIME = {
   HOME_PAGE: 60 * 60 * 24,
 };
 
-export const APP_CONSTANTS = {
-  BACKEND_URL: "https://avancepr.azurewebsites.net",
-  UPLIFTERS_BACKEND_URL: "https://uplifters.azurewebsites.net",
-};
-
 export const APP_ROUTES = {
   HOME: "/",
   ABOUT: "/about",

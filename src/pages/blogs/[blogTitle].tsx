@@ -1,6 +1,5 @@
 import PageLaypout from "@/components/layouts/page-layout";
-import { getBlogById, getBlogs } from "@/lib/apis";
-import { fetchWithCache } from "@/lib/static-cache";
+import { getBlogById, getBlogs } from "@/lib/queries";
 import { REVALIDATE_TIME } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
@@ -9,21 +8,23 @@ import remarkGfm from "remark-gfm";
 import { Markup } from "interweave";
 
 interface BlogPageProps {
-  error: string | string;
-  blog: Blog;
+  error?: string | null;
+  blog: Blog | null;
 }
 
 const BlogPage: NextPage<BlogPageProps> = ({ error, blog }) => {
-  const { id, title, body, body_md, author, image, credits } = blog;
-
-  if (error) {
-    <PageLaypout
-      heading="Not Found"
-      label={`Blog with ID ${id} does not exists, please go back to homepage`}
-    >
-      <p>{error}</p>
-    </PageLaypout>;
+  if (error || !blog) {
+    return (
+      <PageLaypout
+        heading="Not Found"
+        label="This blog does not exist, please go back to homepage"
+      >
+        <p>{error}</p>
+      </PageLaypout>
+    );
   }
+
+  const { title, body, body_md, author, image, credits } = blog;
 
   return (
     <PageLaypout heading={title} label={author} className="text-center">
@@ -104,7 +105,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, blog }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (context) => {
-  const blogs = await fetchWithCache("blogs", getBlogs);
+  const blogs = await getBlogs();
 
   const paths = blogs.map((blog) => {
     return { params: { blogTitle: blog.id.toString() } };
@@ -121,9 +122,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     const blogId = parseInt(blogTitle?.toString() ?? "");
-    const blog = await fetchWithCache(`blog-${blogId}`, () =>
-      getBlogById(blogId)
-    );
+    const blog = await getBlogById(blogId);
 
     if (!blog || blog.id !== blogId) {
       throw new Error("Blog not found");

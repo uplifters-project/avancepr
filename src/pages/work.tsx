@@ -1,5 +1,4 @@
-import { getOurWork } from "@/lib/apis";
-import { fetchWithCache } from "@/lib/static-cache";
+import { getOurWork } from "@/lib/queries";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
@@ -20,7 +19,7 @@ const FeaturedPage: NextPage<{
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const work = await fetchWithCache("our_work", getOurWork);
+  const work = await getOurWork();
 
   return {
     props: {

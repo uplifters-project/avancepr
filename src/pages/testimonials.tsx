@@ -1,5 +1,4 @@
-import { getTestimonials } from "@/lib/apis";
-import { fetchWithCache } from "@/lib/static-cache";
+import { getTestimonials } from "@/lib/queries";
 import TestimonialCard from "@/components/cards/testimonial-card";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
@@ -20,7 +19,7 @@ const TestimonialsPage: NextPage<{
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const testimonials = await fetchWithCache("testimonials", getTestimonials);
+  const testimonials = await getTestimonials();
 
   return {
     props: {

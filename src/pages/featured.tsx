@@ -1,5 +1,4 @@
-import { getLatestNews } from "@/lib/apis";
-import { fetchWithCache } from "@/lib/static-cache";
+import { getLatestNews } from "@/lib/queries";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
@@ -22,7 +21,7 @@ const FeaturedPage: NextPage<{
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const news = await fetchWithCache("latest_news", getLatestNews);
+  const news = await getLatestNews();
 
   return {
     props: {

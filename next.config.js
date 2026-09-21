@@ -25,11 +25,11 @@ const nextConfig = {
     // is listed below (currently inert while unoptimized:true, kept so
     // it's ready if optimization is ever re-enabled).
     remotePatterns: [
-      { protocol: "https", hostname: "avancepr.azurewebsites.net" },
       { protocol: "https", hostname: "avanceprstorage.blob.core.windows.net" },
       { protocol: "https", hostname: "ambitious-hill-028cf7800.3.azurestaticapps.net" },
-      { protocol: "https", hostname: "uplifters.azurewebsites.net" },
       { protocol: "https", hostname: "upliftersstorage.blob.core.windows.net" },
+      // Supabase Storage — new image uploads (see src/lib/supabase.ts mediaUrl()).
+      { protocol: "https", hostname: "*.supabase.co" },
       { protocol: "https", hostname: "dummyimage.com" },
       { protocol: "http", hostname: "127.0.0.1" },
     ],

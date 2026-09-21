@@ -31,11 +31,37 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Backend: Supabase
+
+Content (testimonials, blogs, work, clients, news, awards, enquiries) is stored in
+Supabase Postgres instead of the old Django/Azure backend. Setup:
+
+1. Create a project at [supabase.com](https://supabase.com) (free tier).
+2. Supabase Dashboard → SQL Editor → run `supabase/migrations/0001_initial.sql`.
+   This creates the `main_*` tables (matching the old Django schema exactly) and
+   a public `media` storage bucket for new image uploads.
+3. Dashboard → Project Settings → API: copy the Project URL and the
+   `service_role` key into `.env.local` as `SUPABASE_URL` and
+   `SUPABASE_SERVICE_ROLE_KEY` (see `.env.example`). The service-role key
+   bypasses Row Level Security and must stay server-only — never expose it
+   with a `NEXT_PUBLIC_` prefix.
+4. Add content via Dashboard → Table Editor. Upload images via Dashboard →
+   Storage → `media` bucket, then paste the resulting public URL into the
+   row's `image`/`banner` column.
+5. (Optional, dev only) Seed from previously cached live data:
+   `node --env-file=.env.local scripts/seed-from-cache.mjs`. Do a real
+   migration from the old Postgres database separately for production data.
+
+The enquiry form posts to `src/pages/api/enquiry.ts`, which inserts into
+`main_enquiry` and sends a Telegram notification via `TG_BOT_TOKEN`/`TG_CHAT_ID`.
+
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Import the `uplifters-project/avancepr` repo in [Vercel](https://vercel.com/new) — framework preset Next.js.
+2. Add the env vars from `.env.example` (`SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`,
+   `TG_BOT_TOKEN`, `TG_CHAT_ID`, `WHATSAPP_NO`, `EMAIL`) in the Vercel project settings.
+3. Deploy, verify the preview URL, then point `avancepr.in`/`www` DNS at Vercel.
+4. Once cut over, decommission the old Azure App Service, its Postgres database,
+   and the Azure Static Web App.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. 
-
-hi edit 7 feb 2025 by umang
-hi edit feb 17 2025 by umang
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

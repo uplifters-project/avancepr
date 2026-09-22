@@ -21,16 +21,17 @@ import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 const NAV = [
-  { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
-  { href: "/admin/blogs", label: "Blogs", icon: Newspaper },
-  { href: "/admin/testimonials", label: "Testimonials", icon: Quote },
-  { href: "/admin/clients", label: "Clients", icon: Users },
-  { href: "/admin/work", label: "Our Work", icon: Briefcase },
-  { href: "/admin/news", label: "Latest News", icon: Newspaper },
-  { href: "/admin/awards", label: "Awards", icon: Award },
-  { href: "/admin/enquiries", label: "Enquiries", icon: Mail },
+  { href: ADMIN_BASE_PATH, label: "Overview", icon: LayoutDashboard, exact: true },
+  { href: `${ADMIN_BASE_PATH}/blogs`, label: "Blogs", icon: Newspaper },
+  { href: `${ADMIN_BASE_PATH}/testimonials`, label: "Testimonials", icon: Quote },
+  { href: `${ADMIN_BASE_PATH}/clients`, label: "Clients", icon: Users },
+  { href: `${ADMIN_BASE_PATH}/work`, label: "Our Work", icon: Briefcase },
+  { href: `${ADMIN_BASE_PATH}/news`, label: "Latest News", icon: Newspaper },
+  { href: `${ADMIN_BASE_PATH}/awards`, label: "Awards", icon: Award },
+  { href: `${ADMIN_BASE_PATH}/enquiries`, label: "Enquiries", icon: Mail },
 ];
 
 const AdminLayout: React.FC<{
@@ -46,7 +47,7 @@ const AdminLayout: React.FC<{
 
   const signOut = async () => {
     await getSupabaseBrowser().auth.signOut();
-    window.location.assign("/admin/login");
+    window.location.assign(`${ADMIN_BASE_PATH}/login`);
   };
 
   const rebuildSite = async () => {
@@ -85,7 +86,7 @@ const AdminLayout: React.FC<{
           )}
         >
           <div className="flex h-14 items-center justify-between border-b px-4">
-            <Link href="/admin" className="font-semibold">
+            <Link href={ADMIN_BASE_PATH} className="font-semibold">
               Avance PR admin
             </Link>
             <Tooltip>

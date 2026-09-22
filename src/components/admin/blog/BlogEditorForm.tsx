@@ -6,6 +6,7 @@ import BlogEditor, { type BlogEditorHandle } from "@/components/admin/editor/Blo
 import BlogBody from "@/components/blog/BlogBody";
 import ImageField from "@/components/admin/ImageField";
 import { MEDIA_FOLDERS } from "@/lib/admin/storage";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -139,7 +140,7 @@ const BlogEditorForm: React.FC<{
       toast({ title: id ? "Blog updated" : "Blog created" });
 
       if (id) router.replace(router.asPath);
-      else router.push(`/admin/blogs/${data.id}`);
+      else router.push(`${ADMIN_BASE_PATH}/blogs/${data.id}`);
     } finally {
       setSaving(false);
     }

@@ -5,6 +5,13 @@ export const EMAIL = process.env.EMAIL;
 // sitemap. Must match the production domain exactly (no trailing slash).
 export const SITE_URL = "https://www.avancepr.in";
 
+// Base path for the admin panel (src/pages/staff-console/**). Deliberately
+// not "/admin" — automated scanners and bots probe that path constantly.
+// Changing this only relocates the URL; requireAdmin/requireAdminSSP
+// (src/lib/admin/auth.ts) still gate every page and API route behind
+// Supabase Auth + the ADMIN_EMAILS allowlist regardless of path.
+export const ADMIN_BASE_PATH = "/staff-console";
+
 export const REVALIDATE_TIME = {
   TESTIMONIALS_PAGE: 60 * 60 * 24,
   CLIENT_PAGE: 60 * 60 * 24,

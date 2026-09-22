@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 
 import ServicePageLayout from "@/components/layouts/service-page-layout";
-import Image from "next/image";
 import { EXTERNAL_IMAGES } from "@/lib/constants";
 import Head from "next/head";
 
@@ -40,7 +39,7 @@ const PersonalBrandingPage: NextPage<{}> = ({ }) => {
     <ServicePageLayout
       heading="Personal Branding"
       label="Elevate Your Professional Identity"
-      image={EXTERNAL_IMAGES.CREATIVE}
+      image={EXTERNAL_IMAGES.PERSONAL_BRANDING}
       title="Build Your Legacy, One Story at a Time"
       data={data}
       description={description}

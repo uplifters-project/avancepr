@@ -1,8 +1,9 @@
 import PageLaypout from "@/components/layouts/page-layout";
 import { getOurWork } from "@/lib/queries";
-import { REVALIDATE_TIME } from "@/lib/constants";
+import { REVALIDATE_TIME, SITE_URL } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import ReactMarkdown from "react-markdown";
+import Head from "next/head";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { Markup } from "interweave";
@@ -20,16 +21,31 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, work }) => {
         heading="Not Found"
         label="This work item does not exist, please go back to homepage"
       >
+        <Head>
+          <meta name="robots" content="noindex, follow" />
+        </Head>
         <p>{error}</p>
       </PageLaypout>
     );
   }
 
-  const { image, banner, content, description, created_at, updated_at } =
+  const { id, image, banner, content, description, created_at, updated_at } =
     work;
+  const canonicalUrl = `${SITE_URL}/work/${id}`;
+  const plainDescription = description.replace(/<[^>]*>/g, "").slice(0, 160);
 
   return (
     <PageLaypout heading={""} label={""} className="text-center">
+      <Head>
+        <title>{content} – Avance PR Work</title>
+        <meta name="description" content={plainDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={content} />
+        <meta property="og:description" content={plainDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        {banner && <meta property="og:image" content={banner} />}
+      </Head>
       {/* <div className="mt-8 mx-auto mb-4 h-[50vh] max-h-[50vh] max-w-full">
         {image ? (
           <Image

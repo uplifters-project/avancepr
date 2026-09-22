@@ -14,6 +14,7 @@ const AboutPage: NextPage = () => {
       <Head>
         <title>About Avance PR – PR Services & Experts in India</title>
         <meta name="description" content="Meet Avance PR: Gurugram-based PR firm specializing in startup PR, corporate communications and brand reputation. Strong media & influencer networks." />
+        <link rel="canonical" href="https://www.avancepr.in/about" />
         <meta property="og:title" content="About Avance PR – PR Services & Experts in India" />
         <meta property="og:description" content="Meet Avance PR: Gurugram-based PR firm specializing in startup PR, corporate communications and brand reputation. Strong media & influencer networks." />
         <meta property="og:type" content="website" />
@@ -71,7 +72,7 @@ const AboutPage: NextPage = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://upliftersstorage.blob.core.windows.net/avanceprstatic/Team_imageabout_us.jpg"
+                src="/images/team-image-about-us.webp"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 alt="Avance PR Team"

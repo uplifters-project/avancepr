@@ -1,7 +1,19 @@
+// Storage bucket for all new uploads. Replaces the original `media` bucket
+// (created in supabase/migrations/0001_initial.sql), which had a storage.objects
+// RLS policy broad enough to let anyone with the anon key list every file in
+// it (Supabase Security Advisor: "Clients can list all files in this
+// bucket") and, separately, had gone out of sync — its storage.objects rows
+// no longer had matching files in the backend. `avancepr_media` was created
+// fresh via the dashboard with no such listing policy (public reads still
+// work via the bucket's public-read flag, which bypasses RLS for direct
+// path fetches; only enumeration is blocked) and re-seeded with the real,
+// compressed files.
+export const MEDIA_BUCKET = "avancepr_media";
+
 // Folder names match the old Django ImageField `upload_to=` values exactly
 // (see advancepr_backend/main/models.py), so both legacy Azure paths and new
 // Supabase Storage uploads sort into the same logical buckets in the
-// `media` Storage bucket's file browser.
+// Storage bucket's file browser.
 export const MEDIA_FOLDERS = {
   testimonial: "testimonial",
   ourClient: "our_client",
@@ -66,5 +78,5 @@ export function buildObjectPath(
 }
 
 export function publicMediaUrl(supabaseUrl: string, path: string): string {
-  return `${supabaseUrl}/storage/v1/object/public/media/${path}`;
+  return `${supabaseUrl}/storage/v1/object/public/${MEDIA_BUCKET}/${path}`;
 }

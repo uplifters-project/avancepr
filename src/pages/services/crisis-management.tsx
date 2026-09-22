@@ -44,6 +44,7 @@ const CrisisManagement: NextPage = () => {
       <Head>
         <title>Brand Reputation & Crisis Communication Experts | Avance PR</title>
         <meta name="description" content="Avance PR is helping brands protect reputation, control narratives, and rebuild trust through strategic, transparent, and timely communication." />
+        <link rel="canonical" href="https://www.avancepr.in/services/crisis-management" />
         <meta property="og:title" content="Brand Reputation & Crisis Communication Experts | Avance PR" />
         <meta property="og:description" content="Avance PR is helping brands protect reputation, control narratives, and rebuild trust through strategic, transparent, and timely communication." />
         <meta property="og:type" content="website" />

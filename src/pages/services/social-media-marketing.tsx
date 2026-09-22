@@ -78,6 +78,7 @@ const SocialMediaMarketingPage: NextPage = () => {
       <Head>
         <title>Social Media Marketing Agency India ‐ Avance PR</title>
         <meta name="description" content="Let Avance PR create engaging social media strategies, content & campaigns to grow your followers, engagement & brand visibility online." />
+        <link rel="canonical" href="https://www.avancepr.in/services/social-media-marketing" />
         <meta property="og:title" content="Social Media Marketing Agency India ‐ Avance PR" />
         <meta property="og:description" content="Let Avance PR create engaging social media strategies, content & campaigns to grow your followers, engagement & brand visibility online." />
         <meta property="og:type" content="website" />

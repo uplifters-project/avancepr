@@ -2,6 +2,7 @@ import { submitEnquiryForm } from "@/lib/apis";
 import PageLaypout from "@/components/layouts/page-layout";
 import { GetStaticProps, NextPage } from "next";
 import { REVALIDATE_TIME } from "@/lib/constants";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
@@ -83,6 +84,17 @@ const ContactPage: NextPage = () => {
 
   return (
     <PageLaypout heading="" label="">
+      <Head>
+        <title>Contact Avance PR – Get a Free PR Strategy Consultation</title>
+        <meta name="description" content="Get in touch with Avance PR for startup PR, crisis management, influencer & corporate communication. Reach out for a free consultation today." />
+        <link rel="canonical" href="https://www.avancepr.in/contact" />
+        <meta property="og:title" content="Contact Avance PR – Get a Free PR Strategy Consultation" />
+        <meta property="og:description" content="Get in touch with Avance PR for startup PR, crisis management, influencer & corporate communication. Reach out for a free consultation today." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.avancepr.in/contact" />
+        <meta property="og:image" content="https://www.avancepr.in/og-image.png" />
+      </Head>
+
       <div className="max-w-screen-lg m-auto px-2 pb-16 w-full ">
         {/* <Image
           src="/images/contact-us.jpeg"

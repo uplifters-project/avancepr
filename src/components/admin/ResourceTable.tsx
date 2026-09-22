@@ -23,8 +23,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { useToast } from "@/components/ui/use-toast";
 import ConfirmDialog from "@/components/admin/ConfirmDialog";
+import IconButton from "@/components/admin/IconButton";
 import { cn } from "@/lib/utils";
 
 type Row = Record<string, any>;
@@ -65,14 +67,20 @@ function SortableRow({
       )}
     >
       {draggable && (
-        <button
-          type="button"
-          className="cursor-grab touch-none text-muted-foreground active:cursor-grabbing"
-          {...attributes}
-          {...listeners}
-        >
-          <GripVertical className="h-4 w-4" />
-        </button>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              type="button"
+              aria-label="Drag to reorder"
+              className="cursor-grab touch-none text-muted-foreground active:cursor-grabbing"
+              {...attributes}
+              {...listeners}
+            >
+              <GripVertical className="h-4 w-4" />
+            </button>
+          </TooltipTrigger>
+          <TooltipContent>Drag to reorder</TooltipContent>
+        </Tooltip>
       )}
 
       {hasImageColumn && (
@@ -112,27 +120,20 @@ function SortableRow({
 
       <div className="flex shrink-0 items-center gap-1">
         <Link href={`/admin/${resource.slug}/${row.id}`}>
-          <Button variant="ghost" size="icon" aria-label="Edit">
+          <IconButton label="Edit">
             <Pencil className="h-4 w-4" />
-          </Button>
+          </IconButton>
         </Link>
-        <Button
-          variant="ghost"
-          size="icon"
-          aria-label={row.is_archived ? "Restore" : "Archive"}
+        <IconButton
+          label={row.is_archived ? "Restore" : "Archive"}
           onClick={() => onArchiveToggle(row)}
         >
           {row.is_archived ? <ArchiveRestore className="h-4 w-4" /> : <Archive className="h-4 w-4" />}
-        </Button>
+        </IconButton>
         {row.is_archived && (
-          <Button
-            variant="ghost"
-            size="icon"
-            aria-label="Delete permanently"
-            onClick={() => onDeleteRequest(row)}
-          >
+          <IconButton label="Delete permanently" onClick={() => onDeleteRequest(row)}>
             <Trash2 className="h-4 w-4 text-destructive" />
-          </Button>
+          </IconButton>
         )}
       </div>
     </div>

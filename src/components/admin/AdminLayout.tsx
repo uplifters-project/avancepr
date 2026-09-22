@@ -18,6 +18,7 @@ import {
 
 import { getSupabaseBrowser } from "@/lib/supabase-browser";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 
@@ -69,7 +70,7 @@ const AdminLayout: React.FC<{
     exact ? router.pathname === href : router.pathname.startsWith(href);
 
   return (
-    <>
+    <TooltipProvider delayDuration={300}>
       <Head>
         <title>{title} — Admin</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -87,13 +88,18 @@ const AdminLayout: React.FC<{
             <Link href="/admin" className="font-semibold">
               Avance PR admin
             </Link>
-            <button
-              className="lg:hidden"
-              onClick={() => setMobileOpen(false)}
-              aria-label="Close menu"
-            >
-              <X className="h-5 w-5" />
-            </button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  className="lg:hidden"
+                  onClick={() => setMobileOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>Close menu</TooltipContent>
+            </Tooltip>
           </div>
           <nav className="flex flex-col gap-1 p-3">
             {NAV.map(({ href, label, icon: Icon, exact }) => (
@@ -126,13 +132,18 @@ const AdminLayout: React.FC<{
         <div className="flex min-h-screen flex-col">
           <header className="flex h-14 items-center justify-between border-b bg-background px-4">
             <div className="flex items-center gap-3">
-              <button
-                className="lg:hidden"
-                onClick={() => setMobileOpen(true)}
-                aria-label="Open menu"
-              >
-                <Menu className="h-5 w-5" />
-              </button>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button
+                    className="lg:hidden"
+                    onClick={() => setMobileOpen(true)}
+                    aria-label="Open menu"
+                  >
+                    <Menu className="h-5 w-5" />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>Open menu</TooltipContent>
+              </Tooltip>
               <h1 className="text-sm font-semibold">{title}</h1>
             </div>
             <div className="flex items-center gap-3">
@@ -157,7 +168,7 @@ const AdminLayout: React.FC<{
           <main className="flex-1 p-4 sm:p-6">{children}</main>
         </div>
       </div>
-    </>
+    </TooltipProvider>
   );
 };
 

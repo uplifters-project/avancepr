@@ -15,9 +15,8 @@ import {
   Loader2,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Toggle } from "@/components/admin/editor/Toggle";
+import IconButton from "@/components/admin/IconButton";
 import LinkDialog from "@/components/admin/editor/LinkDialog";
 import { uploadImage, UploadError } from "@/lib/admin/upload";
 import { MEDIA_FOLDERS } from "@/lib/admin/storage";
@@ -49,67 +48,67 @@ const Toolbar: React.FC<{ editor: Editor }> = ({ editor }) => {
 
   return (
     <div className="flex flex-wrap items-center gap-1 border-b bg-muted/30 p-2">
-      <Toggle
+      <IconButton
         pressed={editor.isActive("bold")}
         onClick={() => editor.chain().focus().toggleBold().run()}
         label="Bold"
       >
         <Bold className="h-4 w-4" />
-      </Toggle>
-      <Toggle
+      </IconButton>
+      <IconButton
         pressed={editor.isActive("italic")}
         onClick={() => editor.chain().focus().toggleItalic().run()}
         label="Italic"
       >
         <Italic className="h-4 w-4" />
-      </Toggle>
+      </IconButton>
 
       <Separator orientation="vertical" className="mx-1 h-6" />
 
-      <Toggle
+      <IconButton
         pressed={editor.isActive("heading", { level: 2 })}
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         label="Heading 2"
       >
         <Heading2 className="h-4 w-4" />
-      </Toggle>
-      <Toggle
+      </IconButton>
+      <IconButton
         pressed={editor.isActive("heading", { level: 3 })}
         onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
         label="Heading 3"
       >
         <Heading3 className="h-4 w-4" />
-      </Toggle>
+      </IconButton>
 
       <Separator orientation="vertical" className="mx-1 h-6" />
 
-      <Toggle
+      <IconButton
         pressed={editor.isActive("bulletList")}
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         label="Bullet list"
       >
         <List className="h-4 w-4" />
-      </Toggle>
-      <Toggle
+      </IconButton>
+      <IconButton
         pressed={editor.isActive("orderedList")}
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         label="Numbered list"
       >
         <ListOrdered className="h-4 w-4" />
-      </Toggle>
-      <Toggle
+      </IconButton>
+      <IconButton
         pressed={editor.isActive("blockquote")}
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         label="Quote"
       >
         <Quote className="h-4 w-4" />
-      </Toggle>
+      </IconButton>
 
       <Separator orientation="vertical" className="mx-1 h-6" />
 
-      <Toggle pressed={editor.isActive("link")} onClick={() => setLinkOpen(true)} label="Link">
+      <IconButton pressed={editor.isActive("link")} onClick={() => setLinkOpen(true)} label="Link">
         <LinkIcon className="h-4 w-4" />
-      </Toggle>
+      </IconButton>
 
       <input
         ref={fileInputRef}
@@ -118,46 +117,34 @@ const Toolbar: React.FC<{ editor: Editor }> = ({ editor }) => {
         className="hidden"
         onChange={(e) => insertImage(e.target.files?.[0])}
       />
-      <Button
-        type="button"
-        variant="ghost"
-        size="icon"
-        className="h-8 w-8"
+      <IconButton
         disabled={uploadingImage}
         onClick={() => fileInputRef.current?.click()}
-        aria-label="Insert image"
+        label="Insert image"
       >
         {uploadingImage ? (
           <Loader2 className="h-4 w-4 animate-spin" />
         ) : (
           <ImageIcon className="h-4 w-4" />
         )}
-      </Button>
+      </IconButton>
 
       <Separator orientation="vertical" className="mx-1 h-6" />
 
-      <Button
-        type="button"
-        variant="ghost"
-        size="icon"
-        className="h-8 w-8"
+      <IconButton
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().undo()}
-        aria-label="Undo"
+        label="Undo"
       >
         <Undo2 className="h-4 w-4" />
-      </Button>
-      <Button
-        type="button"
-        variant="ghost"
-        size="icon"
-        className="h-8 w-8"
+      </IconButton>
+      <IconButton
         onClick={() => editor.chain().focus().redo().run()}
         disabled={!editor.can().redo()}
-        aria-label="Redo"
+        label="Redo"
       >
         <Redo2 className="h-4 w-4" />
-      </Button>
+      </IconButton>
 
       <LinkDialog editor={editor} open={linkOpen} onOpenChange={setLinkOpen} />
     </div>

@@ -2,12 +2,12 @@ import { useEffect, useState, useCallback } from "react";
 import { Search, Archive, ArchiveRestore, Trash2, Eye } from "lucide-react";
 
 import type { ResourceDef } from "@/lib/admin/resources";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/components/ui/use-toast";
 import ConfirmDialog from "@/components/admin/ConfirmDialog";
+import IconButton from "@/components/admin/IconButton";
 import {
   Dialog,
   DialogContent,
@@ -146,13 +146,11 @@ const EnquiryTable: React.FC<{ resource: ResourceDef }> = ({ resource }) => {
                 </span>
               )}
               <div className="flex shrink-0 items-center gap-1">
-                <Button variant="ghost" size="icon" aria-label="View" onClick={() => setViewing(row)}>
+                <IconButton label="View" onClick={() => setViewing(row)}>
                   <Eye className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  aria-label={row.is_archived ? "Restore" : "Archive"}
+                </IconButton>
+                <IconButton
+                  label={row.is_archived ? "Restore" : "Archive"}
                   onClick={() => archiveToggle(row)}
                 >
                   {row.is_archived ? (
@@ -160,16 +158,11 @@ const EnquiryTable: React.FC<{ resource: ResourceDef }> = ({ resource }) => {
                   ) : (
                     <Archive className="h-4 w-4" />
                   )}
-                </Button>
+                </IconButton>
                 {row.is_archived && (
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    aria-label="Delete permanently"
-                    onClick={() => setPendingDelete(row)}
-                  >
+                  <IconButton label="Delete permanently" onClick={() => setPendingDelete(row)}>
                     <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button>
+                  </IconButton>
                 )}
               </div>
             </div>

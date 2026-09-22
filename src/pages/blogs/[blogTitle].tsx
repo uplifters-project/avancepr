@@ -1,7 +1,8 @@
 import PageLaypout from "@/components/layouts/page-layout";
 import { getBlogById, getBlogs } from "@/lib/queries";
-import { REVALIDATE_TIME } from "@/lib/constants";
+import { REVALIDATE_TIME, SITE_URL } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import BlogBody from "@/components/blog/BlogBody";
 
@@ -17,15 +18,30 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, blog }) => {
         heading="Not Found"
         label="This blog does not exist, please go back to homepage"
       >
+        <Head>
+          <meta name="robots" content="noindex, follow" />
+        </Head>
         <p>{error}</p>
       </PageLaypout>
     );
   }
 
-  const { title, body, body_md, author, image, credits } = blog;
+  const { id, title, body, body_md, author, image, credits } = blog;
+  const canonicalUrl = `${SITE_URL}/blogs/${id}`;
+  const description = `Read "${title}" by ${author} on the Avance PR blog.`;
 
   return (
     <PageLaypout heading={title} label={author} className="text-center">
+      <Head>
+        <title>{title} – Avance PR Blog</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        {image && <meta property="og:image" content={image} />}
+      </Head>
       <div className="mt-8 mx-auto mb-4 h-[50vh] max-h-[50vh] max-w-full">
         {image ? (
           <Image

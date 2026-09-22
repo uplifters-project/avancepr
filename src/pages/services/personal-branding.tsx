@@ -49,10 +49,11 @@ const PersonalBrandingPage: NextPage<{}> = ({ }) => {
       <Head>
         <title>Founder & CXO Personal Branding Experts | Avance PR</title>
         <meta name="description" content="Avance PR helps founders, CXOs, and leaders build powerful personal brands through strategic storytelling, LinkedIn positioning, podcasts, and media visibility." />
+        <link rel="canonical" href="https://www.avancepr.in/services/personal-branding" />
         <meta property="og:title" content="Founder & CXO Personal Branding Experts | Avance PR" />
         <meta property="og:description" content="Avance PR helps founders, CXOs, and leaders build powerful personal brands through strategic storytelling, LinkedIn positioning, podcasts, and media visibility." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.avancepr.in/services/Personal-Branding" />
+        <meta property="og:url" content="https://www.avancepr.in/services/personal-branding" />
         <meta property="og:image" content="https://www.avancepr.in/og-image.png" />
       </Head>
     </ServicePageLayout>

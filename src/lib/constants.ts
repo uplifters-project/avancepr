@@ -1,6 +1,10 @@
 export const WHATSAPP_NO = process.env.WHATSAPP_NO;
 export const EMAIL = process.env.EMAIL;
 
+// Canonical origin, used to build absolute canonical/og:url tags and the
+// sitemap. Must match the production domain exactly (no trailing slash).
+export const SITE_URL = "https://www.avancepr.in";
+
 export const REVALIDATE_TIME = {
   TESTIMONIALS_PAGE: 60 * 60 * 24,
   CLIENT_PAGE: 60 * 60 * 24,

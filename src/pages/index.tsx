@@ -128,6 +128,7 @@ export default function Home({
       <Head>
         <title>Avance PR: Best PR Agency in India | Top PR Firms for Startups</title>
         <meta name="description" content="Avance PR is a leading public relations agency in India. We offer PR for startups, crisis management, influencer & corporate communication. Free consultation." />
+        <link rel="canonical" href="https://www.avancepr.in/" />
         <meta property="og:title" content="Avance PR: Best PR Agency in India | Top PR Firms for Startups" />
         <meta property="og:description" content="Avance PR is a leading public relations agency in India. We offer PR for startups, crisis management, influencer & corporate communication. Free consultation." />
         <meta property="og:type" content="website" />

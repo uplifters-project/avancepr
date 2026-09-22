@@ -49,6 +49,7 @@ const InfluencerMarketingPage: NextPage<{}> = ({ }) => {
       <Head>
         <title>Influencer Marketing Agency India ‐ Avance PR</title>
         <meta name="description" content="Avance PR connects you with relevant influencers to amplify your brand. End-to-end influencer campaigns for lifestyle, tech & consumer brands." />
+        <link rel="canonical" href="https://www.avancepr.in/services/influencer-marketing" />
         <meta property="og:title" content="Influencer Marketing Agency India ‐ Avance PR" />
         <meta property="og:description" content="Avance PR connects you with relevant influencers to amplify your brand. End-to-end influencer campaigns for lifestyle, tech & consumer brands." />
         <meta property="og:type" content="website" />

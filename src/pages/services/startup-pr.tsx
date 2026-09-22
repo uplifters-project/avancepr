@@ -78,6 +78,7 @@ const PRForStartups: NextPage = () => {
       <Head>
         <title>Top Startup PR Agency in India | Avance PR</title>
         <meta name="description" content="Avance PR empowers startups with strategic storytelling, media visibility, and founder positioning to build credibility and attract investors." />
+        <link rel="canonical" href="https://www.avancepr.in/services/startup-pr" />
         <meta property="og:title" content="Top Startup PR Agency in India | Avance PR" />
         <meta property="og:description" content="Avance PR empowers startups with strategic storytelling, media visibility, and founder positioning to build credibility and attract investors." />
         <meta property="og:type" content="website" />

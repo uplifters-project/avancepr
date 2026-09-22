@@ -1,8 +1,19 @@
+import Head from "next/head";
 import MainLayout from "@/components/layouts/main-layout";
 
 export default function PrivacyPolicy() {
   return (
     <MainLayout>
+      <Head>
+        <title>Privacy Policy – Avance PR</title>
+        <meta name="description" content="Read Avance PR's privacy policy to learn how we collect, use, and protect your personal information." />
+        <link rel="canonical" href="https://www.avancepr.in/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy – Avance PR" />
+        <meta property="og:description" content="Read Avance PR's privacy policy to learn how we collect, use, and protect your personal information." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.avancepr.in/privacy-policy" />
+        <meta name="robots" content="noindex, follow" />
+      </Head>
       <div className="max-w-4xl mx-auto my-20 px-6 text-gray-700 leading-relaxed">
         <h1 className="text-4xl font-bold text-center text-yellow-700 mb-10">
           Privacy Policy

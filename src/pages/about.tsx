@@ -14,6 +14,7 @@ const AboutPage: NextPage = () => {
       <Head>
         <title>About Avance PR – PR Services & Experts in India</title>
         <meta name="description" content="Meet Avance PR: Gurugram-based PR firm specializing in startup PR, corporate communications and brand reputation. Strong media & influencer networks." />
+        <link rel="canonical" href="https://www.avancepr.in/about" />
         <meta property="og:title" content="About Avance PR – PR Services & Experts in India" />
         <meta property="og:description" content="Meet Avance PR: Gurugram-based PR firm specializing in startup PR, corporate communications and brand reputation. Strong media & influencer networks." />
         <meta property="og:type" content="website" />

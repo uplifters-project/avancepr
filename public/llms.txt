@@ -1,0 +1,24 @@
+# Avance PR
+
+> Avance PR is a Gurugram-based public relations agency in India, offering startup PR, crisis management, influencer marketing, social media marketing, corporate communication, and personal branding services.
+
+Avance PR helps brands and founders build visibility, credibility, and trust through strategic media relations, influencer partnerships, and digital communication campaigns.
+
+## Company
+
+- [About](https://www.avancepr.in/about): Who Avance PR is and what the team does.
+- [Contact](https://www.avancepr.in/contact): Get in touch for a free PR strategy consultation.
+- [FAQs](https://www.avancepr.in/faq): Answers to common questions about working with Avance PR.
+- [Testimonials](https://www.avancepr.in/testimonials): What clients say about Avance PR.
+- [Our Work](https://www.avancepr.in/work): Case studies and client campaigns.
+- [Featured](https://www.avancepr.in/featured): Press coverage and media mentions of Avance PR and its clients.
+- [Blog](https://www.avancepr.in/blogs): Articles on PR, media strategy, and communications.
+
+## Services
+
+- [Startup PR](https://www.avancepr.in/services/startup-pr): Strategic storytelling and media visibility for startups and founders.
+- [Social Media Marketing](https://www.avancepr.in/services/social-media-marketing): Social strategy, content, and campaigns to grow brand visibility.
+- [Influencer Marketing](https://www.avancepr.in/services/influencer-marketing): End-to-end influencer campaigns for lifestyle, tech, and consumer brands.
+- [Crisis Management](https://www.avancepr.in/services/crisis-management): Reputation protection and crisis communication.
+- [Corporate Communication](https://www.avancepr.in/services/corporate-communication): Media relations and leadership visibility for brands.
+- [Personal Branding](https://www.avancepr.in/services/personal-branding): Personal brand building for founders, CXOs, and leaders.

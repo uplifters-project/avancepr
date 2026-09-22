@@ -40,6 +40,7 @@ const CorporateCommunication: NextPage = () => {
       <Head>
         <title>Avance PR – Leading Corporate Communication Agency</title>
         <meta name="description" content="Avance PR helps brands build trust and reputation through strategic corporate communication, media relations, and leadership visibility." />
+        <link rel="canonical" href="https://www.avancepr.in/services/corporate-communication" />
         <meta property="og:title" content="Avance PR – Leading Corporate Communication Agency" />
         <meta property="og:description" content="Avance PR helps brands build trust and reputation through strategic corporate communication, media relations, and leadership visibility." />
         <meta property="og:type" content="website" />

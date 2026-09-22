@@ -2,10 +2,8 @@ import PageLaypout from "@/components/layouts/page-layout";
 import { getBlogById, getBlogs } from "@/lib/queries";
 import { REVALIDATE_TIME } from "@/lib/constants";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import remarkGfm from "remark-gfm";
-import { Markup } from "interweave";
+import BlogBody from "@/components/blog/BlogBody";
 
 interface BlogPageProps {
   error?: string | null;
@@ -55,50 +53,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ error, blog }) => {
       <p className="mb-12 text-muted-foreground">{credits}</p>
 
       <div className="text-left text-lg">
-        {body_md ? (
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            components={{
-              h1: (props) => {
-                return (
-                  <h2
-                    className="text-5xl text-center font-bold text-yellow-700 animate-showLetterByLetter"
-                    {...props}
-                  />
-                );
-              },
-              p: (props) => (
-                <p
-                  {...props}
-                  style={{
-                    margin: "2rem auto",
-                  }}
-                />
-              ),
-              li: (props) => (
-                <li
-                  {...props}
-                  style={{
-                    margin: "0.5rem 3rem",
-                  }}
-                />
-              ),
-              a: (props) => (
-                <a
-                  {...props}
-                  style={{
-                    textDecoration: "underline",
-                    color: "var(--blue)",
-                  }}
-                />
-              ),
-            }}
-          >
-            {body_md}
-          </ReactMarkdown>
-        ) : (
-          <Markup content={body} />
-        )}
+        <BlogBody body={body} body_md={body_md} />
       </div>
     </PageLaypout>
   );

@@ -11,19 +11,21 @@ const nextConfig = {
     EMAIL: process.env.EMAIL,
   },
   images: {
-    // Next.js 16's built-in image optimizer added a hardcoded, non-
-    // configurable 7s fetch timeout for the source image (absent in the
-    // Next 13.3.0 this app previously ran). Against this app's blob
-    // storage origin that timeout is regularly exceeded under concurrent
-    // requests, producing 500s from /_next/image that never happened
-    // before the upgrade. Optimization is disabled entirely so next/image
-    // falls back to serving the original URL directly (no resize/format
-    // conversion, but no server-side fetch/timeout risk either).
-    unoptimized: true,
     // `images.domains` was removed in Next 16 — every previously allowed
     // host (from both the `remotePatterns` and legacy `domains` entries)
-    // is listed below (currently inert while unoptimized:true, kept so
-    // it's ready if optimization is ever re-enabled).
+    // is listed below.
+    //
+    // Optimization was previously disabled entirely (`unoptimized: true`)
+    // because Next 16's optimizer has a hardcoded 7s fetch timeout that the
+    // old Azure blob origin (upliftersstorage.blob.core.windows.net)
+    // regularly exceeded under concurrent requests, producing 500s from
+    // /_next/image. The large static assets that used to hotlink that
+    // origin now live in public/ (served from disk, no external fetch, no
+    // timeout risk), so optimization is safe to re-enable. The remaining
+    // external origins below (Supabase Storage for admin-uploaded media,
+    // plus a couple of still-referenced legacy hosts) are lower-volume and
+    // generally more reliable than the old blob storage, but if 500s from
+    // /_next/image reappear, that's the first thing to check.
     remotePatterns: [
       { protocol: "https", hostname: "avanceprstorage.blob.core.windows.net" },
       { protocol: "https", hostname: "ambitious-hill-028cf7800.3.azurestaticapps.net" },

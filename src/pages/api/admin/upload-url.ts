@@ -3,6 +3,7 @@ import { z } from "zod";
 import { supabaseAdmin } from "@/lib/supabase";
 import { requireAdmin } from "@/lib/admin/auth";
 import {
+  MEDIA_BUCKET,
   MEDIA_FOLDERS,
   buildObjectPath,
   isAllowedFileSize,
@@ -53,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const path = buildObjectPath(folder as any, filename, contentType);
 
-  const { data, error } = await supabaseAdmin.storage.from("media").createSignedUploadUrl(path);
+  const { data, error } = await supabaseAdmin.storage.from(MEDIA_BUCKET).createSignedUploadUrl(path);
   if (error || !data) {
     console.error("[admin] createSignedUploadUrl failed", error);
     return res.status(500).json({ detail: "Failed to prepare upload." });

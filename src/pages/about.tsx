@@ -71,7 +71,7 @@ const AboutPage: NextPage = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://upliftersstorage.blob.core.windows.net/avanceprstatic/Team_imageabout_us.jpg"
+                src="/images/team-image-about-us.webp"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 alt="Avance PR Team"

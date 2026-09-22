@@ -47,25 +47,20 @@ export const EXTERNAL_LINKS = {
   EMAIL_PERSONAL: "ritika@avancepr.in",
 };
 
+// Previously hotlinked from the legacy Azure blob origin at full
+// camera/export resolution (some over 6 MB per image, 11 MB for the video).
+// Re-encoded to WebP/H.264 at web-appropriate sizes and served locally from
+// public/ so they're optimized by next/image (or served directly, for the
+// video) instead of fetched from an external, unoptimized origin.
 export const EXTERNAL_IMAGES = {
-  CONTENT_MARKETING:
-    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/content.jpg",
-  EVENT_PR:
-    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/event.jpg",
-  PUBLIC_RELATION:
-    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/final_public_relation.png",
-  SOCIAL_MEDIA_MARKETING:
-    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/social_media.jpg",
-  INFLUENCER_MARKETING:
-    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/likes-social-media.jpg",
-  CREATIVE:
-    "https://upliftersstorage.blob.core.windows.net/avanceprmedia/static_images_for_web/creative.mp4",
-  CORPORATE_COMMUNICATION:
-    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/Corporate_Communication.jpg",
-  CRISIS_MANAGEMENT:
-    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/Crisis_Management.jpg",
-  STARTUPS_PR:
-    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/PR_For_startup.png",
-  PERSONAL_BRANDING:
-    "https://upliftersstorage.blob.core.windows.net/avanceprstatic/services/Personal_Branding.png"
+  CONTENT_MARKETING: "/images/services/content-marketing.webp",
+  EVENT_PR: "/images/services/event-pr.webp",
+  PUBLIC_RELATION: "/images/public-relation.webp",
+  SOCIAL_MEDIA_MARKETING: "/images/services/social-media-marketing.webp",
+  INFLUENCER_MARKETING: "/images/services/influencer-marketing.webp",
+  CREATIVE: "/video/creative.mp4",
+  CORPORATE_COMMUNICATION: "/images/services/corporate-communication.webp",
+  CRISIS_MANAGEMENT: "/images/services/crisis-management.webp",
+  STARTUPS_PR: "/images/services/pr-for-startup.webp",
+  PERSONAL_BRANDING: "/images/services/personal-branding.webp",
 };

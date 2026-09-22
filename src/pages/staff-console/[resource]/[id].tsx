@@ -12,6 +12,7 @@ import { requireAdminSSP } from "@/lib/admin/auth";
 import { supabaseAdmin } from "@/lib/supabase";
 import { getResource, GENERIC_RESOURCE_SLUGS, type ResourceSlug } from "@/lib/admin/resources";
 import { normalizeRowMedia } from "@/lib/admin/media-server";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 const EditResourcePage: NextPage<{
   email: string;
@@ -48,7 +49,7 @@ const EditResourcePage: NextPage<{
       return;
     }
     toast({ title: "Deleted permanently" });
-    router.push(`/admin/${resource.slug}`);
+    router.push(`${ADMIN_BASE_PATH}/${resource.slug}`);
   };
 
   return (

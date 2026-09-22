@@ -45,9 +45,9 @@ Supabase Postgres instead of the old Django/Azure backend. Setup:
    `SUPABASE_SERVICE_ROLE_KEY` (see `.env.example`). The service-role key
    bypasses Row Level Security and must stay server-only — never expose it
    with a `NEXT_PUBLIC_` prefix.
-4. Content is managed through the **admin dashboard** at `/admin` (see below)
+4. Content is managed through the **admin dashboard** at `/staff-console` (see below)
    instead of the Table Editor now — the Table Editor still works if you need
-   to fix something by hand, but `/admin` handles validation, image uploads,
+   to fix something by hand, but `/staff-console` handles validation, image uploads,
    revalidation, drafts and archiving.
 5. (Optional, dev only) Seed from previously cached live data:
    `node --env-file=.env.local scripts/seed-from-cache.mjs`. Do a real
@@ -56,7 +56,7 @@ Supabase Postgres instead of the old Django/Azure backend. Setup:
 The enquiry form posts to `src/pages/api/enquiry.ts`, which inserts into
 `main_enquiry` and sends a Telegram notification via `TG_BOT_TOKEN`/`TG_CHAT_ID`.
 
-## Admin dashboard (`/admin`)
+## Admin dashboard (`/staff-console`)
 
 Replaces the old Django admin (`advancepr_backend`, decommissioned) for
 managing blogs, testimonials, clients, work items, news, awards and viewing
@@ -74,14 +74,14 @@ enquiries. Single admin, gated by Supabase Auth + an email allowlist.
    directly, or use "send invite email" if you'd rather they set their own).
 4. Set `ADMIN_EMAILS` in `.env.local` (and in Vercel for production) to that
    same email — comma-separated if there's ever more than one admin. Only
-   Supabase Auth users whose email is in this list can reach `/admin`, even
+   Supabase Auth users whose email is in this list can reach `/staff-console`, even
    if someone else's Supabase Auth session is somehow valid.
 5. `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
    (Dashboard → Project Settings → API → Project URL / anon public key) must
    also be set — the admin login page and image uploads run in the browser
    and need the public key, separate from the server-only service-role key.
 
-**Using it:** sign in at `/admin`. Blogs get a Tiptap rich-text editor
+**Using it:** sign in at `/staff-console`. Blogs get a Tiptap rich-text editor
 (saves as markdown to `body_md`, the same field the public blog page
 already renders); everything else is a plain form with image upload. Every
 resource supports **archive** (hides it from the public site immediately,
@@ -91,7 +91,7 @@ triggers on-demand ISR revalidation for the affected public page(s)
 instead of waiting for the normal 24h refresh; the "Rebuild site" button in
 the header refreshes every core page at once.
 
-`/admin/*` and `/api/admin/*` are protected by `src/proxy.ts` (redirect) and
+`/staff-console/*` and `/api/admin/*` are protected by `src/proxy.ts` (redirect) and
 by `requireAdmin`/`requireAdminSSP` (`src/lib/admin/auth.ts`) on every page
 and API route — the redirect is a UX shortcut, not the only check.
 

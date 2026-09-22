@@ -6,6 +6,7 @@ import AdminLayout from "@/components/admin/AdminLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { requireAdminSSP } from "@/lib/admin/auth";
 import { supabaseAdmin } from "@/lib/supabase";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 interface Counts {
   blogs: number;
@@ -25,13 +26,13 @@ interface RecentEnquiry {
 }
 
 const TILES: { key: keyof Counts; label: string; href: string; icon: React.ElementType }[] = [
-  { key: "blogs", label: "Blogs", href: "/admin/blogs", icon: Newspaper },
-  { key: "testimonials", label: "Testimonials", href: "/admin/testimonials", icon: Quote },
-  { key: "clients", label: "Clients", href: "/admin/clients", icon: Users },
-  { key: "work", label: "Work items", href: "/admin/work", icon: Briefcase },
-  { key: "news", label: "News items", href: "/admin/news", icon: Newspaper },
-  { key: "awards", label: "Awards", href: "/admin/awards", icon: Award },
-  { key: "enquiries", label: "Enquiries", href: "/admin/enquiries", icon: Mail },
+  { key: "blogs", label: "Blogs", href: `${ADMIN_BASE_PATH}/blogs`, icon: Newspaper },
+  { key: "testimonials", label: "Testimonials", href: `${ADMIN_BASE_PATH}/testimonials`, icon: Quote },
+  { key: "clients", label: "Clients", href: `${ADMIN_BASE_PATH}/clients`, icon: Users },
+  { key: "work", label: "Work items", href: `${ADMIN_BASE_PATH}/work`, icon: Briefcase },
+  { key: "news", label: "News items", href: `${ADMIN_BASE_PATH}/news`, icon: Newspaper },
+  { key: "awards", label: "Awards", href: `${ADMIN_BASE_PATH}/awards`, icon: Award },
+  { key: "enquiries", label: "Enquiries", href: `${ADMIN_BASE_PATH}/enquiries`, icon: Mail },
 ];
 
 const OverviewPage: NextPage<{
@@ -84,7 +85,7 @@ const OverviewPage: NextPage<{
           </div>
         )}
         <Link
-          href="/admin/enquiries"
+          href={`${ADMIN_BASE_PATH}/enquiries`}
           className="mt-3 inline-block text-sm text-primary hover:underline"
         >
           View all enquiries →

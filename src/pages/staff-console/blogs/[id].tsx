@@ -12,6 +12,7 @@ import { requireAdminSSP } from "@/lib/admin/auth";
 import { supabaseAdmin } from "@/lib/supabase";
 import { RESOURCES } from "@/lib/admin/resources";
 import { normalizeRowMedia } from "@/lib/admin/media-server";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 interface BlogRow {
   id: number;
@@ -55,7 +56,7 @@ const EditBlogPage: NextPage<{ email: string; blog: BlogRow }> = ({ email, blog 
       return;
     }
     toast({ title: "Deleted permanently" });
-    router.push("/admin/blogs");
+    router.push(`${ADMIN_BASE_PATH}/blogs`);
   };
 
   return (

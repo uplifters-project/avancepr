@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
 import ImageField from "@/components/admin/ImageField";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 const ResourceForm: React.FC<{
   resource: ResourceDef;
@@ -59,7 +60,7 @@ const ResourceForm: React.FC<{
       toast({ title: id ? `${resource.singular} updated` : `${resource.singular} created` });
 
       if (onSaved) onSaved(data);
-      else router.push(`/admin/${resource.slug}`);
+      else router.push(`${ADMIN_BASE_PATH}/${resource.slug}`);
     } finally {
       setSubmitting(false);
     }
@@ -127,7 +128,7 @@ const ResourceForm: React.FC<{
         <Button type="submit" disabled={submitting}>
           {submitting ? "Saving…" : id ? "Save changes" : `Create ${resource.singular.toLowerCase()}`}
         </Button>
-        <Button type="button" variant="outline" onClick={() => router.push(`/admin/${resource.slug}`)}>
+        <Button type="button" variant="outline" onClick={() => router.push(`${ADMIN_BASE_PATH}/${resource.slug}`)}>
           Cancel
         </Button>
       </div>

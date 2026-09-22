@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { GetServerSidePropsContext } from "next";
 import { createSupabaseServerClient } from "@/lib/supabase-server";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 // Single-admin allowlist. Supabase Auth handles credentials/sessions; this
 // just decides whether a *valid, signed-in* Supabase user is allowed into
@@ -56,8 +57,8 @@ export async function requireAdminSSP(
   } = await supabase.auth.getUser();
 
   if (!isAllowed(user?.email)) {
-    const next = encodeURIComponent(ctx.resolvedUrl || "/admin");
-    return { redirect: { destination: `/admin/login?next=${next}`, permanent: false } };
+    const next = encodeURIComponent(ctx.resolvedUrl || ADMIN_BASE_PATH);
+    return { redirect: { destination: `${ADMIN_BASE_PATH}/login?next=${next}`, permanent: false } };
   }
 
   return { id: user!.id, email: user!.email! };

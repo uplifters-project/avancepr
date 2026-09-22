@@ -28,6 +28,7 @@ import { useToast } from "@/components/ui/use-toast";
 import ConfirmDialog from "@/components/admin/ConfirmDialog";
 import IconButton from "@/components/admin/IconButton";
 import { cn } from "@/lib/utils";
+import { ADMIN_BASE_PATH } from "@/lib/constants";
 
 type Row = Record<string, any>;
 type Status = "active" | "archived" | "all";
@@ -119,7 +120,7 @@ function SortableRow({
       )}
 
       <div className="flex shrink-0 items-center gap-1">
-        <Link href={`/admin/${resource.slug}/${row.id}`}>
+        <Link href={`${ADMIN_BASE_PATH}/${resource.slug}/${row.id}`}>
           <IconButton label="Edit">
             <Pencil className="h-4 w-4" />
           </IconButton>
@@ -257,7 +258,7 @@ const ResourceTable: React.FC<{ resource: ResourceDef }> = ({ resource }) => {
             />
           </div>
           {!resource.readOnly && (
-            <Link href={`/admin/${resource.slug}/new`}>
+            <Link href={`${ADMIN_BASE_PATH}/${resource.slug}/new`}>
               <Button size="sm">
                 <Plus className="h-4 w-4" />
                 New

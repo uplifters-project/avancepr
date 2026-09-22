@@ -92,6 +92,7 @@ const getBlogs = async (): Promise<BlogPreview[]> => {
     .from("main_blog")
     .select("id, title, author, image")
     .eq("is_archived", false)
+    .eq("is_draft", false)
     .order("created_at", { ascending: false });
 
   if (error) throw error;
@@ -111,6 +112,7 @@ const getBlogById = async (id: string | number): Promise<Blog> => {
       "id, order, title, author, image, body, body_md, credits, created_at, updated_at"
     )
     .eq("is_archived", false)
+    .eq("is_draft", false)
     .eq("id", numericId)
     .maybeSingle();
 

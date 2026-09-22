@@ -70,12 +70,15 @@ interface BlogPreview {
 
 interface Blog {
   id: number;
+  order?: number;
   title: string;
   author: string;
   image: string;
   body?: string;
   body_md?: string;
   credits?: string;
+  is_draft?: boolean;
+  is_archived?: boolean;
   created_at?: string;
   updated_at?: string;
 }

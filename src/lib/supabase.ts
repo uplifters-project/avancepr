@@ -1,12 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.SUPABASE_URL;
+// The project URL is not secret (the admin panel's browser client needs it
+// too), so it may be provided as NEXT_PUBLIC_SUPABASE_URL only. The service
+// role key is secret and must never be NEXT_PUBLIC_.
+const supabaseUrl =
+  process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !supabaseServiceRoleKey) {
   throw new Error(
-    "Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables. " +
-      "These are server-only (never prefix with NEXT_PUBLIC_) — see .env.example."
+    "Missing SUPABASE_URL (or NEXT_PUBLIC_SUPABASE_URL) or SUPABASE_SERVICE_ROLE_KEY " +
+      "environment variables. The service role key is server-only (never prefix " +
+      "with NEXT_PUBLIC_) — see .env.example."
   );
 }
 

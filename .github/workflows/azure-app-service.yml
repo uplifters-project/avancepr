@@ -2,7 +2,7 @@ name: Deploy to Azure App Service
 
 on:
   push:
-    branches: [feature/admin-dashboard]
+    branches: [main]
   workflow_dispatch:
 
 env:
